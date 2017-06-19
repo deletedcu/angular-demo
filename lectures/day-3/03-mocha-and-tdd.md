@@ -6,9 +6,9 @@
 
 Whether you like it or not, you will have to test your software somehow before you get it to your users.  Today, we'll talk about how to do that *with software itself*.  Woo-hoo, using software to test software!  -->
 
-# Testing with Mocha
-
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+# Testing with Mocha
 
 ![](resources/xzibit_testing_software.jpg)
 
@@ -93,7 +93,7 @@ When we think of "testing" we tend to think of something you do *after* you've c
 
 ## TDD Review
 
-![TDD Example](http://joshldavis.com/img/tdd-vs-bdd/tdd-flowchart.png)
+![TDD Example](resources/tdd_chart.png)
 
 <!--2:00 but 5 minutes for project 2 in WDI2-->
 
