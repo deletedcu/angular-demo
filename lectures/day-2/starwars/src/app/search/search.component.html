@@ -1,0 +1,29 @@
+<section>
+    <h2>Search For A Star Wars Character</h2>
+    <input [(ngModel)]="name" type="text" placeholder="Character Name"/>
+    <input (click)="findCharacter(name)" type="submit" value="Search"/>
+</section>
+<section *ngIf="results">
+    <h2>Search Results</h2>
+    <ul>
+        <li *ngFor="let character of results">
+            <h3>{{character.name}}</h3>
+            <dl>
+                <dt>Birth Year</dt>
+                <dd>{{character.birth_year}}</dd>
+                <dt>Eye Color</dt>
+                <dd>{{character.eye_color}}</dd>
+                <dt>Hair Color</dt>
+                <dd>{{character.hair_color}}</dd>
+                <dt>Gender</dt>
+                <dd>{{character.gender}}</dd>
+                <dt>Height</dt>
+                <dd>{{character.height}}</dd>
+                <dt>Mass</dt>
+                <dd>{{character.mass}}</dd>
+                <dt>Skin Color</dt>
+                <dd>{{character.skin_color}}</dd>
+            </dl>
+        </li>
+    </ul>
+</section>
