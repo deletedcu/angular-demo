@@ -23,7 +23,7 @@ This phrase is just a fancy way to say that TypeScript includes all of the types
 
 ![TypeScript superset of JavaScript](http://alexander.holbreich.org/content/images/2016/01/typescript-es6-es5.png)
 
-So why bother with TypeScript? It turns out that some of those extra bells and whistles are extremely useful! 
+So why bother with TypeScript? It turns out that some of those extra bells and whistles are extremely useful!
 
 ## Getting started
 
@@ -92,7 +92,7 @@ console.log(product);
 
  ### Lab: Make it compile
 
-**battle.ts** is very broken. Using what we just learned, and the compiler feedback, fix the file until it compiles cleanly.s
+**battle.ts** is very broken. Using what we just learned, and the compiler feedback, fix the file until it compiles cleanly.
 
 ## Additional Resources
 
@@ -103,4 +103,3 @@ console.log(product);
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
 2.  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
-

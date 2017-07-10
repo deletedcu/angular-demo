@@ -169,22 +169,6 @@ We have the modularity of Angular 2 on display here. We pluck a few modules from
 
 At this point, you may be asking yourself "but where does the code that I write live?" For that, we turn to our root component, the app component, in the app folder.
 
-Angular 2 leans heavily into component structure. Everything is a component.
-
-![Component Tree](https://i.stack.imgur.com/sV364.png)
-
-Our app component wraps all of the child components we will write. It is composed of five files:
-
-```bash
-├── app.component.css
-├── app.component.html
-├── app.component.spec.ts
-├── app.component.ts
-└── app.module.ts
-```
-
-Besides the module file, which can be unique to the root component, the Angular 2 dev team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game. We will go more in depth about the purpose of each of these files in the next lesson.
-
 With **app.component.html**, we see our first Angular 2 template.
 
 ```html
