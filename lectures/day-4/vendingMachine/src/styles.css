@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { background-color: #B33323; }
+
+h1 { color: #FFF; font-family: 'Helvetica Neue', sans-serif; font-size: 75px; font-weight: bold; letter-spacing: -1px; line-height: 1; }
+h2 { color: #FFF; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; }
+
+.button {
+  overflow: hidden;
+
+  margin: 5px;
+  padding: 12px 12px;
+
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+
+  color: #fff;
+  border: 0 none;
+  border-radius: 4px;
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transition: all 60ms ease;
+
+    opacity: .85;
+  }
+}
+
+.button.-yellow {
+  color: #f15c5c;
+  background: #feee7d;
+}
+
+.button.-blue {
+  color: #fff;
+  background: #2b90d9;
+}
+
+.button.-green {
+  color: #fff;
+  background: #3ac569;
+}
+
+.button.-full-width {
+  width: 154px;
+}
