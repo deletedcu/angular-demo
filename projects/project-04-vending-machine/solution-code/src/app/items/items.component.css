@@ -1,0 +1,13 @@
+.item {
+  list-style: none;
+  padding: 12px 12px 12px 2px;
+  font-family: 'Helvetica Neue', sans-serif; font-size: 14px;
+}
+
+.item-list {
+  padding: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
