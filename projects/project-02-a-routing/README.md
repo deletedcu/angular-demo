@@ -10,5 +10,18 @@ Those pesky rebels are planning yet another attack on our death square.  Like an
 
 2. Look familiar?  This is our "death square", harbinger of doom for the Rebel Alliance.  However, we at the Empire demand a little more micro-management, errr, detail.  Try clicking on one of the turrets.  Nothing happened?  Let's fix that.
 
-... More coming soon.
+3. Create a new component called `info-window` so we can see some info on our turrets.
 
+4. Create an `app-routing.module.ts` file just like the previous lesson which imports the `InfoWindowComponent` and defines one route with the path `info` pointing to the `InfoWindowComponent`. Import this routing module in `app.module.ts`.
+
+5. Add a `router-outlet` to `app.component.html`.
+
+6. Test your new route by going to `/info` in your browser.
+
+7. That's great, but we need to be able to quickly click a turret and get all its information.  Wrap the `img` tag in `turret.component.html` in an `a` tag with a `routerLink` like we used in the previous lesson.
+
+8. Now import `RouterModule` in the `death-square.module.ts` file.
+
+9. Finally, change the `info-window` component HTML to say `Turret is functional`.
+
+It's not the most detailed inventory, but I'm sure it's better than what those nasty rebels have.  Stay tuned for more!
