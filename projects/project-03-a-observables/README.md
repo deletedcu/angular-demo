@@ -9,3 +9,5 @@ In the Galactic Empire, workplace safety and [a host of other issues](https://tw
 1. Open up our data banks.  Go into `turret-api`, run `seed.js` and `server.js`...but don't forget to install those npm modules!
 
 2. Go into `imperial-starfleet` and start up our front end.
+
+3. 
