@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Angular
+# Angular Basics
 
 ![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
 
@@ -10,23 +10,16 @@
 
 By the end of this, developers should be able to:
 
--   Explain what Angular is
+-   Explain what the Angular CLI is
 -   Download and install `@angular/cli` and scaffold a new Angular app
 -   Understand the basics of how an Angular app is composed
 
-## What is Angular?
+## What is the Angular CLI?
 
-Angular is a front end framework that was developed and is maintained by Google. As a front end framework, it offers developers an blueprint to organize their front end code by and many useful APIs to help speed up development significantly. Angular in particular stresses:
-
-- Reuseability and flexibility through component structure
-- Modularity
-- Component encapsulation
-- Ubiquity
-- Native TypeScript Integration
+The Angular CLI (command line interface) is a tool that allows us to serve up our Angular app, run tests and generate code. In the recent past, we had to install our own web servers, set up our own testing and bundling infastructure and write all of our own code. Those days are dead! The Angular CLI will be our one stop shop for all of the tools and tasks we need to build up our web app.
 
 ## Install `@angular/cli`
 
-The Angular CLI is a tool that allows us to serve up our Angular app, run tests and generate code.
 
 Let's install it globally:
 
