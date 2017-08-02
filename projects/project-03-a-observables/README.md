@@ -10,4 +10,6 @@ In the Galactic Empire, workplace safety and [a host of other issues](https://tw
 
 2. Go into `imperial-starfleet` and start up our front end.
 
-3. 
+3. Remove the `toPromise` import from your InfoWindowComponent.
+
+4. Convert `findTurret()` to use `subscribe()` instead of `toPromise()` and `then()` as we showed in the last lesson.
