@@ -6,19 +6,21 @@ Those pesky rebels destroyed yet another one of our death stars. Curse them! We 
 
 ### Instructions:
 
-1. Generate a new ng app called 'imperial-starfleet'.
+1. Generate a new ng app called `imperial-starfleet`.
 
-2. Make a component called 'death-square'. This component should have a square grey background. Add one instance of this component to our root component.
+2. Make a component called `death-square`. This component should be a square with a grey background. Add one instance of this component to our root component.
 
-3. Create a component called 'turret'. This component consist of an '<img>' tag with 'turret.png' as its source. Nest as many instances of this component inside of 'death-square' as you think necessary to crush the rebel scum. 
+3. Create a component called `turret`. This component consists of an `<img>` tag with [turret.png](images/turret.png) as its source. Nest as many instances of this component inside of `death-square` as you think necessary to crush the rebel scum. 
 
-4. Now that our death square is protected, let's create a component called 'laser-cannon'. One instance of this component should also be nested in our 'death-square' component, centered inside of our 'death-square' component and should have a square red background.
+>**Note:** All Angular assets are served up from the `src/assets` folder.  Point the turret's `src` attribute at this folder (e.g. `/assets/...`).
 
-5. Our death square is complete, but we would still be vulnerable if the rebel fleet attacked. Let's create a new component called 'tie-fighter', and add as many instances as you feel necessary to protect our death square. Do NOT nested these in the 'death-square' component.
+4. Now that our death square is protected, let's create a component called `laser-cannon`. One instance of this component should also be nested in our `death-square` component, centered inside of our `death-square` component and should be a square with a red background.
 
-6. This death square will surely not be destroyed now, but we still want to wrap up our code up so future engineers can build another one easily. Package the 'death-square', 'turret' and 'laser-cannon' in a feature model.
+5. Our death square is complete, but we would still be vulnerable if the rebel fleet attacked. Let's create a new component called `tie-fighter`, include [tie-fighter.png](images/tie-fighter.png) in its template, and add as many instances as you feel necessary to protect our death square. Do NOT nest these in the `death-square` component.
+
+6. This death square will surely not be destroyed now, but we still want to wrap up our code so future engineers can build another one easily. Move the `turret` and `laser-cannon` into the `death-square` repository, and create a feature module for `death-square`.
 
 ### Bonus
 
-7. Our tie fighters will be exposed if the rebels attack with larger cruisers. Create a 'star-destroyer' component, add it to our app NOT nested in the 'death-square' component, then package it and our tie-fighter component into a feature module.
+7. Our tie fighters will be exposed if the rebels attack with larger cruisers. Create a `star-destroyer` component, add it to our app, NOT nested in the `death-square` component, then package it and our tie-fighter component into a feature module called `external-defenses`.
 
