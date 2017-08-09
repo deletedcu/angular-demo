@@ -1,13 +1,14 @@
 # What is Routing?
 
 ## Lesson Objectives
+*By the end of this, developers will be able to:*
 
-1. Describe Routing
-1. Demo Routing
+- Describe Routing
+- Demo Routing
 
 ## Describe Routing
 
-- Routing is the process an app uses mimic the feel of traditional navigation
+- Routing is the process an app uses to mimic the feel of traditional navigation
 - The process:
     1. Define a set of URLs for the app to listen for
     1. When a user visits those particular URLs, the app will load a component into a specific part of the page
@@ -25,4 +26,4 @@ Demo the site in [/router](/router).  Show the following:
     1. Reopen the browser
     1. Paste the link into the URL bar
     1. Hit Enter
-    1. Note that it takes you directly the "page" whose URL you copied
+    1. Note that it takes you directly to the "page" whose URL you copied
