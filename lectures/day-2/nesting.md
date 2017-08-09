@@ -1,13 +1,14 @@
 # Nesting
 
 ## Lesson Objectives
+*By the end of this, developers will be able to:*
 
-1. Describe nested routes
-1. Create components for two sub sections
-1. Move the appropriate HTML to each sub section component
-1. Create a router just for the sub sections
-1. Replace the old main route with the new routing module
-1. Add the router outlet for the sub sections:
+- Describe nested routes
+- Create components for two sub sections
+- Move the appropriate HTML to each sub section component
+- Create a router just for the sub sections
+- Replace the old main route with the new routing module
+- Add the router outlet for the sub sections:
 
 ## Describe nested routes
 
@@ -15,7 +16,7 @@ Sometimes you want to have sub sections within a specific route (routes within r
 
 ## Create components for two sub sections
 
-We're going to split `/about` into `/about/early-life` and `/about/career`.
+We're going to split `/about` into `/early-life` and `/career`.
 
 Generate the two components:
 

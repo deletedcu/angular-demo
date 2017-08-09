@@ -1,17 +1,18 @@
 # Video: Quick intro to SPAs and Push state
 
 ## Lesson Objectives
+*By the end of this, developers will be able to:*
 
-1. Define what a SPA is
-1. List some advantages of a SPA over a traditional website
-1. Describe PushState
+- Define what an SPA is
+- List some advantages of an SPA over a traditional website
+- Describe PushState
 
-## Define what a SPA is
+## Define what an SPA is
 
-- A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a faster, more intuitive user experience. In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.(show facebook loading content as the user scrolls)
+- A **single-page application** (SPA) is a web application or web site that fits on a single web page with the goal of providing a faster, more intuitive user experience. In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.(show facebook loading content as the user scrolls)
 - The page does not reload at any point in the process, nor does control transfer to another page. Interaction with the single page application often involves dynamic communication with the web server behind the scenes.(show diagram of a web page with a button.  a cursor clicks on it.  an arrow labeled "request" is drawn between the page and a diagram of a web server.  an arrow labeled "data" is drawn from the web server back to the page.  a box with the word "data" appears in the diagram of the page)
 
-## List some advantages of a SPA over a traditional website
+## List some advantages of an SPA over a traditional website
 
 - Load time is slower up front, but faster with each interaction
     - The server sends one large file up front, but then just sends tiny chunks of data to the user for each request (rather than an entire brand new page)
@@ -29,7 +30,7 @@
             - Personal computers are fast enough now to handle this
     - Show drawing of two situations:
         - one large computer with big arm muscles and $$$$ around it.  This computer has arrows out to many small computers
-        - one small computer with thin arms and $ around it.  This computer has arrows out slightly larger computers with $ around them
+        - one small computer with thin arms and $ around it.  This computer has arrows out slightly larger than computers with $ around them
 
 ## Describe PushState
 

@@ -1,34 +1,35 @@
 # Routing in Angular
 
 ## Lesson Objectives
+*By the end of this, developers will be able to:*
 
-1. Create a new angular app
-1. Clean up app HTML
-1. Create About, Links, and Resume components
-1. Edit the HTML for the About, Links, and Resume components
-1. Display all components at once
-1. Set up the router
-1. Tell the router where to display the components
-1. Create links to the different "pages"
-1. Create an external routing file
-1. Use external AppRoutingModule in app.module.ts
+- Create a new angular app
+- Clean up app HTML
+- Create About, Links, and Resume components
+- Edit the HTML for the About, Links, and Resume components
+- Display all components at once
+- Set up the router
+- Tell the router where to display the components
+- Create links to the different "pages"
+- Create an external routing file
+- Use external AppRoutingModule in app.module.ts
 
 ## Create a new angular app
 
-First create a new app using
+First create a new app using:
 
 ```
 ng new router
 ```
 
-Now, `cd` into the new directory and start serving the app
+Now, `cd` into the new directory and start serving the app:
 
 ```
 cd router
 ng serve --open
 ```
 
-You should now see the welcome screen
+You should now see the welcome screen.
 
 ## Clean up app HTML
 
