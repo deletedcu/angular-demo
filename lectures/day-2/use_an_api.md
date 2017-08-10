@@ -23,18 +23,18 @@ cd starwars
 ng serve --open
 ```
 
-## Generate a new component
-
-```
-ng generate component search
-```
-
 ## Clean up app.component.html
 
 Set `src/app/app.component.html` contents to:
 
 ```html
 <h1>Star Wars Character Search App</h1>
+```
+
+## Generate a new component
+
+```
+ng generate component search
 ```
 
 ## Add search component to app
@@ -99,7 +99,7 @@ In `src/app/search/search.component.html`, add `[(ngModel)]` to the text input:
 </section>
 ```
 
-Test this by changing the text in the input field
+Test this by changing the text in the input field.
 
 ## Invoke a function when the user clicks a button
 
@@ -121,7 +121,7 @@ Call it in `src/app/search/search.component.html` (also remove the `Search Strin
 </section>
 ```
 
-Test this by looking in the console
+Test this by looking in the console.
 
 ## Add the ability to make AJAX requests
 
@@ -172,9 +172,9 @@ findCharacter(name){
 }
 ```
 
-The `rxjs/add/operator/toPromise` import that we previously wrote adds the ability to change the `Observable` (more on this in another lecture) into a `Promise`
+The `rxjs/add/operator/toPromise` import that we previously wrote adds the ability to change the `Observable` (more on this in another lecture) into a `Promise`.
 
-You can test this by looking in the console
+You can test this by looking in the console.
 
 ## Display AJAX results in app
 
@@ -212,7 +212,7 @@ Now add some HTML to `src/app/search/search.component.html` to display the resul
 </section>
 ```
 
-You can test this in the app
+You can test this in the app.
 
 ## Display more data in the HTML
 
