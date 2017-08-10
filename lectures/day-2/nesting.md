@@ -143,7 +143,7 @@ You can now test by going to:
 
 ## Add links to the various sub sections:
 
-You can now create links to these sub section in `src/app/app.component.html`:
+You can now create links to these sub sections in the `About` `<li>` inside `src/app/app.component.html`:
 
 ```html
 <h2>About Page</h2>
