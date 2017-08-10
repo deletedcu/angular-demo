@@ -1,5 +1,7 @@
 # Routing in Angular
 
+<!--2:03 WDI4 -->
+
 ## Lesson Objectives
 *By the end of this, developers will be able to:*
 
@@ -31,6 +33,8 @@ ng serve --open
 
 You should now see the welcome screen.
 
+<!--WDI4 2:09 -->
+
 ## Clean up app HTML
 
 Go into `src/app/app.component.html` and change the HTML to:
@@ -48,6 +52,8 @@ ng generate component about
 ng generate component links
 ng generate component resume
 ```
+
+<!--2:14 WDI4 -->
 
 ## Edit the HTML for the About, Links, and Resume components
 
@@ -120,6 +126,8 @@ Edit `src/app/app.component.html`:
 
 You should now see all components displayed on the page
 
+<!-- WDI4 2:20-->
+
 ## Set up the router
 
 First import the RouterModule in to `src/app/app.module.ts`:
@@ -169,6 +177,8 @@ You can now test the different "pages" by going to
 - http://localhost:4200/links
 - http://localhost:4200/resume
 
+<!--WDI4 2:29 -->
+
 ## Create links to the different "pages"
 
 When creating links, we don't use `href` anymore.  Instead we use `routerLink`.  Edit `src/app/app.component.html`:
@@ -193,6 +203,8 @@ When creating links, we don't use `href` anymore.  Instead we use `routerLink`. 
 </nav>
 <router-outlet></router-outlet>
 ```
+
+<!--WDI4 2:35-->
 
 ## Create an external routing file
 
@@ -251,3 +263,5 @@ import { AppRoutingModule } from './app-routing.module'
 })
 export class AppModule { }
 ```
+
+<!--WDI4 2:45 -->
