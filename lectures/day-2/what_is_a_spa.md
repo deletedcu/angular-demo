@@ -1,5 +1,7 @@
 # What is a SPA?
 
+<!--1:37 WDI4 -->
+
 ## Lesson Objectives
 *By the end of this, developers will be able to:*
 
@@ -38,3 +40,5 @@ A **single-page application** (SPA) is a web application or web site that fits o
     1. Interact with cards/lists
     1. Note that creating/moving/editing/deleting cards does not cause the page to refresh, even though the data is saved
     1. Perhaps have a student go to the same board and interact with it.  Note that changes appear for the instructor in real time
+
+<!--WDI4 1:49 -->
