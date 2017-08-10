@@ -1,5 +1,7 @@
 # Nesting
 
+<!--3:33 WDI4 -->
+
 ## Lesson Objectives
 *By the end of this, developers will be able to:*
 
@@ -40,6 +42,8 @@ and `src/app/career/career.component.html`:
 <h3>Career</h3>
 <p>Now I'm makin' it raaaiiiiiinnnn!!!</p>
 ```
+
+<!--WDI4 3:40 -->
 
 ## Create a router just for the sub sections
 
@@ -135,9 +139,11 @@ You can now test by going to:
 - http://localhost:4200/about/early-life
 - http://localhost:4200/about/career
 
+<!--WDI4 3:53 -->
+
 ## Add links to the various sub sections:
 
-You can now create links to these sub section in `src/app/about/about.component.html`:
+You can now create links to these sub section in `src/app/app.component.html`:
 
 ```html
 <h2>About Page</h2>
@@ -153,3 +159,5 @@ You can now create links to these sub section in `src/app/about/about.component.
 </nav>
 <router-outlet></router-outlet>
 ```
+
+<!--WDI4 3:59 -->
