@@ -1,5 +1,7 @@
 # Observables
 
+<!--WDI4 2:16 -->
+
 ## Lesson Objectives
 
 1. Describe publish/subscribe model and how it relates to Observables
@@ -20,6 +22,8 @@ A lot of times, communication between components is done through component prope
 
 An observable is our publisher model.  It will broadcast events that happen, and we can then tell components to `subscribe` to this publisher.  They will be notified when an event happens, and they can choose to do what they want at this point.  The other thing our observables do is allow us to deal with streams of events.  We can perform operations on them to optimize the performance of our application.
 
+<!--WDI4 2:22 -->
+
 ## Demonstrate when a normal promise is not optimal
 
 We're going to be optimizing our star wars app from the previous day.
@@ -34,6 +38,8 @@ Firstly, we want it to search as the user types into the input (like how google 
 ```
 
 Test it out.  In the network tab of your Chrome Developer Tools, see how a request goes out for every letter?  This can use up data unnecessarily.  Also, the responses don't always come back in order.  With Observables, we can fix this.
+
+<!--2:29 WDI4 -->
 
 ## Switch from a Promise to an Observable
 
@@ -53,6 +59,8 @@ Since we aren't using `toPromise` anymore, we can eliminate this line of code in
 ```javascript
 import 'rxjs/add/operator/toPromise';
 ```
+
+<!--WDI4 2:36 -->
 
 ## Make typing into an input field an observable
 
@@ -84,6 +92,8 @@ export class SearchComponent implements OnInit {
 
 }
 ```
+
+<!--WDI4 2:42 -->
 
 In `findCharacter`, let's publish those events:
 
@@ -153,6 +163,8 @@ ngOnInit() {
 
 Now try typing.  You should see that a request goes out only when you pause your typing.
 
+<!--WDI4 2:59-->
+
 ## Check for distinct events from an observable
 
 Try selecting the input with your cursor, typing in a value, and then hitting tab to make the cursor move away from the input box.  You should see a second request go out to the same location, even though the search value is the same as before.  Let's fix this.
@@ -176,6 +188,9 @@ ngOnInit() {
         })
 }
 ```
+
+<!--3:03 WDI4 -->
+<!--Came back 3:20 WDI4 -->
 
 ## Create a service for an observable
 
@@ -207,6 +222,8 @@ export class SearchService {
     }
 }
 ```
+
+<!--WDI4 3:27 -->
 
 We need to import the Http module into `src/app/search/search.service.ts`, though:
 
@@ -255,6 +272,8 @@ this.searchSubject
     })
 ```
 
+<!--WDI4 3:35 -->
+
 You might see an error in your Chrome console.  We still need to specify our new service as a provider, either at the app level or at the component level.  Let's do at the app level, so that other components can use it if they need to later.  Edit `src/app/app.module.ts` to add the import:
 
 ```javascript
@@ -278,6 +297,8 @@ Now add it as a provider in `src/app/app.module.ts`:
     bootstrap: [AppComponent]
 })
 ```
+
+<!--WDI4 3:38 -->
 
 ## Format the content of the event being published
 
@@ -309,8 +330,10 @@ Back in `src/app/search/search.component.ts` we can simplify what comes back fro
 
 ```javascript
 this.searchService.createAPIObservable(name)
-    .subscribe(results => this.results = results);
+    .subscribe(response => this.results = response);
 ```
+
+<!--WDI4 3:4 -->
 
 ## Pass an observable off to the HTML
 
