@@ -333,7 +333,7 @@ this.searchService.createAPIObservable(name)
     .subscribe(response => this.results = response);
 ```
 
-<!--WDI4 3:4 -->
+<!--WDI4 3:46 -->
 
 ## Pass an observable off to the HTML
 
@@ -371,6 +371,8 @@ Now change the HTML in `src/app/search/search.component.html` to handle the fact
 ```html
 <li *ngFor="let character of results | async">
 ```
+
+<!--WDI4 3:58 -->
 
 This should work.  Let's clean up our names so it's clear.  Edit `src/app/search/search.component.ts`:
 
@@ -420,6 +422,8 @@ You might notice that "Search Results" is always displayed even when there are n
 ```
 
 Now the `h2` subscribes to the observable and tests to see if there are values in it
+
+<!--WDI4 Ended 4:03 -->
 
 ### Resources
 
