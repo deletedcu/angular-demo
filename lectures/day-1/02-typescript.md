@@ -37,7 +37,7 @@ What did we just install? This program will read our TypeScript, interpret it, a
 
 ![Transpiling](https://i1.wp.com/www.mithunvp.com/wp-content/uploads/2016/02/transpiling.png)
 
-Let's try it out!
+Let's try it out!  Clone [this repo](https://github.com/den-materials/typescript-files) with three `.ts` files inside.  We will go through them one-by-one.
 
 Take a look at **hello.ts.** You should see this:
 
