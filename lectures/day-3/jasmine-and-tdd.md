@@ -18,8 +18,8 @@ Test Driven Development leads to better code. TDD is extremely helpful when impl
 *After this workshop, developers will be able to:*
 
 - **Write** unit tests using Jasmine `expectations` and `matchers`
-- **Define** common Jasmine terms including `describe`, `context`, and `it`
-- **Refactor** tests with `before`
+- **Define** common Jasmine terms including `describe` and `it`
+- **Refactor** tests with `before` and `beforeEach`
 
 ### Where should we be now?
 *Before this workshop, developers should already be able to:*
