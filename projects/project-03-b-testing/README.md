@@ -18,7 +18,7 @@ The rebels are on board our death square, and are heading for our datbanks!  A p
 
 5. Woo hoo, we're failing again!  We need to import one more thing.  It's called `RouterTestingModule` and it comes from the `@angular/router/testing` package.  Don't forget to add it to the `imports` array, too.  Save the file, and check the `ng test` browser output one more time.
 
-6. Create a new test below the 'should be created' one, and call it 'should get data from the data banks'.  Fail this test the old fashioned way, by making it test `expect(true).toEqual(false);`.
+6. Create a new test below the 'should be created' one, and call it 'should have a findTurret function to get data from the data banks'.  Fail this test the old fashioned way, by making it test `expect(true).toEqual(false);`.
 
 7. Let's actually test something now.  We're going to make a lot of changes to our Death Square Dashboard™, and we need to make sure that `findTurret` is still a working function.  Replace our `expect(true)...` expectation with `expect(typeof(component.findTurret)).toBe('function');`
 
