@@ -18,8 +18,8 @@ Test Driven Development leads to better code. TDD is extremely helpful when impl
 *After this workshop, developers will be able to:*
 
 - **Write** unit tests using Jasmine `expectations` and `matchers`
-- **Define** common Jasmine terms including `describe`, `context`, and `it`
-- **Refactor** tests with `before`
+- **Define** common Jasmine terms including `describe` and `it`
+- **Refactor** tests with `before` and `beforeEach`
 
 ### Where should we be now?
 *Before this workshop, developers should already be able to:*
@@ -27,41 +27,7 @@ Test Driven Development leads to better code. TDD is extremely helpful when impl
 - **Program** in Javascript
 - **Pass tests** in a TDD manner
 
-<!--5 minutes (10)-->
-
-## Do You Test?
-
-#### Place yourselves somewhere in the following ranges:
-
-* I have used TDD **or** I have never used TDD
-
-* I love the idea of TDD **or** I hate the idea of TDD
-
-#### Thoughts:
-
-<!--Have devs think about this as they sit down, then ask if they have anything to add after reading the list below -->
-
-* For those of you who are negative to testing, why? What did you or would you do instead?
-* For those of you who are positive to testing, why? What problems did it solve?
-
-<details><summary>Some possible responses...</summary>
-
-<!--Ask one student to read Cons, one to read Pros, add any they think are missing -->
-
-* Cons
- * **Time.** It's a waste of my time and effort to test.
- * **It's too much.** I can test just fine using the console.
- * **App complexity.** My app is too simple to require testing.
-* Pros
- * **Bug detection.** Quickly identify unanticipated errors.
- * **Code Quality.** Create standards for our code before writing it.
- * **Time.** Shorten development time through bug detection; allows for [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
- * **Documentation.** Tests act as a documentation of sorts for how our code should work. Helpful to other developers and shareholders.
- * **Jobs.** Testing is a job requirement across the board.
-
-</details>
-
-<!-- 10 minutes (20)-->
+<!-- 10 minutes (15)-->
 
 ## Unit vs End-to-end Tests
 
@@ -93,7 +59,7 @@ When we think of "testing" we tend to think of something you do *after* you've c
 
 ![TDD Example](resources/tdd_chart.png)
 
-<!--10 minutes (30)-->
+<!--10 minutes (25)-->
 <!-- Key point: this is just a demo, devs should NOT clone this repo, it will just confuse them when we move to the exercise -->
 
 ## What is Jasmine?
@@ -186,7 +152,7 @@ describe('PersonComponent', () => {
 
 >What does `expect(person.language).toEqual('English');` mean in regular English?
 
-<!-- 15 minutes (45)-->
+<!-- 15 minutes (40)-->
 
 <!-- Half Mast -->
 
@@ -280,7 +246,7 @@ We did it!  Now everything is green again.
 
 ## More expectations!
 
-<!-- 20 minutes (65)-->
+<!-- 20 minutes (60)-->
 
 ### Challenge: Hungry Dog
 
@@ -353,7 +319,7 @@ describe("Dog", function() {
 
 Write the code to pass the above specs!
 
-<!-- 5 minutes (70)-->
+<!-- 5 minutes (65)-->
 
 ### Before Blocks
 
@@ -371,7 +337,7 @@ In e2e testing, one process runs the real application and a second process runs 
 
 If you would like to dive deeper into end-to-end tests, you may want to look at [this tutorial](https://blog.jscrambler.com/getting-started-with-angular-2-end-to-end-testing/).
 
-<!--5 minutes (75)-->
+<!--5 minutes (70)-->
 
 ## Closing
 
