@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--WDI4 1:34 -->
+
 # Introduction to Angular
 
 ![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
@@ -34,3 +36,5 @@ Angular applications consist of a series of cascading **components**.
 **Components** are bundles of html, css and typescript that represent unique entities that appear on web pages, like user icons and buttons.
 
 Now that we're acquainted with what we're going to be learning, it's time to get cracking! As eager as you may be to start writing Angular code, however, we first need to learn the basics of TypeScript.
+
+<!--1:41 WDI4 -->

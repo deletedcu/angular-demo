@@ -1,5 +1,7 @@
 # What is Push State?
 
+<!--WDI4 1:50 -->
+
 # Lesson Objectives
 *By the end of this, developers will be able to:*
 
@@ -33,3 +35,5 @@
     1. Close the window
     1. Open a new window and paste the copied URL into the URL bar.  Hit enter (duh)
     1. Note that the page has opened to show the card that was opened when we copied the URL
+
+<!--1:56 WDI4 -->
