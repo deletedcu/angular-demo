@@ -201,7 +201,7 @@ meta.addTags([
 ![](resources/componentRendered.jpg)
 
 <!--WDI4 3:22 turning ove to devs -->
-<!--WDI4 3:27  coming back -->
+<!--WDI4 3:28  coming back -->
 
 ### Resources
 
