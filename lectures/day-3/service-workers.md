@@ -154,7 +154,7 @@ self.addEventListener('install', function(event) {
 >**Note:** Sometimes the cache does not update immediately.  If it looks empty, you can close Dev Tools and open it again to bring in the newest cache.
 
 <!--12:05 WDI4 turning over to devs -->
-<!--WDI4 coming back 12:-->
+<!--WDI4 coming back 12:12-->
 
 10. Our resources are in the cache!  Now we need to reference these any time we're offline.  To do that, add the following `fetch` handler to `service-worker.js`.  `fetch` is an API that Service Workers use to grab resources online, similar to XML/HTTP requests:
 
@@ -176,9 +176,14 @@ self.addEventListener('fetch', function(event) {
 
 11. Refresh your browser, cross your fingers, select `Offline` again, and refresh your browser one more time.  Woo hoo, no more "Offline-osaur"!
 
+<!--WDI4 12:16 turning over to devs -->
+<!--WDI4 coming back 12:25 -->
+
 ### Conclusion
 
 - What is a Service Worker?
 - Why is a Service Worker useful?
 - Name two steps in the Service Worker life cycle.
 - What is `fetch`?
+
+<!--WDI4 12:28 -->
