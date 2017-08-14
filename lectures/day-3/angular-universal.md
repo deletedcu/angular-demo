@@ -28,7 +28,7 @@ Well, yes, except for a couple things:
 
 2. Dynamic SPAs are really bad for SEO (Search Engine Optimization).
 
-In this lesson, we will address those two issues.
+In this lesson, we will address the second issue.
 
 ### Setup
 
@@ -36,11 +36,12 @@ First, we'll need to create a new project with the Angular CLI called `first-ang
 
 Now, let's bring Angular Universal into the picture.  In order to do this, we will need something you have probably seen before: a Node server.
 
-1. First, we will need to install the `platform-server` package, so enter the `first-angular-universal` directory in Terminal and run the following command:
+1. First, we will need to install the `platform-server` package and the `ts-node` package that will allow us to run `node` on a TypeScript file, so enter the `first-angular-universal` directory in Terminal and run the following command:
 
 `npm install -S @angular/platform-server`
+`npm install -D ts-node`
 
-2. Next, we will need to connect the client to this Node server.  Open your `app.module.ts` file and replace the `BrowserModule` import with the following line:
+2. Next, we will need to connect the client to this Node server.  Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
 
 ```js
 BrowserModule.withServerTransition({appId: 'cli-universal-demo'})
@@ -118,28 +119,62 @@ Look familiar?
 
 Besides the code you're used to from a typical Node `server.js` file, this file includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
 
-6. Finally, we need to change our `package.json` scripts to run our transpiled `server.js` file instead of the default front-end-only webserver:
+6. Next, we will ignore `server.ts` in our `tsconfig.app.json` file:
+
+```js
+  "exclude": [
+    "server.ts",
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+```
+
+7. Finally, we need to change our `package.json` scripts to run our transpiled `server.js` file instead of the default front-end-only webserver:
 
 ```json
   "scripts": {
     "prestart": "ng build --prod && ngc",
-    "start": "node src/server.js"
+    "start": "ts-node src/server.ts"
   }
 ```
 
-7. Now, make sure you are in the `first-angular-universal` directory and run `npm run start`.
+8. Now, make sure you are in the `first-angular-universal` directory and run `npm run start`.
 
-8. Go to `http://localhost:4000` and you should see your app...but this time with a full back end!
+9. Go to `http://localhost:4000` and you should see your app...but this time with a full back end!
 
 Cool, right?  But we haven't changed any functionality yet, next we'll set our site up for easy searching.
 
 ### SEO
 
-Coming soon!
+A cornerstone of on-page SEO factors are unique titles, meta descriptions and meta keywords. 
 
-### Better Page Performance
+Let's add support for these to our fledgling app.
 
-Coming soon!
+1. In `app.component.ts`, we need to add the `Meta` and `Title` packages:
+
+```typescript
+import { Meta, Title } from "@angular/platform-browser";
+```
+
+2. Add Meta and Title to a constructor function for your `AppComponent`:
+
+```typescript
+  constructor(meta: Meta, title: Title) {}
+```
+
+3. Then add a title and some meta tags for your app:
+
+```typescript
+title.setTitle('Our Very Professional Page');
+
+meta.addTags([
+  { name: 'author',   content: 'YOURNAMEHERE'},
+  { name: 'keywords', content: 'angular seo, angular 4 universal, etc'},
+  { name: 'description', content: 'This is my Angular SEO-based App, enjoy it!' }
+]);
+```
+
+4. Go back to your browser, refresh the page, and inspect `Element` with `Dev Tools`.  You should see your title and meta tags now!  SEO FTW!!
 
 ![](resources/componentRendered.jpg)
 
@@ -147,6 +182,7 @@ Coming soon!
 
 - [Angular Universal Official Page](https://universal.angular.io/)
 - [Angular Universal Setup Tutorial](https://medium.com/@evertonrobertoauler/angular-4-universal-app-with-angular-cli-db8b53bba07d)
+- [Newer Angular Universal Setup Tutorial](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 - [Making Angular SEO Friendly](https://coursetro.com/posts/code/68/Make-your-Angular-App-SEO-Friendly-(Angular-4-+-Universal))
 - [Angular Universal Pitch](http://dev.sebastienlucas.com/universal-angular/)
 - [Angular Universal Docs](https://github.com/angular/universal)
