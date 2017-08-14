@@ -161,6 +161,8 @@ Cool, right?  But we haven't changed any functionality yet, next we'll set our s
 <!--2:52 WDI4 turning over to devs -->
 <!--WDI4 coming back 2:57-->
 
+<!--After break, WDI4 3:12 -->
+
 ### SEO
 
 A cornerstone of on-page SEO factors are unique titles, meta descriptions and meta keywords. 
@@ -179,7 +181,10 @@ import { Meta, Title } from "@angular/platform-browser";
   constructor(meta: Meta, title: Title) {}
 ```
 
-3. Then add a title and some meta tags for your app:
+<!--3:15 WDI4 turning over to devs -->
+<!--3:19 WDI4 -->
+
+3. Then add a title and some meta tags for your app **inside the constructor** function:
 
 ```typescript
 title.setTitle('Our Very Professional Page');
@@ -194,6 +199,9 @@ meta.addTags([
 4. Go back to your browser, refresh the page, and inspect `Element` with `Dev Tools`.  You should see your title and meta tags now!  SEO FTW!!
 
 ![](resources/componentRendered.jpg)
+
+<!--WDI4 3:22 turning ove to devs -->
+<!--WDI4 3:27  coming back -->
 
 ### Resources
 
