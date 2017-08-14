@@ -1,5 +1,7 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI4 11:34 -->
+
 # Service Workers
 
 ### Why is this important?
@@ -38,6 +40,9 @@ In order to get started, we need to do a little front-end setup:
 3. Fill `index.html` out with basic HTML boilerplate, and a "Hello World" heading
 4. Create a `service-worker.js` file inside the same folder
 
+<!--WDI4 11:37 turning over to devs -->
+<!--WDI4 coming back 11:42 -->
+
 #### Dev Tools Revisited
 
 Open up Chrome Developer Tools, and select the `Application` tab.  This is where we will be playing the most today.
@@ -74,6 +79,8 @@ Let's walk through what's happening here.
 Save your work, and start a web server like python's `SimpleHTTPServer` in your folder.
 
 >**Note:** It is *very important* that you load your page with a web server, rather than opening the HTML file directly.  Service Workers do not work on static files.
+
+<!--WDI4 11:53-->
 
 ### Actually Doing Work with our Service Worker
 
@@ -119,6 +126,7 @@ Remember Xzibit? He had some very powerful things to say about software tests.
 ```js
 var CACHE_NAME = 'service-worker-cache-v1';
 var urlsToCache = [
+  'service-worker.js',
   'index.html',
   'xzibit_testing_software.jpg'
 ];
@@ -144,6 +152,9 @@ self.addEventListener('install', function(event) {
 9. Yayy, Xzibit's back!  But is he here to stay?  Click the `Cache Storage` item on the left of your `Application` tab in Developer Tools.
 
 >**Note:** Sometimes the cache does not update immediately.  If it looks empty, you can close Dev Tools and open it again to bring in the newest cache.
+
+<!--12:05 WDI4 turning over to devs -->
+<!--WDI4 coming back 12:-->
 
 10. Our resources are in the cache!  Now we need to reference these any time we're offline.  To do that, add the following `fetch` handler to `service-worker.js`.  `fetch` is an API that Service Workers use to grab resources online, similar to XML/HTTP requests:
 
