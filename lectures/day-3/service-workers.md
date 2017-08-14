@@ -171,7 +171,3 @@ self.addEventListener('fetch', function(event) {
 - Why is a Service Worker useful?
 - Name two steps in the Service Worker life cycle.
 - What is `fetch`?
-
-### Connecting to Angular 2
-
-Coming soon!
