@@ -46,6 +46,9 @@ Now, let's bring Angular Universal into the picture.  In order to do this, we wi
 
 `npm install -D ts-node`
 
+<!--2:20 turning over to devs WDI4-->
+<!--WDI4 2:26 coming back -->
+
 2. Next, we will need to connect the client to this Node server.  Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
 
 ```js
@@ -69,6 +72,9 @@ import { AppComponent } from './app.component';
 })
 export class AppServerModule { }
 ```
+
+<!--2:31 WDI4 turning over to devs -->
+<!--WDI4 coming back 2:37 -->
 
 4. Next, we will add compiler options to our `tsconfig.json` file:
 
@@ -124,6 +130,9 @@ Look familiar?
 
 Besides the code you're used to from a typical Node `server.js` file, this file includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
 
+<!--WDI4 2:41 turning over to devs -->
+<!--WDI4 coming back 2:46 -->
+
 6. Next, we will ignore `server.ts` in our `tsconfig.app.json` file:
 
 ```js
@@ -134,7 +143,7 @@ Besides the code you're used to from a typical Node `server.js` file, this file 
   ]
 ```
 
-7. Finally, we need to change our `package.json` scripts to run our transpiled `server.js` file instead of the default front-end-only webserver:
+7. Finally, we need to change our `package.json` scripts to run our `server.ts` file instead of the default front-end-only webserver:
 
 ```json
   "scripts": {
@@ -148,6 +157,9 @@ Besides the code you're used to from a typical Node `server.js` file, this file 
 9. Go to `http://localhost:4000` and you should see your app...but this time with a full back end!
 
 Cool, right?  But we haven't changed any functionality yet, next we'll set our site up for easy searching.
+
+<!--2:52 WDI4 turning over to devs -->
+<!--WDI4 coming back 2:57-->
 
 ### SEO
 
