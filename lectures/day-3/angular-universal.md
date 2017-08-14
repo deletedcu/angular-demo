@@ -1,5 +1,7 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--2:14 WDI4-->
+
 # Angular Universal
 
 ![](resources/siteBroken.jpeg)
@@ -30,6 +32,8 @@ Well, yes, except for a couple things:
 
 In this lesson, we will address the second issue.
 
+<!--WDI4 2:17 -->
+
 ### Setup
 
 First, we'll need to create a new project with the Angular CLI called `first-angular-universal`.  If you can't remember how to do this, you can check earlier lessons.
@@ -39,6 +43,7 @@ Now, let's bring Angular Universal into the picture.  In order to do this, we wi
 1. First, we will need to install the `platform-server` package and the `ts-node` package that will allow us to run `node` on a TypeScript file, so enter the `first-angular-universal` directory in Terminal and run the following command:
 
 `npm install -S @angular/platform-server`
+
 `npm install -D ts-node`
 
 2. Next, we will need to connect the client to this Node server.  Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
