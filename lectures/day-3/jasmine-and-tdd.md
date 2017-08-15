@@ -62,7 +62,6 @@ When we think of "testing" we tend to think of something you do *after* you've c
 ![TDD Example](resources/tdd_chart.png)
 
 <!--9:45 WDI4 -->
-
 <!--10 minutes (25)-->
 <!-- Key point: this is just a demo, devs should NOT clone this repo, it will just confuse them when we move to the exercise -->
 
@@ -157,7 +156,6 @@ describe('PersonComponent', () => {
 >What does `expect(person.language).toEqual('English');` mean in regular English?
 
 <!-- 15 minutes (40)-->
-
 <!--WDI4 9:55 -->
 
 <!-- Half Mast -->
@@ -334,7 +332,6 @@ describe("Dog", function() {
 Write the code to pass the above specs!
 
 <!--WDI4 10:47 -->
-
 <!-- 5 minutes (65)-->
 
 ### Before Blocks
