@@ -1,5 +1,7 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI4 3:47 -->
+
 # Major Angular Packages Breakdown
 
 In this lesson, we will discuss the most popular and frequently used packages in Angular.
@@ -106,6 +108,8 @@ Make sure you switch drivers halfway through.
 
 - What does `rxjs` add to Angular?
 - What is `lite-server`?
+
+<!--3:56 WDI4, turning over to devs for the activity above (30-40 minutes) -->
 
 ### Resources
 

@@ -1,5 +1,7 @@
 <!-- 5 minutes (5)-->
 
+<!--WDI4 9:39 -->
+
 <!--Hook: Has anyone here tried fixing a car or complicated appliance?  After two hours, you get the piece back in place, or the wheel on straight.  Then what do you do?  (For me, back up and cross fingers that it works.)  The idea behind TDD is to gain a higher confidence that before we flip that switch, before we try to go 80 miles an hour on the highway, the app we are building does what the customer wants.  
 
 Whether you like it or not, you will have to test your software somehow before you get it to your users.  Today, we'll talk about how to do that *with software itself*.  Woo-hoo, using software to test software!  -->
@@ -59,6 +61,7 @@ When we think of "testing" we tend to think of something you do *after* you've c
 
 ![TDD Example](resources/tdd_chart.png)
 
+<!--9:45 WDI4 -->
 <!--10 minutes (25)-->
 <!-- Key point: this is just a demo, devs should NOT clone this repo, it will just confuse them when we move to the exercise -->
 
@@ -153,6 +156,7 @@ describe('PersonComponent', () => {
 >What does `expect(person.language).toEqual('English');` mean in regular English?
 
 <!-- 15 minutes (40)-->
+<!--WDI4 9:55 -->
 
 <!-- Half Mast -->
 
@@ -176,6 +180,9 @@ Run `ng test`, and you should see a browser open with the following output:
   DogComponent
     ✓ should be created
 ```
+
+<!--WDI4 would have been 10:01 but had to resolve student issues...some really confusing ones depending on where ng g c was run, folder names, etc -->
+<!--WDI4 actually 10:07 -->
 
 ### Writing our First Specification
 
@@ -244,6 +251,8 @@ We did it!  Now everything is green again.
 
 <!-- Half-mast again -->
 
+<!--10:19 WDI4, still working on one student's issue...super-frustrating, i have no idea what's going on...complaining about `Can not load "webpack"!` -->
+
 ## More expectations!
 
 <!-- 20 minutes (60)-->
@@ -256,6 +265,7 @@ Add an expectation to the dog that "allows the reading of a hunger level". This 
 
 Add another expectation to the dog that "allows the writing of a hunger level", and follow the same pattern as with the earlier expectation.  This test should set the `hungerLevel` property in the component to `5`, and then check that it is equal to `5` after it is set.  
 
+<!--WDI4 10:30 -->
 <!-- End half-mast -->
 
 ### Feeding the Dog
@@ -282,6 +292,8 @@ Let's implement a method `eat` which decrements a dog's hunger level when invoke
 ### Challenge: Teach the Dog to Eat
 
 Write the code that passes the above specifications.
+
+<!--WDI4 10:39 -->
 
 ### Edge Case
 
@@ -319,6 +331,7 @@ describe("Dog", function() {
 
 Write the code to pass the above specs!
 
+<!--WDI4 10:47 -->
 <!-- 5 minutes (65)-->
 
 ### Before Blocks
@@ -337,6 +350,7 @@ In e2e testing, one process runs the real application and a second process runs 
 
 If you would like to dive deeper into end-to-end tests, you may want to look at [this tutorial](https://blog.jscrambler.com/getting-started-with-angular-2-end-to-end-testing/).
 
+<!--WDI4 10:50 -->
 <!--5 minutes (70)-->
 
 ## Closing
@@ -348,6 +362,7 @@ If you would like to dive deeper into end-to-end tests, you may want to look at 
 - How can `before` and `beforeEach` be helpful?
 - What does Angular use to write end-to-end tests by default?
 
+<!--WDI4 10:53 -->
 
 ### Additional Resources
 - [Jasmine Documentation](https://jasmine.github.io/2.4/introduction.html)
