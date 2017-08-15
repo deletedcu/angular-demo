@@ -15,7 +15,7 @@ Look around [the comments app](https://github.com/den-materials/angular-comments
     - You should be able to click on a comment, and the text will be replaced by two text inputs (one for author, one for comment)
 
 <!--WDI4 2:31 taking a break -->
-<!--WDI4 2:42 coming back, few minutes to explain, then devs on their own-->
+<!--WDI4 2:42 coming back, few minutes to explain, then devs on their own at 2:46, let devs run with it till 4-->
 
 ## Changing a Feature
 
