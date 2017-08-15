@@ -14,6 +14,9 @@ Look around [the comments app](https://github.com/den-materials/angular-comments
 - Add a feature that allows you to edit comments
     - You should be able to click on a comment, and the text will be replaced by two text inputs (one for author, one for comment)
 
+<!--WDI4 2:31 taking a break -->
+<!--WDI4 2:42 coming back, few minutes to explain, then devs on their own-->
+
 ## Changing a Feature
 
 Look again at what you did in [the comments app](https://github.com/den-materials/angular-comments).  It's all in one component, which isn't very modular.  Put the list of comments into one component and put the new comments form into another component.  Use observables to communicate between the two.
