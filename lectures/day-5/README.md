@@ -1,5 +1,7 @@
 # Exercises With Code Bases
 
+<!--WDI4 1:35 introing to devs, 1:41 turning over to devs for independent work-->
+
 ## Adding a Feature
 
 Look around [the comments app](https://github.com/den-materials/angular-comments).  This is just a basic app that displays a list of comments.  You may need to run `npm install` for it to work.
