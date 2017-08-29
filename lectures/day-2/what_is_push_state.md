@@ -1,16 +1,17 @@
 # What is Push State?
 
 # Lesson Objectives
+*By the end of this, developers will be able to:*
 
-1. Describe PushState
-1. Demonstrate a SPA that uses Push State
+- Describe PushState
+- Demonstrate an SPA that uses Push State
 
 ## Describe PushState
 
 - PushState allows JavaScript to alter the browser's history as if a user is clicking on links and loading brand new pages
 - This gives the appearance of the user actually visiting new pages
 - If the application is set up correctly, it allows deep linking so that users can bookmark and share links to specific aspects of an application as if it were a page itself
-- The user can use the back/forward buttons of the browser to move back/forward through their history of the various states they've used of the application.
+- The user can use the back/forward buttons of the browser to move back/forward through their history of the various states of the application they've used.
     - Now it behaves just as if they were viewing multiple pages of a traditional site
 
 ## Demonstrate a SPA that uses Push State

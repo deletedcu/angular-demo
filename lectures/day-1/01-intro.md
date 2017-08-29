@@ -4,13 +4,13 @@
 
 ![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
 
-Welcome to the world of Angular! You're about to embark on a week-long journey of discover, learning one of the hottest front end frameworks on the planet.
+Welcome to the world of Angular! You're about to embark on a week-long journey of discovery, learning one of the hottest front end frameworks on the planet.
 
 ## What is Angular?
 
-Angular is a front end framework that was developed and is maintained by Google. As a front end framework, it offers developers an blueprint to organize their front end code by and many useful APIs to help speed up development significantly. Angular in particular stresses:
+Angular is a front end framework that was developed and is maintained by Google. As a front end framework, it offers developers a blueprint with which to organize their front end code and many useful APIs to help speed up development significantly. Angular in particular stresses:
 
-- Reuseability and flexibility through component structure
+- Reusability and flexibility through component structure
 - Modularity
 - Component encapsulation
 - Ubiquity
@@ -20,4 +20,4 @@ This short video will give you more context:
 
 VIDEO GOES HERE!!!!!!!!!!
 
-Now that we're acquainted with what we're going to be learning, it's time to get cracking! As eager as you may be to start writing Angular code however, we first need to learn the basics of TypeScript.
+Now that we're acquainted with what we're going to be learning, it's time to get cracking! As eager as you may be to start writing Angular code, however, we first need to learn the basics of TypeScript.

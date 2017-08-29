@@ -15,7 +15,7 @@ By the end of this lesson, students should be able to:
 
 ## What is TypeScript?
 
-TypeScript is an open-sourced programming language developed and maintained by Microsoft. It is a superset of JavaScript, meaning that **any existing valid JavaScript program is also a valid TypeScript program.** TypeScript transcompiles to JavaScript, so **it can be run in both browsers and serverside.**
+TypeScript is an open-sourced programming language developed and maintained by Microsoft. It is a superset of JavaScript, meaning that **any existing valid JavaScript program is also a valid TypeScript program.** TypeScript transpiles to JavaScript, so **it can be run in a browser and on a server.**
 
 ### "TS as a superset of JS"
 
@@ -59,7 +59,7 @@ tsc hello.ts
 
 ### Type Annotations
 
-TypeScript is a static, weakly-typed. It is staticly typed because **we can declare the types of our variables and properties which are enforced at compile time**, and it is weakly typed because **we can also choose not to.** What does this mean?
+TypeScript is a statically-, weakly-typed language. It is statically typed because **we can declare the types of our variables and properties which are enforced at compile time**, and it is weakly typed because **we can also choose not to.** What does this mean?
 
 Let's take a look at **multiplier.ts:**
 
@@ -88,7 +88,7 @@ console.log(product);
 
  . . . the same exact same thing minus the type annotations. What the hell?! Why even bother? Let's go back and change the argument to 'a billion' and see what happens.
 
- BAM. Our compiler yells at us, and doesn't produce our JavaScript file. It's saving us from making mistakes. If we remove the type annotation from the argument, compile again, and run the JavaScript script with node, we get an awkward return value that was not the intended result of the function.
+ BAM. Our compiler yells at us, even though it still produces our JavaScript file. It's saving us from making mistakes. If we remove the type annotation from the argument, compile again, and run the JavaScript script with `node`, we get an awkward return value that was not the intended result of the function.
 
  ### Lab: Make it compile
 

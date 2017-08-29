@@ -4,4 +4,10 @@
 
 You now have all the knowledge you need to build a simple Angular application from scratch.
 
-We started by learning about TypeScript and how it differs from regulas JavaScript. Then we installed the Angular CLI and explored how to use it to generate and serve our code. With our tooling set, we generated our first Angular application and walked through its parts. One of those parts was a component, which we explored in great detail. When we started creating our own components, we realized that we needed to use services to abstract out our business logic and keep our code DRY. Finally, we cleaned up our code by packaging up our components in a module. 
+We started by learning about **TypeScript** and how it differs from regulas JavaScript. 
+
+Then we installed the **Angular CLI** and explored how to use it to generate and serve our code. With our tooling set, we generated our first Angular application and walked through its parts. 
+
+One of those parts was a **component**, which we explored in great detail. 
+
+When we started creating our own **components**, we realized that we needed to use **services** to abstract out our business logic and keep our code DRY. Finally, we cleaned up our code by packaging up our components in a **module**. 

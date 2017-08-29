@@ -41,7 +41,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 As a professional software engineer, you will most likely be working off of stories. We have split the work of creating our vending machine into three user stories.
 
-### Watch: Insert Coin
+### Code Together: Insert Coin
 
 _As a vendor_  
 _I want a vending machine that accepts coins_  

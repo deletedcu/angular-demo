@@ -1,15 +1,17 @@
 # What is a SPA?
 
 ## Lesson Objectives
-1. Define what a SPA is
-1. List some advantages of a SPA over a traditional website
-1. Demonstrate a SPA
+*By the end of this, developers will be able to:*
 
-## Define what a SPA is
+- Define what an SPA is
+- List some advantages of an SPA over a traditional website
+- Demonstrate an SPA
 
-A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a faster, more intuitive user experience. In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does control transfer to another page. Interaction with the single page application often involves dynamic communication with the web server behind the scenes.
+## Define what an SPA is
 
-## List some advantages of a SPA over a traditional website
+A **single-page application** (SPA) is a web application or web site that fits on a single web page with the goal of providing a faster, more intuitive user experience. In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions. The page does not reload at any point in the process, nor does control transfer to another page. Interaction with the single page application often involves dynamic communication with the web server behind the scenes.
+
+## List some advantages of an SPA over a traditional website
 
 - Load time is slower up front, but faster with each interaction
     - The server sends one large file up front, but then just sends tiny chunks of data to the user for each request (rather than an entire brand new page)
@@ -26,7 +28,7 @@ A single-page application (SPA) is a web application or web site that fits on a 
             - It's a great example of distributed computing!
             - Personal computers are fast enough now to handle this
 
-## Demonstrate a SPA
+## Demonstrate an SPA
 
 1. Go to [Google Maps](https://www.google.com/maps/)
     1. Pan/zoom around

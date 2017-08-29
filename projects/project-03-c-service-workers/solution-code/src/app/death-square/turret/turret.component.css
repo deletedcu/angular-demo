@@ -1,0 +1,21 @@
+.left {
+  left: 0px;
+  top: 50%;
+}
+
+.right {
+  right: 0px;
+  top: 50%;
+}
+
+.up {
+
+}
+
+.down {
+
+}
+
+.turret {
+  position: relative;
+}

@@ -397,3 +397,8 @@ You might notice that "Search Results" is always displayed even when there are n
 ```
 
 Now the `h2` subscribes to the observable and tests to see if there are values in it
+
+### Resources
+
+- [Observable Documentation](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html)
+- [More on Subject vs Observable](http://javascript.tutorialhorizon.com/2017/03/23/rxjs-subject-vs-observable/)

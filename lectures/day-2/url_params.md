@@ -1,12 +1,13 @@
 # URL Params
 
 ## Lesson Objectives
+*By the end of this, developers will be able to:*
 
-1. Define what URL params are
-1. Create an external data file
-1. Use the data file to generate links
-1. Have Resume component display the id param
-1. Show specific job data based on id param
+- Define what URL params are
+- Create an external data file
+- Use the data file to generate links
+- Have Resume component display the id param
+- Show specific job data based on id param
 
 ## Define what URL params are
 

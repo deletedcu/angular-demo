@@ -31,8 +31,8 @@ To verify that everything is working, run the command `ng -v`. You should see
 a response more or less like this.
 
 ```bash
-@angular/cli: 1.0.0
-node: 7.6.0
+@angular/cli: 1.2.7
+node: 8.1.4
 os: darwin x64
 ```
 
@@ -124,7 +124,7 @@ Our scaffolded application looks like this:
 └── tslint.json
 ```
 
-At the root of our application, we have a our README, a folder for our end-to-end tests, the source folder where our code will live and a series of configuration files. These config files relate to TypeScript and the linting thereof. We will not be touching any files that live here, or the end-to-end folder.
+At the root of our application, we have a README, a folder for our end-to-end tests, the source folder where our code will live and a series of configuration files. These config files relate to TypeScript and the linting thereof. We will not be touching any files that live here, or the end-to-end folder.
 
 In **src**, we find all of the files of importance to us, and a few more configuration files we will be ignoring.
 
@@ -165,12 +165,12 @@ At this point, you may be asking yourself "but where does the code that I write 
 With **app.component.html**, we see our first Angular 2 template.
 
 ```html
-<h1>
-  {{title}}
-</h1>
+  <h1>
+    Welcome to {{title}}!
+  </h1>
 ```
 
-As you can see, Angular uses the same double bracket binding syntax as Ember.
+Notice that Angular uses a double bracket syntax to bind Javascript expressions, which is the same as Ember and similar to Handlebars if you have used either of those before.  This will come in handy very soon.
 
 The beating heart of our component exists in **app.component.ts**.
 
@@ -181,17 +181,17 @@ The beating heart of our component exists in **app.component.ts**.
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'app';
 }
 ```
 
-Our component's selecter, is the name of the html element we use to summon the component in our templates. If you look at our index, you will see:
+Our component's `selector` is the name of the html element we use to summon the component in our templates. If you look at our index, you will see:
 
 ```html
-<app-root>Loading...</app-root>
+<app-root></app-root>
 ```
 
-Finally, our app component is neatly packaged up to be bootstrapped in **app.module.ts**.
+Finally, our app component is neatly packaged up to be exported, and then bootstrapped in **app.module.ts**.
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -215,6 +215,14 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
+
+## Testing It Out
+
+Browse to `http://localhost:4200` in your browser and see your default application.
+
+Go into `app.component.ts` and change the `title` variable value to `My Website`.
+
+Go back to your browser and you will see your new title.
 
 ## Wrapping Up
 
