@@ -12,15 +12,15 @@ Those pesky rebels destroyed yet another one of our death stars. Curse them! We 
 
 2. Make a component called `death-square`. This component should be a square with a grey background. Add one instance of this component to our root component.
 
-3. Create a component called `turret`. This component consists of an `<img>` tag with [turret.png](images/turret.png) as its source. Nest as many instances of this component inside of `death-square` as you think necessary to crush the rebel scum. 
+3. Create a component called `turret`. This component consists of an `<img>` tag with [turret.png](images/turret.png) as its source. Place as many instances of this component inside the `death-square` component HTML as you think necessary to crush the rebel scum. 
 
 >**Note:** All Angular assets are served up from the `src/assets` folder.  Point the turret's `src` attribute at this folder (e.g. `/assets/...`).
 
-4. Now that our death square is protected, let's create a component called `laser-cannon`. One instance of this component should also be nested in our `death-square` component, centered inside of our `death-square` component and should be a square with a red background.
+4. Now that our death square is protected, let's create a component called `laser-cannon`. One instance of this component should also be placed in our `death-square` component, centered inside of our `death-square` component and should be a square with a red background.
 
 5. Our death square is complete, but we would still be vulnerable if the rebel fleet attacked. Let's create a new component called `tie-fighter`, include [tie-fighter.png](images/tie-fighter.png) in its template, and add as many instances as you feel necessary to protect our death square. Do NOT nest these in the `death-square` component.
 
-6. This death square will surely not be destroyed now, but we still want to wrap up our code so future engineers can build another one easily. Move the `turret` and `laser-cannon` into the `death-square` directory, and create a feature module for `death-square`.
+6. This death square will surely not be destroyed now, but we still want to wrap up our code so future engineers can build another one easily. Move the `turret`, `death-square`, and `laser-cannon` into an `internal-defenses` repository, and create a feature module for `internal-defenses`.
 
 ### Bonus
 

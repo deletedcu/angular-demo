@@ -32,7 +32,7 @@ NOTE: Data for the API server is found in `db.json` in the root project folder.
 
 Start the app:
 ```
-npm start
+ng serve
 ```
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -47,7 +47,7 @@ _As a vendor_
 _I want a vending machine that accepts coins_  
 _So that I can collect money from the customer_ 
 
-- The vending machine will accept valid coins (nickels, dimes, and quarters). Coins represented by three buttons.
+- The vending machine will accept valid coins (nickels, dimes, and quarters). Coins are represented by three buttons.
 - When a valid coin is inserted (button pressed) the amount of the coin will be added to the current balance and the machine's display will be updated.
 - When there are no coins inserted, the machine displays INSERT COIN.
 

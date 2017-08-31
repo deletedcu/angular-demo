@@ -25,7 +25,7 @@ At the moment, there's no styling.  Add some by incorporating [Bootstrap](http:/
 
 ## Fixing Bugs
 
-Someone has hacked up the [Tour Of Heroes](https://angular.io/tutorial/toh-pt5) demo from google!  Go into [heroes](https://github.com/den-materials/angular-heroes), run `npm install` and `npm start` to start the app.  Try to fix all the errors so that it works like [this](https://embed.plnkr.co/?show=preview).  Try not to look at the code listed in the previous link, unless you're absolutely stumped.
+Someone has hacked up the [Tour Of Heroes](https://angular.io/tutorial/toh-pt5) demo from google!  Go into [heroes](heroes/), run `npm install` and `npm start` to start the app.  Try to fix all the errors so that it works like [this](https://den-materials.github.io/tour-of-heroes-dist).  Try not to look at the code listed in the previous link, unless you're absolutely stumped.
 
 ## Choose Your Own Adventure!
 
