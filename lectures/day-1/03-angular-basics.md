@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--3:34 WDI4 -->
+
 # Angular Basics
 
 ![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
@@ -52,13 +54,15 @@ Then let's move into the repo:
 cd ga-ui
 ```
 
+<!--3:43 WDI4-->
+
 . . . and we should be able to run our web app immediately!
 
 ```bash
 ng serve
 ```
 
-## Angular Twooling
+## Angular Tooling
 
 Before we dive into the structure of the app, let's quickly go over all of the built-in tooling provided to us.
 
@@ -227,6 +231,8 @@ Go back to your browser and you will see your new title.
 ## Wrapping Up
 
 By now, you should have a broad, but shallow understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular yet. In the coming lessons, we will flesh out your understanding, so you'll be ready to go out and conquer the world of front end development.
+
+<!--WDI4 4:03 -->
 
 ## References
 

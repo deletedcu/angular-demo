@@ -1,5 +1,7 @@
 # URL Params
 
+<!--WDI4 2:55 -->
+
 ## Lesson Objectives
 *By the end of this, developers will be able to:*
 
@@ -85,6 +87,8 @@ In `src/app.app.component.html` loop through the jobs to create links:
 </nav>
 ```
 
+<!--WDI4 3:09-->
+
 ## Alter the resume route to accept params
 
 Our resume route in `src/app/app-routing.module.ts` no longer works.  Update it to accept params:
@@ -138,6 +142,8 @@ Test that this works by showing `jobIndex` in `src/app/resume/resume.component.h
 <h2>Resume: {{jobIndex}}</h2>
 ```
 
+<!--WDI4 3:21 -->
+
 ## Show specific job data based on id param
 
 Import the `JOBS` data object:
@@ -187,3 +193,5 @@ Now in `src/app/resume/resume.component.html` display the data:
     <dd>{{job.description}}</dd>
 </dl>
 ```
+
+<!--WDI4 3:32 -->

@@ -1,5 +1,7 @@
 # What is Routing?
 
+<!--1:57 WDI4 -->
+
 ## Lesson Objectives
 *By the end of this, developers will be able to:*
 
@@ -27,3 +29,5 @@ Demo the site in [/router](/router).  Show the following:
     1. Paste the link into the URL bar
     1. Hit Enter
     1. Note that it takes you directly to the "page" whose URL you copied
+
+<!--2:02 WDI4 -->

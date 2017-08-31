@@ -1,5 +1,7 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--2:14 WDI4-->
+
 # Angular Universal
 
 ![](resources/siteBroken.jpeg)
@@ -30,6 +32,8 @@ Well, yes, except for a couple things:
 
 In this lesson, we will address the second issue.
 
+<!--WDI4 2:17 -->
+
 ### Setup
 
 First, we'll need to create a new project with the Angular CLI called `first-angular-universal`.  If you can't remember how to do this, you can check earlier lessons.
@@ -39,7 +43,11 @@ Now, let's bring Angular Universal into the picture.  In order to do this, we wi
 1. First, we will need to install the `platform-server` package and the `ts-node` package that will allow us to run `node` on a TypeScript file, so enter the `first-angular-universal` directory in Terminal and run the following command:
 
 `npm install -S @angular/platform-server`
+
 `npm install -D ts-node`
+
+<!--2:20 turning over to devs WDI4-->
+<!--WDI4 2:26 coming back -->
 
 2. Next, we will need to connect the client to this Node server.  Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
 
@@ -64,6 +72,9 @@ import { AppComponent } from './app.component';
 })
 export class AppServerModule { }
 ```
+
+<!--2:31 WDI4 turning over to devs -->
+<!--WDI4 coming back 2:37 -->
 
 4. Next, we will add compiler options to our `tsconfig.json` file:
 
@@ -119,6 +130,9 @@ Look familiar?
 
 Besides the code you're used to from a typical Node `server.js` file, this file includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
 
+<!--WDI4 2:41 turning over to devs -->
+<!--WDI4 coming back 2:46 -->
+
 6. Next, we will ignore `server.ts` in our `tsconfig.app.json` file:
 
 ```js
@@ -129,7 +143,7 @@ Besides the code you're used to from a typical Node `server.js` file, this file 
   ]
 ```
 
-7. Finally, we need to change our `package.json` scripts to run our transpiled `server.js` file instead of the default front-end-only webserver:
+7. Finally, we need to change our `package.json` scripts to run our `server.ts` file instead of the default front-end-only webserver:
 
 ```json
   "scripts": {
@@ -143,6 +157,11 @@ Besides the code you're used to from a typical Node `server.js` file, this file 
 9. Go to `http://localhost:4000` and you should see your app...but this time with a full back end!
 
 Cool, right?  But we haven't changed any functionality yet, next we'll set our site up for easy searching.
+
+<!--2:52 WDI4 turning over to devs -->
+<!--WDI4 coming back 2:57-->
+
+<!--After break, WDI4 3:12 -->
 
 ### SEO
 
@@ -162,7 +181,10 @@ import { Meta, Title } from "@angular/platform-browser";
   constructor(meta: Meta, title: Title) {}
 ```
 
-3. Then add a title and some meta tags for your app:
+<!--3:15 WDI4 turning over to devs -->
+<!--3:19 WDI4 -->
+
+3. Then add a title and some meta tags for your app **inside the constructor** function:
 
 ```typescript
 title.setTitle('Our Very Professional Page');
@@ -177,6 +199,9 @@ meta.addTags([
 4. Go back to your browser, refresh the page, and inspect `Element` with `Dev Tools`.  You should see your title and meta tags now!  SEO FTW!!
 
 ![](resources/componentRendered.jpg)
+
+<!--WDI4 3:22 turning ove to devs -->
+<!--WDI4 3:28  coming back -->
 
 ### Resources
 

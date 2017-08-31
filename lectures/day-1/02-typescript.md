@@ -1,5 +1,7 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
+<!--1:44 WDI4 -->
+
 # Introduction to TypeScript
 
 ![TypeScript Logo](https://cdn-images-1.medium.com/max/622/1*grk7btEn0OJEQRKgG2Qs2A.png)
@@ -37,7 +39,7 @@ What did we just install? This program will read our TypeScript, interpret it, a
 
 ![Transpiling](https://i1.wp.com/www.mithunvp.com/wp-content/uploads/2016/02/transpiling.png)
 
-Let's try it out!
+Let's try it out!  Clone [this repo](https://github.com/den-materials/typescript-files) with three `.ts` files inside.  We will go through them one-by-one.
 
 Take a look at **hello.ts.** You should see this:
 
@@ -48,6 +50,8 @@ function sayHello() {
 
 sayHello();
 ```
+
+<!--1:53 WDI4 after coming back -->
 
 Looks just like JavaScript, right? Let's see what happens when we run it through the TypeScript compiler. Go to your terminal and run:
 
@@ -93,6 +97,8 @@ console.log(product);
  ### Lab: Make it compile
 
 **battle.ts** is very broken. Using what we just learned, and the compiler feedback, fix the file until it compiles cleanly.
+
+<!--2:10 WDI4 -->
 
 ## Additional Resources
 

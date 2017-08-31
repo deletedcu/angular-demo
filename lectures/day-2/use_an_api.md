@@ -1,5 +1,7 @@
 # Using an API with AJAX
 
+<!--WDI4 9:57 -->
+
 ## Lesson Objectives
 
 1. Create a new app
@@ -46,6 +48,8 @@ Edit `src/app/app.component.html`:
 <app-search></app-search>
 ```
 
+<!--10:07 WDI4 -->
+
 ## Add Form HTML to search component
 
 Edit `src/app/search/search.component.html`:
@@ -86,6 +90,8 @@ import { FormsModule } from '@angular/forms'; //import FormsModule
 export class AppModule { }
 ```
 
+<!--10:12 WDI4 -->
+
 ## Set a component property to the value of an input
 
 In `src/app/search/search.component.html`, add `[(ngModel)]` to the text input:
@@ -122,6 +128,8 @@ Call it in `src/app/search/search.component.html` (also remove the `Search Strin
 ```
 
 Test this by looking in the console.
+
+<!--WDI4 10:24 -->
 
 ## Add the ability to make AJAX requests
 
@@ -175,6 +183,8 @@ findCharacter(name){
 The `rxjs/add/operator/toPromise` import that we previously wrote adds the ability to change the `Observable` (more on this in another lecture) into a `Promise`.
 
 You can test this by looking in the console.
+
+<!--10:35 WDI4 -->
 
 ## Display AJAX results in app
 
@@ -244,3 +254,5 @@ Edit `src/app/search/search.component.html`:
     </ul>
 </section>
 ```
+
+<!--10:45 WDI4 -->

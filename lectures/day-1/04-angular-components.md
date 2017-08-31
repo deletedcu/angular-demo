@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--9:04 WDI4 -->
+
 # Angular 2 - Components & Modules
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
@@ -85,6 +87,8 @@ In the class itself, we see one property being set. The scope of an instance of 
 ![Angular 2 Components](https://angular.io/generated/images/guide/architecture/component-databinding.png)
 
 And that's it! We've reviewed all of the working parts of 95% of Angular components. Our first component may be exceedingly simple, but we'll add more spice to our components in the following sections.
+
+<!--9:18 WDI4 -->
 
 ### Code-Along: Our Second Component
 
@@ -180,6 +184,9 @@ And use it in **app.component.html**!
 <app-master-sword></app-master-sword>
 ```
 
+<!--9:30 WDI4 coming back from half (no image, no style) -->
+<!--9:37 WDI4 done with sword -->
+
 #### Test It Out
 
 Now run `ng serve` in your `ga-ui` folder, and browse to `localhost:4200` in your browser. Look at that sword!
@@ -187,6 +194,8 @@ Now run `ng serve` in your `ga-ui` folder, and browse to `localhost:4200` in you
 ### Lab: Make your own component
 
 Use the Angular CLI to generate a 'hylian-shield' component. Have the component display a picture of a hylian shield and text that reads 'Behold! The Hylian Shield!' with a blue background. If you have extra time, play around with the directives listed in the [Angular Cheatsheet](https://angular.io/guide/cheatsheet).
+
+<!--WDI4 done with shield 9:47 -->
 
 ## Services: Abstracting and Reusing business logic
 
@@ -227,6 +236,8 @@ installing service
   WARNING Service is generated but not provided, it must be provided to be used
 ```
 
+<!--9:52 WDI4 turning over to devs, coming back 9:58, some people saw the service installing into /src/app even though they were in the /services/user folder -->
+
 Our generator created our service and a test file for the service. It is also warning us that we still need to **provide** our service to use it. Let's go ahead and do that!
 
 You may have noticed an empty **providers** array property in our **app.module** when we first looked at it. If we add a reference to our service class to our array:
@@ -254,6 +265,8 @@ import { UserService } from './services/user/user.service';
 })
 export class AppModule { }
 ```
+
+<!--10:04 WDI4 -->
 
 Our application will create a single instance of our service on boot, and will allow us to inject that instance into as many of our components (and other angular entities) as we want.
 
@@ -303,6 +316,8 @@ export class MasterSwordComponent implements OnInit {
 }
 ```
 
+<!--10:12 WDI4 -->
+
 A bit of typescript magic will automatically glob on our service as a property of our component, which allows us to make these modifications:
 
 ```typescript
@@ -328,6 +343,8 @@ And there you have it! We have injected our new service into our component, and 
 ## Lab: Our second injection
 
 Use our new service to update the `hylian-shield` component in the same manner that we just updated our `master-sword` component.
+
+<!--10:28 coming back WDI4, but skipped hylian-shield injection...oops!  will come back later -->
 
 ## Feature Modules: Adding organization to unruly codebases
 
@@ -379,6 +396,8 @@ import { HylianShieldComponent } from './hylian-shield/hylian-shield.component';
 export class EquipmentModule { }
 ```
 
+<!--WDI4 10:42 -->
+
 Now we need to remove references to the individual components from import our main **app.module** and replace them by importing our feature module:
 
 ```typescript
@@ -413,6 +432,8 @@ Finally, since we moved our `master-sword` and `hylian-shield` components, we ne
 
 If everything worked correctly, our app will render exactly the same, while our app component will look less cluttered!
 
+<!--10:50 WDI4, now going back to shield service injection-->
+<!--10:59 WDI4 end-->
 ## References
 
 -   [Angular-cli github page](https://github.com/angular/angular-cli)
