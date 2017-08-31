@@ -81,5 +81,6 @@ const allTurrets = [
 Turret.remove({}, function(err, turrets) {
 	Turret.create(allTurrets, function(err, turrets) {
 		console.log("Created " + turrets.length + " turrets");
+		process.exit();
 	});
 });

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DeathSquareModule } from './death-square/death-square.module'
+import { InternalDefensesModule } from './internal-defenses/internal-defenses.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -19,7 +19,7 @@ import { InfoWindowComponent } from './info-window/info-window.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    DeathSquareModule,
+    InternalDefensesModule,
     AppRoutingModule
   ],
   providers: [],
