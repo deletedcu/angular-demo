@@ -1,5 +1,6 @@
 var CACHE_NAME = 'service-worker-cache-v1';
 var urlsToCache = [
+  'service-worker.js',
 	'index.html',
   'assets/images/tie-fighter.png',
   'assets/images/turret.png'
@@ -17,9 +18,12 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+  console.log("hey we're fetching!");
+  console.log(event);
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
+        console.log(response);
         // Cache hit - return response
         if (response) {
           return response;

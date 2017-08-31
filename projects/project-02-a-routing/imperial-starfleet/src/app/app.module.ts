@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DeathSquareModule } from './death-square/death-square.module'
+import { InternalDefensesModule } from './internal-defenses/internal-defenses.module'
 
 import { AppComponent } from './app.component';
 import { TieFighterComponent } from './tie-fighter/tie-fighter.component';
@@ -16,7 +16,7 @@ import { TieFighterComponent } from './tie-fighter/tie-fighter.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    DeathSquareModule
+    InternalDefensesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
