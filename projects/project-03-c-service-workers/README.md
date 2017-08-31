@@ -28,6 +28,8 @@ As we all know, intergalactic WiFi is not the best.  "The Boss" (you know who I'
 
 11. Check `Offline` again, and refresh the page.  This time, we should see our death square in all its offline glory!
 
+>**Note:** Make sure you are going directly to `http://localhost:8000/` when you refresh, not any of the sub-pages like `/info/8`.  You can navigate to those sub-pages later, by clicking on the turrets, but if you do it in the beginning, it will trigger a network request.  We're offline, so this would fail.
+
 ### Resources
 
 - [Angular Apps with Service Workers](https://coryrylan.com/blog/fast-offline-angular-apps-with-service-workers)
