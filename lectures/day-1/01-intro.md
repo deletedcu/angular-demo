@@ -2,7 +2,7 @@
 
 # Introduction to Angular
 
-![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
+![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
 
 Welcome to the world of Angular! You're about to embark on a week-long journey of discovery, learning one of the hottest front end frameworks on the planet.
 
