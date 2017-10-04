@@ -14,7 +14,7 @@ This gives us the flexibility to lean on the back end when it's the better tool 
 *After this lesson, you will be able to:*
 
 - **Integrate** Angular Universal into an Angular CLI project.
-- **Use** Angular Universal to render views on a node server.
+- **Use** Angular Universal to render views on a Node server.
 
 ### What is Angular Universal?
 
@@ -34,14 +34,14 @@ In this lesson, we will address the second issue.
 
 First, we'll need to create a new project with the Angular CLI called `first-angular-universal`. If you can't remember how to do this, use the earlier lessons for reference.
 
-Now, let's bring Angular Universal into the picture. In order to do this, we'll need something you have probably seen before: a node server.
+Now, let's bring Angular Universal into the picture. In order to do this, we'll need something you have probably seen before: a Node server.
 
 1) We need to install the `platform-server` package and the `ts-node` package that allow us to run `node` on a TypeScript file. Enter the `first-angular-universal` directory in the terminal and run the following command:
 
 `npm install -S @angular/platform-server`
 `npm install -D ts-node`
 
-2) Next, we need to connect the client to this node server. Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
+2) Next, we need to connect the client to this Node server. Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
 
 ```js
 BrowserModule.withServerTransition({appId: 'cli-universal-demo'})
@@ -117,7 +117,7 @@ app.listen(PORT, () => {
 
 Look familiar?
 
-Besides the code you're used to from a typical node `server.js` file, this file also includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
+Besides the code you're used to from a typical Node `server.js` file, this file also includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
 
 6) Next, we'll ignore `server.ts` in our `tsconfig.app.json` file:
 
