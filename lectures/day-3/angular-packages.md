@@ -20,7 +20,7 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Core
 
-`@angular/core`: Critical run-time parts of the framework needed by every application. Includes all metadata decorators, components, directives, dependency injections, and the component life-cycle hooks.
+`@angular/core`: Critical run-time parts of the framework needed by every application. Includes all metadata decorators, Component, Directive, dependency injections, and the component life-cycle hooks.
 
 ### Common
 
