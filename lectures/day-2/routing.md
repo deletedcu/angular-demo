@@ -1,18 +1,18 @@
 # Routing in Angular
 
 ## Lesson Objectives
-*By the end of this lesson, students should be able to:*
+*By the end of this lesson, you will be able to:*
 
 - Create a new Angular app.
 - Clean up the app's HTML.
-- Create About, Links, and Resume components.
-- Edit the HTML for the About, Links, and Resume components.
+- Create about, links, and resume components.
+- Edit the HTML for the about, links, and resume components.
 - Display all of the components at once.
 - Set up the router.
 - Tell the router where to display the components.
 - Create links to the different "pages."
 - Create an external routing file.
-- Use the external AppRoutingModule in app.module.ts.
+- Use the external AppRoutingModule in `app.module.ts`.
 
 ## Create a New Angular App
 
@@ -41,7 +41,7 @@ Go into `src/app/app.component.html` and change the HTML to:
 
 ## Create About, Links, and Resume Components
 
-We'll create components for the different "sections" of the site we want to "navigate" to.
+We'll create components for the different "sections" of the site to which we want to "navigate."
 
 ```
 ng generate component about
@@ -56,7 +56,7 @@ Edit `src/app/about/about.component.html`:
 ```html
 <h2>This is the About Section of the Site</h2>
 <h3>Early Life</h3>
-<p>Just a kid growing up rough on the streets.  Hustlin' code for ca$h</p>
+<p>Just a kid growing up rough on the streets. Hustlin' code for ca$h.</p>
 <h3>Career</h3>
 <p>Now I'm makin' it raaaiiiiiinnnn!!!</p>
 ```
@@ -132,7 +132,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { RouterModule } from '@angular/router'; // add import statement here
 ```
 
-Now add the module as an import in `src/app/app.module.ts` and define which modules go with which routes:
+Now add the module as an import in `src/app/app.module.ts` and define which modules correspond with which routes:
 
 ```javascript
 imports: [
@@ -163,7 +163,7 @@ Now that we've set up the router, we need to tell it where to display the compon
 <router-outlet></router-outlet>
 ```
 
-You can now test the different "pages" by going to
+You can now test the different "pages" by going to:
 
 - http://localhost:4200/about
 - http://localhost:4200/links
@@ -171,7 +171,7 @@ You can now test the different "pages" by going to
 
 ## Create Links to the Different "Pages"
 
-When creating links, we don't use `href` anymore. Instead we use `routerLink`.  
+When creating links, we no longer use `href`. Instead we use `routerLink`.  
 
 Edit `src/app/app.component.html`:
 
@@ -198,7 +198,7 @@ Edit `src/app/app.component.html`:
 
 ## Create an External Routing File
 
-As you can imagine, that `RouterModule.forRoot()` can get lengthy. Let's put it in a new file `src/app/app-routing.module.ts`:
+As you can imagine, that `RouterModule.forRoot()` can get lengthy. Let's put it in a new file, `src/app/app-routing.module.ts`:
 
 ```javascript
 import { NgModule } from '@angular/core';
@@ -230,7 +230,7 @@ const routes: Routes = [
 export class AppRoutingModule {}
 ```
 
-## Use the External AppRoutingModule in app.module.ts
+## Use the External AppRoutingModule in `app.module.ts`
 
 Now let's replace our routing with our new AppRoutingModule in `src/app/app.module.ts`:
 
