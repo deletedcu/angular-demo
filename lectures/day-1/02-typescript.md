@@ -74,7 +74,7 @@ let product: number = multiplyByTen(10);
 console.log(product);
 ```
 
-With this colon syntax, we're telling both the compiler and our fellow coders our variables' types, and more importantly, what type of argument our function expects. When we run this code through our compiler, we get:
+With this colon syntax, we're telling both the compiler and our fellow coders exactly what type our variables are, and more importantly, what type of argument our function expects. When we run this code through our compiler, we get:
 
 ```javascript
 function multiplyByTen(points) {
