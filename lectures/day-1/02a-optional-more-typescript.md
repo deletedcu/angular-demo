@@ -278,8 +278,8 @@ Next, run `node scripts/output.js`. We see all of our files' output. Pretty cool
 
 ## Resources
 
-- [Udemy TypeScript Tutorial](https://www.udemy.com/typescript/learn/v4/overview).
-- [TypeScript Official Docs](https://www.typescriptlang.org/).
-- [TypeScript GitHub](https://github.com/Microsoft/TypeScript).
+- [Udemy TypeScript Tutorial](https://www.udemy.com/typescript/learn/v4/overview)
+- [TypeScript Official Docs](https://www.typescriptlang.org/)
+- [TypeScript GitHub](https://github.com/Microsoft/TypeScript)
 - [Why Should I](http://stackoverflow.com/questions/12694530/what-is-typescript-and-why-would-i-use-it-in-place-of-javascript) [Use TypeScript?](http://stackoverflow.com/questions/12694530/what-is-typescript-and-why-would-i-use-it-in-place-of-javascript/35048303#35048303)
-- [Gulp Doc for TypeScript](https://www.typescriptlang.org/docs/handbook/gulp.html).
+- [Gulp Doc for TypeScript](https://www.typescriptlang.org/docs/handbook/gulp.html)
