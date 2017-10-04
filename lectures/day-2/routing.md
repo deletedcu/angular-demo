@@ -5,8 +5,8 @@
 
 - Create a new Angular app.
 - Clean up the app's HTML.
-- Create about, links, and resume components.
-- Edit the HTML for the about, links, and resume components.
+- Create About, Links, and Resume components.
+- Edit the HTML for the About, Links, and Resume components.
 - Display all of the components at once.
 - Set up the router.
 - Tell the router where to display the components.
