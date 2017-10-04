@@ -109,6 +109,6 @@ Make sure you switch drivers halfway through.
 
 ### Resources
 
-- [Major Angular `npm` Packages](https://angular.io/guide/npm-packages).
-- [Angular CLI Wiki](https://github.com/angular/angular-cli/wiki).
-- [Curated List of Additional Components and Libraries](https://github.com/brillout/awesome-angular-components).
+- [Major Angular `npm` Packages](https://angular.io/guide/npm-packages)
+- [Angular CLI Wiki](https://github.com/angular/angular-cli/wiki)
+- [Curated List of Additional Components and Libraries](https://github.com/brillout/awesome-angular-components)
