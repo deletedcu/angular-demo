@@ -3,7 +3,7 @@
 ## Lesson Objectives
 *By the end of this lesson, students should be able to:*
 
-- Define what URL params are,
+- Define what URL params are.
 - Create an external data file.
 - Use the data file to generate links.
 - Have the Resume component display the ID param.
