@@ -6,7 +6,7 @@
 
 ## Objectives
 
-By the end of this lesson, students should be able to:
+By the end of this lesson, you will be able to:
 
 - Explain the relationship between ES6 and TypeScript.
 - Use the TypeScript compiler to transpile TypeScript.
@@ -21,19 +21,19 @@ TypeScript is an open-sourced programming language developed and maintained by M
 
 This is just a fancy way to say that TypeScript includes all of the types, semantics, and functionalities of JavaScript while adding a few bells and whistles of its own.
 
-![TypeScript superset of JavaScript](http://alexander.holbreich.org/content/images/2016/01/typescript-es6-es5.png)
+![TypeScript Superset of JavaScript](http://alexander.holbreich.org/content/images/2016/01/typescript-es6-es5.png)
 
 So why bother with TypeScript? It turns out that some of those extra bells and whistles are extremely useful.
 
 ## Getting Started
 
-First off, we need to globally install the TypeScript compiler. We can do this through npm:
+First off, we need to globally install the TypeScript compiler. We can do this through `npm`:
 
 ```bash
 npm install typescript -g
 ```
 
-This program will read our TypeScript, interpret it, and turn it into JavaScript (ES5). Pretty neat, right? Since our finished product is JavaScript, it can be run in browsers.
+This program will read our TypeScript, interpret it, and turn it into JavaScript (ES5). Pretty neat, right? Because our finished product is JavaScript, it can be run in browsers.
 
 ![Transpiling](https://i1.wp.com/www.mithunvp.com/wp-content/uploads/2016/02/transpiling.png)
 
@@ -59,7 +59,7 @@ Then, look around in your repo. You should see the exact same file with a ".js" 
 
 ### Type Annotations
 
-TypeScript is a statically- and weakly-typed language. It's statically typed because **we can declare the types of variables and properties that are enforced at compile time**. It's weakly typed because **we can also choose not to.** What does this mean?
+TypeScript is a statically and weakly typed language. It's statically typed because **we can declare the types of variables and properties that are enforced at compile time**. It's weakly typed because **we can also choose not to.** What does this mean?
 
 Let's take a look at **multiplier.ts:**
 
@@ -74,7 +74,7 @@ let product: number = multiplyByTen(10);
 console.log(product);
 ```
 
-With this colon syntax, we're telling both the compiler and our fellow coders exactly what type our variables are, and more importantly, what type of argument our function expects. When we run this code through our compiler, we get:
+With this colon syntax, we're telling both the compiler and our fellow coders our variables' types, and more importantly, what type of argument our function expects. When we run this code through our compiler, we get:
 
 ```javascript
 function multiplyByTen(points) {
@@ -86,20 +86,20 @@ console.log(product);
 
 ```
 
-It's the same exact thing, just without the type annotations. You might be thinking, "Why even bother?" Let's go back and change the argument to 'a billion' and see what happens.
+It's the same, except without the type annotations. You might be thinking, "Why even bother?" Let's go back and change the argument to "a billion" and see what happens.
 
 Bam! Our compiler yells at us even though it still produces our JavaScript file. It's saving us from making mistakes. If we remove the type annotation from the argument, compile again, and run the JavaScript script with `node`, we get an awkward return value that wasn't the intended result of the function.
 
  ### Lab: Make It Compile
 
-**battle.ts** is very broken. Using what we just learned and the compiler feedback, fix the file until it compiles cleanly.
+**battle.ts** is broken. Using what we've just learned, along with the compiler feedback, fix the file so it compiles cleanly.
 
 ## Additional Resources
 
--   [TypeScript documentation](https://www.typescriptlang.org/docs/tutorial.html).
+-   [TypeScript Documentation](https://www.typescriptlang.org/docs/tutorial.html).
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-2.  All software code is licensed under GNU GPLv3. For commercial use or
+1)  All content is licensed under a CC­BY­NC­SA 4.0 license.
+2)  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
