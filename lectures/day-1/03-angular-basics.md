@@ -229,8 +229,8 @@ By now, you should have a broad-yet-shallow understanding of how an Angular app 
 
 ## References
 
--   [Angular CLI GitHub Page](https://github.com/angular/angular-cli).
--   [Official Angular Documentation](https://github.com/angular/angular-cli).
+-   [Angular CLI GitHub Page](https://github.com/angular/angular-cli)
+-   [Official Angular Documentation](https://github.com/angular/angular-cli)
 
 ## [License](LICENSE)
 
