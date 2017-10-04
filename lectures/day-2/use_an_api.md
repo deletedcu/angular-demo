@@ -2,9 +2,11 @@
 
 ## Lesson Objectives
 
+By the end of this lesson, you will be able to: 
+
 - Create a new app.
 - Generate a new component.
-- Clean up app.component.html.
+- Clean up `app.component.html`.
 - Add a search component to the app.
 - Add form HTML to the search component.
 - Import form functionality into the app.
@@ -15,7 +17,7 @@
 - Display AJAX results in the app.
 - Display more data in the HTML.
 
-## Create a New app
+## Create a New App
 
 ```
 ng new starwars
@@ -23,7 +25,7 @@ cd starwars
 ng serve --open
 ```
 
-## Clean Up app.component.html
+## Clean Up `app.component.html`
 
 Set `src/app/app.component.html` contents to:
 
@@ -46,7 +48,7 @@ Edit `src/app/app.component.html`:
 <app-search></app-search>
 ```
 
-## Add form HTML to the Search Component
+## Add Form HTML to the Search Component
 
 Edit `src/app/search/search.component.html`:
 
@@ -58,7 +60,7 @@ Edit `src/app/search/search.component.html`:
 </section>
 ```
 
-## Import Form Dunctionality Into the App
+## Import Form Functionality Into the App
 
 Edit `src/app/app.module.ts` to import `FormsModule` and place it as an import:
 
