@@ -3,8 +3,8 @@
 ## Lesson Objectives
 *By the end of this lesson, you will be able to:*
 
-- Describe routing.
-- Demonstrate routing.
+- Describe Routing.
+- Demonstrate Routing.
 
 ## Describe Routing
 
