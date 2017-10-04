@@ -28,7 +28,7 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Template Compiler
 
-`@angular/compiler`: Angular's template compiler. It understands templates and can convert them to code that makes the application run and render. Typically, you don’t interact with the compiler directly; rather, you use it indirectly via `platformBrowserDynamic` or the offline template compiler.
+`@angular/compiler`: Angular's template compiler. It understands templates and can convert them to code that makes the application run and render. Typically, you don’t interact with the compiler directly; rather, you use it indirectly via `platform-browser-dynamic` or the offline template compiler.
 
 ### Browser
 
@@ -36,7 +36,7 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Dynamic Browser
 
-`@angular/platform-browser-dynamic`: Includes providers and a bootstrap method for applications that compile templates on the client side. Don’t use the offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
+`@angular/platform-browser-dynamic`: Includes providers and a bootstrap method for applications that compile templates on the client. Don’t use the offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
 
 ### HTTP
 
