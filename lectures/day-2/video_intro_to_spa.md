@@ -5,7 +5,7 @@
 
 - Define what a SPA is.
 - List some advantages of a SPA over a traditional website.
-- Describe PushState.
+- Describe pushState.
 
 ## Define What a SPA Is
 
@@ -37,9 +37,9 @@
  
 (Show drawing of two situations: one large computer with big arm muscles and $$$$ around it.  This computer has arrows out to many small computers. One small computer with thin arms and $ around it.  This computer has arrows out slightly larger than computers with $ around them.)
 
-## Describe PushState
+## Describe pushState
 
-- PushState allows JavaScript to alter the browser's history as if a user is clicking on links and loading brand new pages.
+- pushState allows JavaScript to alter the browser's history as if a user is clicking on links and loading brand new pages.
 - This gives the appearance that the user is actually visiting new pages. 
 (show ESPN updating its URL as the user scrolls to a new article)
 - If the application is set up correctly, it allows deep linking so that users can bookmark and share links to specific aspects of an application as if it were a page itself. 
