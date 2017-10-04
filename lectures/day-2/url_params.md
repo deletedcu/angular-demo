@@ -1,15 +1,15 @@
 # URL Params
 
 ## Lesson Objectives
-*By the end of this lesson, students should be able to:*
+*By the end of this lesson, you will be able to:*
 
-- Define what URL params are.
+- Define URL params.
 - Create an external data file.
 - Use the data file to generate links.
-- Have the Resume component display the ID param.
+- Have the resume component display the ID param.
 - Show specific job data based on the ID param.
 
-## Define What URL Params Are
+## Define URL Params
 
 URL params allow us to pass data into the application from the URL.
 
@@ -23,7 +23,7 @@ export const JOBS = [
         id:3,
         title: 'Crushed It',
         dates: '2010-2011, 2013-Present',
-        description: 'There was a medical situation preventing me from crushing it to my usual standards. So I had to take some time off until I was able to crush it at 100%, at which point I resumed crushing it full-time.'
+        description: 'There was a medical situation preventing me from crushing it to my usual standards. So I had to take some time off until I was able to crush it at 100 percent, at which point I resumed crushing it full time.'
     },
     {
         id:2,
@@ -108,7 +108,7 @@ const routes: Routes = [
 
 ## Have the Resume Component Display the ID Param
 
-At this point, the resume shows all the jobs. We want to show just one job. 
+At this point, the resume shows all of the jobs. We want it to show just one job. 
 
 Edit `src/app/resume/resume.component.ts` to import `ActivatedRoute`:
 
@@ -148,10 +148,10 @@ Import the `JOBS` data object:
 import { JOBS } from './jobs';
 ```
 
-Now alter the `ResumeComponent` to
+Now alter the `ResumeComponent` to:
 
-1. Have a `job` property set by the URL param.
-1. Find the job that has a matching ID to the one specified in the URL.
+1) Have a `job` property set by the URL param.
+2) Find the job that has a matching ID to the one specified in the URL.
     - Note: `param.id` is a string and `job.id` is a number, so we must call `parseInt(param.id)`.
 
 ```javascript
