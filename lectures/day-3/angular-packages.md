@@ -20,11 +20,11 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Core
 
-`@angular/core`: The critical run-time parts of the framework needed by every application. These include all metadata decorators, components, directives, dependency injections, and the component life-cycle hooks.
+`@angular/core`: Critical run-time parts of the framework needed by every application. Includes all metadata decorators, components, directives, dependency injections, and the component life-cycle hooks.
 
 ### Common
 
-`@angular/common`: The commonly needed services, pipes, and directives provided by the Angular team.
+`@angular/common`: Commonly needed services, pipes, and directives provided by the Angular team.
 
 ### Template Compiler
 
@@ -36,7 +36,7 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Dynamic Browser
 
-`@angular/platform-browser-dynamic`: Includes Providers and a bootstrap method for applications that compile templates on the client. Don’t use the offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
+`@angular/platform-browser-dynamic`: Includes Providers and a bootstrap method for applications that compile templates on the client. Don’t use offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
 
 ### HTTP
 
@@ -44,11 +44,11 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Router
 
-`@angular/router`: The component router.
+`@angular/router`: Component router.
 
 ### Upgrade
 
-`@angular/upgrade`: The set of utilities for upgrading AngularJS applications to Angular.
+`@angular/upgrade`: Set of utilities for upgrading AngularJS applications to Angular.
 
 ## Polyfill Packages
 
