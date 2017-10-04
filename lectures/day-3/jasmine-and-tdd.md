@@ -128,9 +128,9 @@ When we run `ng test` (and `npm install`) in the `example-jasmine` directory, wh
         ✓ should offer a greeting in Italian
 ```
 
-We have a person component and a person component spec (a specification or test). This is the typical Angular convention. Specs live in the same directory as the component code and are named identically to the component, except for the addition of the `.spec` suffix.
+We have a Person component and a Person component spec (a specification or test). This is the typical Angular convention. Specs live in the same directory as the component code and are named identically to the component, except for the addition of the `.spec` suffix.
 
-Let's review `person.component.spec.ts`. This is the specification for a person. It indicates how we can expect a person to function.
+Let's review `person.component.spec.ts`. This is the specification for a Person. It indicates how we can expect a Person to function.
 
 <!--Talk through the first one, then give student a minute to discuss with neighbor what the rest of them do, come back and share -->
 
@@ -297,7 +297,7 @@ Add another expectation to `dog` that "allows the writing of a hunger level" and
 
 <!-- Half-mast -->
 
-Let's implement a method, `eat`, which reduces a dog's hunger level when invoked. How would we translate this specification into a Jasmine test?
+Let's implement a method, `eat`, which decrements a dog's hunger level when invoked. How would we translate this specification into a Jasmine test?
 
 **dog.component.spec.ts**
 
@@ -322,7 +322,7 @@ Write the code that passes the specifications above.
 
 <!-- Half-mast -->
 
-Imagine we want the `eat` method to behave differently in different contexts. For example, if the dog is not hungry and has a `hunger_level` of `0`, we don't want the `eat` method to continue reducing. In order to set up different scenarios or contexts in our specifications, we can use different `describe` blocks.
+Imagine we want the `eat` method to behave differently in different contexts. For example, if the dog is not hungry and has a `hunger_level` of `0`, we don't want the `eat` method to continue decrementing. In order to set up different scenarios or contexts in our specifications, we can use different `describe` blocks.
 
 **dog.component.spec.ts**
 
