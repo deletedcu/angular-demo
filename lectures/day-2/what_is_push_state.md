@@ -1,35 +1,35 @@
-# What is Push State?
+# What is `pushState()`?
 
 # Lesson Objectives
-*By the end of this, developers will be able to:*
+*By the end of this lesson, you will be able to:*
 
-- Describe PushState
-- Demonstrate an SPA that uses Push State
+- Describe `pushState()`.
+- Demonstrate a single-page application that uses `pushState()`.
 
-## Describe PushState
+## Describe `pushState()`
 
-- PushState allows JavaScript to alter the browser's history as if a user is clicking on links and loading brand new pages
-- This gives the appearance of the user actually visiting new pages
-- If the application is set up correctly, it allows deep linking so that users can bookmark and share links to specific aspects of an application as if it were a page itself
-- The user can use the back/forward buttons of the browser to move back/forward through their history of the various states of the application they've used.
-    - Now it behaves just as if they were viewing multiple pages of a traditional site
+- `pushState()` allows JavaScript to alter the browser's history as if a user was clicking on links and loading new pages.
+- This gives the appearance that the user is actually visiting new pages.
+- If the application is set up correctly, it allows deep linking so that users can bookmark and share links to specific aspects of an application as if it were a page itself.
+- The user can use the browser's back/forward buttons to move back/forward through their history of the application's various states.
+    - Now it behaves just as if they were viewing multiple pages of a traditional website.
 
-## Demonstrate a SPA that uses Push State
+## Demonstrate an SPA That Uses `pushState()`.
 
-1. Go to [Google Maps](https://www.google.com/maps/)
-    1. Pan/zoom around
-    1. Observe how the URL changes
-    1. Copy the URL after it's changed
-    1. Note what the map currently looks like
-    1. Close the window
-    1. Open a new window and paste the copied URL into the URL bar.  Hit enter (duh)
-    1. Note that the page has opened to show the map exactly as it was when we copied the URL
-1. Go to a public [Trello](https://trello.com/)
-    1. Note the current URL
-    1. Open a card by clicking on it
-    1. Note how the URL has changed
-    1. Copy the URL after it's changed
-    1. Note which card has been opened
-    1. Close the window
-    1. Open a new window and paste the copied URL into the URL bar.  Hit enter (duh)
-    1. Note that the page has opened to show the card that was opened when we copied the URL
+1. Go to [Google Maps](https://www.google.com/maps/).
+    - Pan/zoom around.
+    - Observe how the URL changes.
+    - Copy the URL after it has changed.
+    - Note what the map looks like currently.
+    - Close the window.
+    - Open a new window and paste the copied URL into the URL bar. Hit enter.
+    - Note that the page has opened to display the map exactly as it appeared when we copied the URL.
+1. Go to a public [Trello](https://trello.com/) board.
+    - Note the current URL.
+    - Open a card by clicking on it.
+    - Note how the URL has changed.
+    - Copy the URL after it has changed.
+    - Note which card has been opened.
+    - Close the window.
+    - Open a new window and paste the copied URL into the URL bar. Hit enter.
+    - Note that the page has opened to display the card that was open when we copied the URL.
