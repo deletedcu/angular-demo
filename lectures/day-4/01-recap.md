@@ -16,11 +16,11 @@ We started our first day by dipping our toes into Angular, and by the end of it 
 
 On day two, we pushed the boundaries of what our simple applications could do. We learned about what SPAs are and how they differ from the traditional web application model. Next, we learned how to use the Angular router to break our SPAs out into distict pages and lastly how to use pushState to get these pages to play nicely with our browsers. 
 
-Afterwards, we pushed the envelope even further by incorporating AJAX into our applications. We used Angular's Http service and our knowledge of URL paramaters to interact with an API and make our app more dyanmic.
+Afterwards, we pushed the envelope even further by incorporating AJAX into our applications. We used Angular's HTTP service and our knowledge of URL paramaters to interact with an API and make our app more dyanmic.
 
 ### Day Three: Asynchronicity, Testing, and Everything In Between
 
-With the fundamentals down pat, we started filling in the cracks on day three. We covered promises and observables, exploring the strengths and weaknesses of using both to wrangle asynchronous behavior. Then we took a hard pivot into the world of testing and explored the default testing-setup that the Angular provides us with.
+With the fundamentals down pat, we started filling in the cracks on day three. We covered Promises and Observables, exploring the strengths and weaknesses of using both to wrangle asynchronous behavior. Then we took a hard pivot into the world of testing and explored the default testing-setup that the Angular provides us with.
 
 ## Exercise: It's All Coming Back to You Now
 
@@ -28,5 +28,5 @@ Let's make sure that everything we've covered so far sank in. Answer the followi
 
 1. What is a component and why do we use them?
 2. What is a SPA? What are the advantages of using SPAs over more tradition web application models?
-3. What are the differences between observables and promises?
+3. What are the differences between Observables and Promises?
 
