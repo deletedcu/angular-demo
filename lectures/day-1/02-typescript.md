@@ -96,7 +96,7 @@ Bam! Our compiler yells at us even though it still produces our JavaScript file.
 
 ## Additional Resources
 
--   [TypeScript Documentation](https://www.typescriptlang.org/docs/tutorial.html).
+-   [TypeScript Documentation](https://www.typescriptlang.org/docs/tutorial.html)
 
 ## [License](LICENSE)
 
