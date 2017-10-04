@@ -1,4 +1,4 @@
-# Video: Quick intro to SPAs and Push state
+# Video: Quick Introduction to SPAs and PushState
 
 ## Lesson Objectives
 *By the end of this lesson, students should be able to:*
