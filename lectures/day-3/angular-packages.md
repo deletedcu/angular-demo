@@ -36,7 +36,7 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### Dynamic Browser
 
-`@angular/platform-browser-dynamic`: Includes providers and a bootstrap method for applications that compile templates on the client. Don’t use the offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
+`@angular/platform-browser-dynamic`: Includes Providers and a bootstrap method for applications that compile templates on the client. Don’t use the offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
 
 ### HTTP
 
@@ -58,11 +58,11 @@ By the end of this lesson, we'll have covered the essentials so developers can f
 
 ### RxJS
 
-`rxjs`: A polyfill for the [observables specification](https://github.com/tc39/proposal-observable) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of RxJS (within a compatible version range) without waiting for Angular updates.
+`rxjs`: A polyfill for the [Observables specification](https://github.com/tc39/proposal-observable) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of RxJS (within a compatible version range) without waiting for Angular updates.
 
 ### Zone JS
 
-`zone.js`: A polyfill for the [zone specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of `zone.js` to use (within a compatible version range) without waiting for Angular updates.
+`zone.js`: A polyfill for the [Zone specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of `zone.js` to use (within a compatible version range) without waiting for Angular updates.
 
 ## Helper Libraries
 
