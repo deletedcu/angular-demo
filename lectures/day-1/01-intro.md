@@ -8,7 +8,7 @@ Welcome to the world of Angular. You're about to embark on a week-long journey o
 
 ## What is Angular?
 
-Angular is a front-end framework that was developed and is maintained by Google. As a front-end framework, it offers developers a blueprint to help organize their front-end code and many useful application programming interfaces (APIs) to help speed up development significantly. In particular, Angular stresses:
+Angular is a front-end framework developed and maintained by Google. As a front-end framework, it offers developers a blueprint to help organize their front-end code and many useful application programming interfaces (APIs) to help speed up development significantly. In particular, Angular stresses:
 
 - Reusability and flexibility through component structure.
 - Modularity
