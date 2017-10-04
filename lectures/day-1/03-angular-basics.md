@@ -123,7 +123,7 @@ Our scaffolded application looks like this:
 └── tslint.json
 ```
 
-At the root of our application, we have a README, a folder for our end-to-end tests, the source folder where our code will live, and a series of configuration files. These configuration files relate to TypeScript and its linting. We won't be touching any files that live here or in the end-to-end folder.
+At the root of our application, we have a README, a folder for our end-to-end tests, the source folder where our code will live, and a series of configuration files. These config files relate to TypeScript and its linting. We won't be touching any files that live here or in the end-to-end folder.
 
 In **src**, we'll find all of the files that are important to us and a few more configuration files we'll be ignoring.
 
@@ -131,7 +131,7 @@ We have our **index** that, like with most web frameworks, we'll leave largely u
 
 We have a few more TypeScript and test configuration files that suit us as is.
 
-We have a polyfill file, which the Angular CLI supplies to ensure our code works well on all browsers.
+We have a polyfill file, which the Angular CLI mercifully supplies to ensure our code works well on all browsers.
 
 We have **main.ts**, where our app is bootstrapped. This file is very important but works just fine as is.
 
