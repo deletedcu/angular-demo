@@ -2,7 +2,7 @@
 
 ## Lesson Objectives
 
-By the end of this lesson, you will be able to: 
+*By the end of this lesson, you will be able to:*
 
 - Create a new app.
 - Generate a new component.
