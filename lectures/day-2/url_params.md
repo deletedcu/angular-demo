@@ -6,7 +6,7 @@
 - Define URL params.
 - Create an external data file.
 - Use the data file to generate links.
-- Have the resume component display the ID param.
+- Have the Resume component display the ID param.
 - Show specific job data based on the ID param.
 
 ## Define URL Params
