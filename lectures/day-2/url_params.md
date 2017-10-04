@@ -1,21 +1,21 @@
 # URL Params
 
 ## Lesson Objectives
-*By the end of this, developers will be able to:*
+*By the end of this lesson, students should be able to:*
 
-- Define what URL params are
-- Create an external data file
-- Use the data file to generate links
-- Have Resume component display the id param
-- Show specific job data based on id param
+- Define what URL params are,
+- Create an external data file.
+- Use the data file to generate links.
+- Have the Resume component display the ID param.
+- Show specific job data based on the ID param.
 
-## Define what URL params are
+## Define What URL Params Are
 
-URL params allow us to pass data into the application from the URL
+URL params allow us to pass data into the application from the URL.
 
-## Create an external data file
+## Create an External Data File
 
-Now we're going to have how app be a little more data driven.  Create `src/app/resume/jobs.ts`:
+Now, we're going to make our app a little more data driven. Create `src/app/resume/jobs.ts`:
 
 ```javascript
 export const JOBS = [
@@ -42,16 +42,16 @@ export const JOBS = [
 ]
 ```
 
-## Use the data file to generate links
+## Use the Data File to Generate Links
 
-In `src/app/app.component.ts` import the data file:
+In `src/app/app.component.ts`, import the data file:
 
 ```javascript
 import { Component } from '@angular/core';
 import { JOBS } from './resume/jobs';
 ```
 
-and now add it as a property of `AppComponent` (remove title if it still exists):
+Now, add it as a property of `AppComponent` (remove the title if it still exists):
 
 ```javascript
 export class AppComponent {
@@ -59,7 +59,7 @@ export class AppComponent {
 }
 ```
 
-In `src/app.app.component.html` loop through the jobs to create links:
+In `src/app.app.component.html`, loop through the jobs to create links:
 
 ```html
 <nav>
@@ -85,9 +85,9 @@ In `src/app.app.component.html` loop through the jobs to create links:
 </nav>
 ```
 
-## Alter the resume route to accept params
+## Alter the Resume Route to Accept Params
 
-Our resume route in `src/app/app-routing.module.ts` no longer works.  Update it to accept params:
+Our resume route in `src/app/app-routing.module.ts` no longer works. Update it to accept params:
 
 ```javascript
 const routes: Routes = [
@@ -106,9 +106,11 @@ const routes: Routes = [
 ];
 ```
 
-## Have Resume component display the id param
+## Have the Resume Component Display the ID Param
 
-At this point, the resume shows all the jobs.  But we want to show just one job.  Edit `src/app/resume/resume.component.ts` to import `ActivatedRoute`:
+At this point, the resume shows all the jobs. We want to show just one job. 
+
+Edit `src/app/resume/resume.component.ts` to import `ActivatedRoute`:
 
 ```javascript
 import { ActivatedRoute }   from '@angular/router';
@@ -138,7 +140,7 @@ Test that this works by showing `jobIndex` in `src/app/resume/resume.component.h
 <h2>Resume: {{jobIndex}}</h2>
 ```
 
-## Show specific job data based on id param
+## Show Specific Job Data Based on the ID Param
 
 Import the `JOBS` data object:
 
@@ -148,9 +150,9 @@ import { JOBS } from './jobs';
 
 Now alter the `ResumeComponent` to
 
-1. have a `job` property, set by the URL param
-1. find the job that has a matching id to the one specified in the URL
-    - NOTE: `param.id` is a string, and `job.id` is a number, so we must call `parseInt(param.id)`
+1. Have a `job` property set by the URL param.
+1. Find the job that has a matching ID to the one specified in the URL.
+    - Note: `param.id` is a string and `job.id` is a number, so we must call `parseInt(param.id)`.
 
 ```javascript
 export class ResumeComponent implements OnInit {
@@ -174,7 +176,7 @@ export class ResumeComponent implements OnInit {
 }
 ```
 
-Now in `src/app/resume/resume.component.html` display the data:
+Now, display the data in `src/app/resume/resume.component.html`:
 
 ```html
 <h2>Job Description For: {{job.title}}</h2>
