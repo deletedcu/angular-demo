@@ -1,14 +1,14 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Angular 2 - Components & Modules
+# Angular 2: Components & Modules
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
 
-Keeping our code DRY(don't repeat yourself) and KISS compliant by using Angular components.
+Keeping our code DRY (don't repeat yourself) and KISS compliant by using Angular components.
 
 ## Objectives
 
-By the end of this lesson, students should be able to:
+By the end of this lesson, you will be able to:
 
 -  Use the Angular CLI to generate new components.
 -  Use simple directives to make a component dynamic and interactive.
@@ -17,7 +17,7 @@ By the end of this lesson, students should be able to:
 
 ## Angular Components
 
-We've used the term component a lot recently, but what exactly is a component?
+We've used the term "component" a lot recently, but what exactly is a component?
 
 Generally speaking, a component is a reusable piece of code that addresses a specific concern. When developers separate their concerns successfully, the result is a series of reusable components that can be composed differently to create new applications.
 
@@ -27,7 +27,7 @@ Angular 2 leans heavily into component structure. Everything is a component.
 
 What does an Angular 2 component look like?
 
-Our 'app' component is composed of five files:
+Our `app` component is composed of five files:
 
 ```bash
 ├── app.component.css
@@ -39,9 +39,9 @@ Our 'app' component is composed of five files:
 
 Besides the module file, which can be unique to the root component, the Angular 2 development team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game.
 
-We'll put all of the styles that pertain to our component in **app.component.css**. Sick of namespacing your styles to avoid collisions? Angular 2 has you covered — these styles **are scoped exclusively to their component.** 
+We'll put all of the styles that pertain to our component in **app.component.css**. Sick of namespacing your styles to avoid collisions? Angular 2 has you covered — these styles **are scoped exclusively to its component.** 
 
-All of our unit tests for the component will live in **app.component.spec.ts**. We'll dive into testing a little later, but for now, just know that Angular 2 natively supports the Jasmine testing-framework.
+All of our unit tests for the component will live in **app.component.spec.ts**. We'll dive into testing a little later, but for now, just know that Angular 2 natively supports the Jasmine testing framework.
 
 With **app.component.html**, we see an Angular template once again:
 
@@ -76,11 +76,11 @@ Our component's **selector** is the name of the HTML element we use to summon th
 
 That's our component.
 
-The next two properties of our component decorator argument are relative paths to the template and the stylesheet for the component.
+The next two properties of our component's decorator argument are relative paths to the template and the component's style sheet.
 
-These metadata properties are added to our component class at runtime. For a full list of metadata properties that our component decorator recognizes, [check out the documentation](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html).
+These metadata properties are added to our component class at run time. For a full list of metadata properties that our component decorator recognizes, [check out the documentation](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html).
 
-In the class itself, we see one property being set. The scope of an instance of this class will serve as the **view-model** for our component. It connects our data **model** and the **view** that the user sees. For example, that 'title' we saw earlier in the template will be bound to the value of our instance's 'title' property.
+In the class itself, we see one property being set. The scope of an instance of this class will serve as the **view model** for our component. It connects our data **model** and the **view** the user sees. For example, that `title` we saw earlier in the template will be bound to the value of our instance's `title` property.
 
 ![Angular 2 Components](https://angular.io/generated/images/guide/architecture/component-databinding.png)
 
@@ -88,9 +88,9 @@ That's it! We've reviewed all of the working parts of 95 percent of Angular comp
 
 ### Code-Along: Our Second Component
 
-Let's work together to add a second component, MasterSword, to our fledgling app from earlier. The Angular CLI makes this a breeze.
+Let's work together to add a second component, `MasterSword`, to our fledgling app from earlier. The Angular CLI makes this easy.
 
-In your terminal in the root of this application directory, type:
+In your terminal, in the root of this application directory, type:
 
 ```bash
 ng g c master-sword
@@ -143,7 +143,7 @@ Let's give our template some flavor:
 <img src="http://vignette1.wikia.nocookie.net/zelda/images/f/fa/Master_Sword_Artwork_(Skyward_Sword).png/revision/latest">
 ```
 
-Make our implicitly-scoped stylesheet spicy:
+Make our implicitly scoped style sheet spicy:
 
 ```css
 h1 {
@@ -151,7 +151,7 @@ h1 {
 }
 ```
 
-And modify our component view-model slightly:
+And modify our component view model slightly:
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -163,7 +163,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterSwordComponent implements OnInit {
   
-  //Create the proclamation variable for the view-model
+  //Create the proclamation variable for the view model
   proclamation: string = 'Behold! The Master Sword!';
 
   constructor() { }
@@ -182,23 +182,23 @@ Finally, we'll use it in **app.component.html**:
 
 #### Test It Out
 
-Now run `ng serve` in your `ga-ui` folder, and browse to `localhost:4200` in your browser. Look at that sword!
+Now run `ng serve` in your `ga-ui` folder, and navigate to `localhost:4200` in your browser. Look at that sword!
 
 ### Lab: Make Your Own Component
 
-Use the Angular CLI to generate a 'hylian-shield' component. Have the component display a picture of a hylian shield and text that reads 'Behold! The Hylian Shield!' with a blue background. If you have extra time, play around with the directives listed in the [Angular Cheatsheet](https://angular.io/guide/cheatsheet).
+Use the Angular CLI to generate a `hylian-shield` component. Have the component display a picture of a hylian shield and text that reads "Behold! The Hylian Shield!" with a blue background. If you have extra time, play around with the directives listed in the [Angular Cheat Sheet](https://angular.io/guide/cheatsheet).
 
 ## Services: Abstracting and Reusing Business Logic
 
 All of the components we've looked at so far have been pretty basic. They have merely bound hard-coded data from our component classes to their corresponding templates. What if we want to write code that multiple different components can use?
 
-Servives are a way to abstract out business logic into a form that allows us to use it anywhere in our app. At boot, our app creates a single instance of the service. Through a few lines of code, we can inject this instance wherever we want.
+Services are a way to abstract out business logic into a form that allows us to use it anywhere in our app. At boot, our app creates a single instance of the service. Through a few lines of code, we can incorporate this instance wherever we want.
 
 ### Code-Along: Our First Service
 
 At the moment, we have two components that render different items. But what if we want both of those items to be owned by the same person? We could either hard-code our information in both components or use a service to share the logic.
 
-Let's go behind door number two.
+Let's go behind Door No. 2.
 
 First, let's create a directory to house all of the services for our app:
 
@@ -227,7 +227,7 @@ installing service
   WARNING Service is generated but not provided, it must be provided to be used
 ```
 
-Our generator created our service and a test file for the service. It's also warning us that we still need to **provide** our service to use it. Let's go ahead and do that.
+Our generator created our service and a test file for it. It's also warning us that we still need to **provide** our service to use it. Let's go ahead and do that.
 
 You may have noticed an empty **providers** array property in our **app.module** when we first looked at it. If we add a reference to our service class to our array...
 
@@ -255,7 +255,7 @@ import { UserService } from './services/user/user.service';
 export class AppModule { }
 ```
 
-...our application will create a single instance of our service on boot, and will allow us to inject that instance into as many of our components (and other Angular entities) as we want.
+...Our application will create a single instance of our service on boot and allow us to incorporate that instance into as many of our components (and other Angular entities) as we want.
 
 Our service is pretty useless at the moment, so let's add a method:
 
@@ -277,7 +277,7 @@ export class UserService {
 
 Our new method approximates an AJAX request (don't worry, we'll get to that in a later lesson) and returns something useful to both of our components.
 
-Returning to our MasterSword component, we can now inject the service by importing the service class into our file and modifying the constructor:
+Returning to our `MasterSword` component, we can now incorporate the service by importing the service class into our file and modifying the constructor:
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -303,7 +303,7 @@ export class MasterSwordComponent implements OnInit {
 }
 ```
 
-A bit of TypeScript magic will automatically add on our service as a property of our component, which allows us to make these modifications:
+A bit of TypeScript magic will automatically add our service as a property of our component, which allows us to make these modifications:
 
 ```typescript
 export class MasterSwordComponent implements OnInit {
@@ -327,13 +327,13 @@ There you have it. We've injected our new service and used its logic to enrich o
 
 ## Lab: Our Second Injection
 
-Use our new service to update the `hylian-shield` component in the same manner that we just updated our `master-sword` component.
+Use our new service to update the `hylian-shield` component in the same manner we just updated our `master-sword` component.
 
-## Feature Modules: Adding Organization to Unruly Codebases
+## Feature Modules: Adding Organization to Unruly Code Bases
 
-Our current app is small, but let's imagine what an a mature application running in production would look like. We could have hundreds of components and dozens of services vying for our attention. Now imagine coming into the project for the first time and trying to make sense of the madness. It's not such a fun prospect.
+Our current app is small, but let's imagine what a mature application running in production would look like. We could have hundreds of components and dozens of services vying for our attention. Now imagine coming into the project for the first time and trying to make sense of the madness. It's not such a fun prospect.
 
-With Angular modules, we get another chance to namespace our code and provide a layer of organization for developers to make sense of it with.
+With Angular modules, we get another chance to namespace our code and provide a layer of organization with which developers can make sense of it.
 
 Let's see the theory in practice by abstracting out the code we've written so far into a feature module.
 
@@ -409,13 +409,13 @@ import { EquipmentModule } from './equipment/equipment.module';
 export class AppModule { }
 ```
 
-Finally, since we moved our `master-sword` and `hylian-shield` components, we need to change the directory that they're importing `user.service.ts` from.  What should it be now?
+Finally, because we moved our `master-sword` and `hylian-shield` components, we need to change the directory from which they're importing `user.service.ts`.  What should it be now?
 
-If everything worked correctly, our app will render exactly the same — but our app component will look less cluttered.
+If everything worked correctly, our app will render in exactly the same way — but our app component will look less cluttered.
 
 ## References
 
--   [Angular-cli github page](https://github.com/angular/angular-cli).
+-   [Angular CLI GitHub Page](https://github.com/angular/angular-cli).
 -   [Official Angular Documentation](https://github.com/angular/angular-cli).
 -   [Angular Components](https://angular.io/api/core/Component).
 -   [Angular Services Example](https://angular.io/tutorial/toh-pt4).
@@ -423,6 +423,6 @@ If everything worked correctly, our app will render exactly the same — but our
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+1)  All content is licensed under a CC­BY­NC­SA 4.0 license.
+2)  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
