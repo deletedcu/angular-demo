@@ -2,25 +2,25 @@
 
 # Major Angular Packages Breakdown
 
-In this lesson, we will discuss the most popular and frequently used packages in Angular.
+In this lesson, we'll discuss the most popular and frequently-used packages in Angular.
 
-### Why is this important?
+### Why Is This important?
 
 Angular, and front-end web development in general, can be an intimidating field because there are so many tools to choose from.
 
-By the end of this lesson, we will cover the essentials so developers can focus on just what they need, and filter out the rest until later.
+By the end of this lesson, we'll cover the essentials so developers can focus on just what they need, and filter out the rest until later.
 
-### What are the objectives?
-*After this workshop, developers will be able to:*
+### What Are the Objectives?
+*After this lesson, you will be able to:*
 
-- **List** the most important packages in Angular
-- **Integrate** these packages into an Angular project
+- **List** the most important packages in Angular.
+- **Integrate** these packages into an Angular project.
 
 ## Feature Packages
 
 ### Core
 
-`@angular/core`: Critical runtime parts of the framework needed by every application. Includes all metadata decorators, Component, Directive, dependency injection, and the component lifecycle hooks.
+`@angular/core`: The critical runtime parts of the framework needed by every application. Includes all metadata decorators, components, directives, dependency injections, and the component lifecycle hooks.
 
 ### Common
 
@@ -28,7 +28,7 @@ By the end of this lesson, we will cover the essentials so developers can focus 
 
 ### Template Compiler
 
-`@angular/compiler`: Angular's Template Compiler. It understands templates and can convert them to code that makes the application run and render. Typically you don’t interact with the compiler directly; rather, you use it indirectly via platform-browser-dynamic or the offline template compiler.
+`@angular/compiler`: Angular's template compiler. It understands templates and can convert them to code that makes the application run and render. Typically, you don’t interact with the compiler directly; rather, you use it indirectly via platform-browser-dynamic or the offline template compiler.
 
 ### Browser
 
@@ -36,7 +36,7 @@ By the end of this lesson, we will cover the essentials so developers can focus 
 
 ### Dynamic Browser
 
-`@angular/platform-browser-dynamic`: Includes Providers and a bootstrap method for applications that compile templates on the client. Don’t use offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
+`@angular/platform-browser-dynamic`: Includes providers and a bootstrap method for applications that compile templates on the client. Don’t use the offline compilation. Use this package for bootstrapping during development and for bootstrapping plunker samples.
 
 ### HTTP
 
@@ -44,11 +44,11 @@ By the end of this lesson, we will cover the essentials so developers can focus 
 
 ### Router
 
-`@angular/router`: Component router.
+`@angular/router`: The component router.
 
 ### Upgrade
 
-`@angular/upgrade`: Set of utilities for upgrading AngularJS applications to Angular.
+`@angular/upgrade`: The set of utilities for upgrading AngularJS applications to Angular.
 
 ## Polyfill Packages
 
@@ -58,17 +58,17 @@ By the end of this lesson, we will cover the essentials so developers can focus 
 
 ### rxjs
 
-`rxjs`: A polyfill for the [Observables specification](https://github.com/tc39/proposal-observable) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of rxjs (within a compatible version range) without waiting for Angular updates.
+`rxjs`: A polyfill for the [observables specification](https://github.com/tc39/proposal-observable) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of rxjs (within a compatible version range) without waiting for Angular updates.
 
 ### Zone JS
 
-`zone.js`: A polyfill for the [Zone specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of zone.js to use (within a compatible version range) without waiting for Angular updates.
+`zone.js`: A polyfill for the [zone specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the TC39 committee that determines standards for the JavaScript language. You can pick a preferred version of zone.js to use (within a compatible version range) without waiting for Angular updates.
 
 ## Helper Libraries
 
 ### Angular Mock API
 
-`angular-in-memory-web-api`: An Angular-supported library that simulates a remote server's web api without requiring an actual server or real HTTP calls. Good for demos, samples, and early stage development (before you even have a server).
+`angular-in-memory-web-api`: An Angular-supported library that simulates a remote server's web API without requiring an actual server or real HTTP calls. Good for demos, samples, and early-stage development (before you even have a server).
 
 ### Bootstrap
 
@@ -78,11 +78,11 @@ By the end of this lesson, we will cover the essentials so developers can focus 
 
 ### lite-server
 
-`lite-server`: A light-weight, static file server, by John Papa with excellent support for Angular apps that use routing.
+`lite-server`: A light-weight, static file-server by John Papa with excellent support for Angular apps that use routing.
 
 ### TypeScript
 
-`typescript`: the TypeScript language server, including the tsc TypeScript compiler.
+`typescript`: The TypeScript language server, including the tsc TypeScript compiler.
 
 ### Types for TypeScript
 
@@ -92,13 +92,13 @@ By the end of this lesson, we will cover the essentials so developers can focus 
 
 Work with a partner for the following activity.  
 
-Choose one partner's computer to start with, and that partner will be the first driver.
+Choose one partner's computer to start with — that partner will be the first driver.
 
 Create a new project with `ng new`.
 
-Find as many of the packages above as possible in your new project.  Make sure to note where you find the reference to the package (file and line number).
+Find as many of the packages above as possible in your new project. Make sure to note where you find the reference to the package (include the file and line number).
 
-Now that you have found some packages in your project, try to import as many as possible and integrate them into your project.  Feel free to use previous lessons as a resource, but avoid copying-and-pasting.
+Now that you've found some packages, try to import as many as possible and integrate them into your project. Feel free to use previous lessons as a resource, but avoid copying-and-pasting.
 
 Make sure you switch drivers halfway through.
 
@@ -109,6 +109,6 @@ Make sure you switch drivers halfway through.
 
 ### Resources
 
-- [Major Angular npm Packages](https://angular.io/guide/npm-packages)
-- [Angular CLI Wiki](https://github.com/angular/angular-cli/wiki)
-- [Curated List of Additional Components and Libraries](https://github.com/brillout/awesome-angular-components)
+- [Major Angular npm packages](https://angular.io/guide/npm-packages).
+- [Angular CLI wiki](https://github.com/angular/angular-cli/wiki).
+- [Curated list of additional components and libraries](https://github.com/brillout/awesome-angular-components).
