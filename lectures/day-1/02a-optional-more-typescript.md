@@ -208,7 +208,7 @@ robb.dance();
 
 <!--0:45 10 minutes -->
 
-**Modules** are a powerful way to share code between files. In TypeScript, the functionality is similar to node, but the syntax is a little different. Let's see how.
+**Modules** are a powerful way to share code between files. In TypeScript, the functionality is similar to Node, but the syntax is a little different. Let's see how.
 
 We want to gather all of our `main` code in one file while allowing it to be included independently elsewhere. For instance, we have a lot of *very advanced* mathematical methods that we'd like to include in many places. Create a file called `math.ts` and follow along.
 
@@ -220,7 +220,7 @@ export class Multiplication {
 	}
 }
 
--- Note that we could easily create another class called addition, and we could put functions like `addTwo` inside it. Does this look familiar? (That's the ES6 method syntax.)
+-- Note that we could easily create another class called Addition, and we could put functions like `addTwo` inside it. Does this look familiar? (That's the ES6 method syntax.)
 
 -->
 
