@@ -180,9 +180,9 @@ meta.addTags([
 
 ### Resources
 
-- [Angular Universal Official Page](https://universal.angular.io/).
-- [Angular Universal Set Up Tutorial](https://medium.com/@evertonrobertoauler/angular-4-universal-app-with-angular-cli-db8b53bba07d).
-- [Newer Angular Universal Set Up Tutorial](https://github.com/angular/angular-cli/wiki/stories-universal-rendering).
-- [Making Angular SEO friendly](https://coursetro.com/posts/code/68/Make-your-Angular-App-SEO-Friendly-(Angular-4-+-Universal)).
-- [Angular Universal Pitch](http://dev.sebastienlucas.com/universal-angular/).
-- [Angular Universal Docs](https://github.com/angular/universal).
+- [Angular Universal Official Page](https://universal.angular.io/)
+- [Angular Universal Set Up Tutorial](https://medium.com/@evertonrobertoauler/angular-4-universal-app-with-angular-cli-db8b53bba07d)
+- [Newer Angular Universal Set Up Tutorial](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
+- [Making Angular SEO friendly](https://coursetro.com/posts/code/68/Make-your-Angular-App-SEO-Friendly-(Angular-4-+-Universal))
+- [Angular Universal Pitch](http://dev.sebastienlucas.com/universal-angular/)
+- [Angular Universal Docs](https://github.com/angular/universal)
