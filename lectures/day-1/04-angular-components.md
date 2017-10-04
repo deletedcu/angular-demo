@@ -415,11 +415,11 @@ If everything worked correctly, our app will render in exactly the same way — 
 
 ## References
 
--   [Angular CLI GitHub Page](https://github.com/angular/angular-cli).
--   [Official Angular Documentation](https://github.com/angular/angular-cli).
--   [Angular Components](https://angular.io/api/core/Component).
--   [Angular Services Example](https://angular.io/tutorial/toh-pt4).
--   [Angular Modules](https://angular.io/guide/ngmodule).
+-   [Angular CLI GitHub Page](https://github.com/angular/angular-cli)
+-   [Official Angular Documentation](https://github.com/angular/angular-cli)
+-   [Angular Components](https://angular.io/api/core/Component)
+-   [Angular Services Example](https://angular.io/tutorial/toh-pt4)
+-   [Angular Modules](https://angular.io/guide/ngmodule)
 
 ## [License](LICENSE)
 
