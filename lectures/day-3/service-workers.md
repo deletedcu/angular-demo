@@ -6,14 +6,14 @@
 
 Users of modern web apps have grown accustomed to:
 
-- Very **fast response times**.
-- **Cached offline resources** when the internet connection is slow or non-existent.
+- **Fast response times**.
+- **Cached offline resources** when the internet connection is slow or nonexistent.
 - **Pleasant offline responses**/error messages in all other circumstances.
 
 With that in mind, we can take advantage of Service Workers to give users what they want.
 
 ### What Are the Objectives?
-*After this less, you will be able to:*
+*After this lesson, you will be able to:*
 
 - **Install** and **activate** a Service Worker.
 - **Utilize** a Service Worker to fetch a resource.
@@ -23,22 +23,22 @@ With that in mind, we can take advantage of Service Workers to give users what t
 
 ### What is a Service Worker?
 
-*A Service Worker is a script that your browser runs in the background — separate from a web page — and opens the door to features that don't need a web page or user interaction.* 
+*A Service Worker is a script that your browser runs in the background — separate from a web page — that opens the door to features that don't need a web page or user interaction.* 
 
-**_ Google**
+**— Google**
 
 ### Our First Service Worker
 
-#### Setup
+#### Set Up
 
 In order to get started, we need to do a little front-end setup:
 
-1. Create a new folder called `first-service-worker`.
-2. Create a new `index.html` file inside this folder.
-3. Fill `index.html` out with the basic HTML boilerplate and a "Hello World" heading.
-4. Create a `service-worker.js` file inside the same folder.
+1) Create a new folder called `first-service-worker`.
+2) Create a new `index.html` file inside this folder.
+3) Fill `index.html` out with the basic HTML boilerplate and a "Hello, World" heading.
+4) Create a `service-worker.js` file inside the same folder.
 
-#### Dev Tools Revisited
+#### Dev Tools, Revisited
 
 Open up Chrome Developer Tools and select the `Application` tab. This is where we'll be playing the most today.
 
@@ -69,13 +69,13 @@ Let's walk through what's happening here.
 
 1. Not all browsers support Service Workers just yet. We need to make sure we can use them here.
 2. Next we need to tie our Service Worker to the page load.
-3. Now we need to `register` our Service Worker. In other words, we need to tell the browser where our Service Worker code is.
+3. Now we need to `register` our Service Worker. In other words, we need to tell the browser the location of our Service Worker code.
 
 Save your work and start a web server like Python's `SimpleHTTPServer` in your folder.
 
->**Note:** It's *very important* that you load your page with a web server, rather than opening the HTML file directly.  Service Workers do not work on static files.
+>**Note:** It's *very important* that you load your page with a web server rather than opening the HTML file directly.  Service Workers do not work on static files.
 
-### Actually Doing Work With our Service Worker
+### Actually Doing Work With Our Service Worker
 
 We have a Service Worker!
 
@@ -95,26 +95,26 @@ Installing is the first of two important steps our Service Worker takes before w
 
 It's important that we never disrupt service for our users. For that reason, we split the process in half.
 
-- **Installing** adds the new Service Worker to the browser, but keeps the old Service Worker running the whole time.
+- **Installing** adds the new Service Worker to the browser but keeps the old Service Worker running the whole time.
 - **Activating** switches out the old Service Worker for the new one.
 
-Some tasks are best left to the **install** step and some for the **activate** step. Let's look at one of the most important **install** tasks: caching.
+Some tasks are best left to the **install** step and some to the **activate** step. Let's look at one of the most important **install** tasks: caching.
 
 #### Caching an Image
 
-Remember Xzibit? He had some very powerful things to say about software tests.
+Remember Xzibit? He had some powerful things to say about software tests.
 
-1. Download the image (or an image of your choice) from the `resources` folder in this repository and place it in your `first-service-worker` folder.
+1) Download the image (or an image of your choice) from the `resources` folder in this repository and place it in your `first-service-worker` folder.
 
-2. Create an `img` HTML element with a `src` pointing to the king of Pimp My Ride.
+2) Create an `img` HTML element with an `src` pointing to the king of *Pimp My Ride*.
 
-3. Refresh your page. We have a meme!
+3) Refresh your page. We have a meme!
 
-4. Now go into Dev Tools and select `Service Workers` under the `Application` tab.
+4) Now navigate into Dev Tools and select `Service Workers` under the `Application` tab.
 
-5. Check the `Offline` box at the top of the developer tools section and refresh the page. Oh no, our beautiful page is gone.
+5) Check the `Offline` box at the top of the developer tools section and refresh the page. Oh no, our beautiful page is gone!
 
-6. Let's fix this, we need to cache some files in our **install**. Add the following lines to `service-worker.js`:
+6) Let's fix this. We need to cache some files in our **install**. Add the following lines to `service-worker.js`:
 
 ```js
 var CACHE_NAME = 'service-worker-cache-v1';
@@ -124,7 +124,7 @@ var urlsToCache = [
 ];
 ```
 
-7. Now that we have a named cache and files to put inside it, we need to load the cache when we install our Service Worker.  Add the following lines to your `install` listener:
+7) Now that we have a named cache and files to put inside it, we need to load the cache when we install our Service Worker.  Add the following lines to your `install` listener:
 
 ```js
 self.addEventListener('install', function(event) {
@@ -139,13 +139,13 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-8. Save your files, go back to your browser, deselect `Offline`, and refresh the page.
+8) Save your files, go back to your browser, deselect `Offline`, and refresh the page.
 
-9. Xzibit is back, but is he here to stay? Click the `Cache Storage` item on the left of your `Application` tab in developer tools.
+9) Xzibit is back, but is he here to stay? Click the `Cache Storage` item on the left of your `Application` tab in Dev Tools.
 
->**Note:** Sometimes the cache doesn't update immediately. If it looks empty, you can close the developer tools and open it again to bring in the newest cache.
+>**Note:** Sometimes the cache doesn't update immediately. If it looks empty, you can close Dev Tools and open it again to bring in the newest cache.
 
-10. Our resources are in the cache. Now we need to reference these any time we're offline. To do that, add the following `fetch` handler to `service-worker.js`. `fetch` is an API that Service Workers use to grab online resources — similar to XML/HTTP requests:
+10) Our resources are in the cache. Now we need to reference these any time we're offline. To do that, add the following `fetch` handler to `service-worker.js`. `fetch` is an API that Service Workers use to grab online resources — similar to XML/HTTP requests:
 
 ```js
 self.addEventListener('fetch', function(event) {
@@ -163,7 +163,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-11. Refresh your browser, cross your fingers, select `Offline` again, and refresh your browser one more time. Good job!
+11) Refresh your browser, cross your fingers, select `Offline` again, and refresh your browser one more time. Good job!
 
 ### Conclusion
 
