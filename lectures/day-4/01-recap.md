@@ -14,7 +14,7 @@ We started our first day by dipping our toes into Angular, and by the end of it 
 
 ### Day Two: Navigation and AJAX
 
-On day two, we pushed the boundaries of what our simple applications could do. We learned about what single-page applications are and how they differ from the traditional web application model. Next, we learned how to use the Angular router to break our SPAs out into distict pages, and lastly how to use `pushState()` to get these pages to play nicely with our browsers. 
+On day two, we pushed the boundaries of what our simple applications could do. We learned about what single-page applications are and how they differ from the traditional web application model. Next, we learned how to use the Angular router to break our SPAs out into distict pages and how to use `pushState()` to get these pages to play nicely with our browsers. 
 
 Afterward, we pushed the envelope even further by incorporating AJAX into our applications. We used Angular's HTTP service and our knowledge of URL parameters to interact with an API and make our app more dyanmic.
 
