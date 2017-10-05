@@ -1,21 +1,23 @@
-# Using an API with AJAX
+# Using an API With AJAX
 
 ## Lesson Objectives
 
-1. Create a new app
-1. Generate a new component
-1. Clean up app.component.html
-1. Add search component to app
-1. Add Form HTML to search component
-1. Import Form functionality into the app
-1. Set a component property to the value of an input
-1. Invoke a function when the user clicks a button
-1. Add the ability to make AJAX requests
-1. Make an AJAX request
-1. Display AJAX results in app
-1. Display more data in the HTML
+*By the end of this lesson, you will be able to:*
 
-## Create a new app
+- Create a new app.
+- Generate a new component.
+- Clean up `app.component.html`.
+- Add a search component to the app.
+- Add form HTML to the search component.
+- Import form functionality into the app.
+- Set a component property to the value of an input.
+- Invoke a function when the user clicks a button.
+- Add the ability to make AJAX requests.
+- Make an AJAX request.
+- Display AJAX results in the app.
+- Display more data in the HTML.
+
+## Create a New App
 
 ```
 ng new starwars
@@ -23,7 +25,7 @@ cd starwars
 ng serve --open
 ```
 
-## Clean up app.component.html
+## Clean Up `app.component.html`
 
 Set `src/app/app.component.html` contents to:
 
@@ -31,13 +33,13 @@ Set `src/app/app.component.html` contents to:
 <h1>Star Wars Character Search App</h1>
 ```
 
-## Generate a new component
+## Generate a New Component
 
 ```
 ng generate component search
 ```
 
-## Add search component to app
+## Add a Search Component to the App
 
 Edit `src/app/app.component.html`:
 
@@ -46,7 +48,7 @@ Edit `src/app/app.component.html`:
 <app-search></app-search>
 ```
 
-## Add Form HTML to search component
+## Add Form HTML to the Search Component
 
 Edit `src/app/search/search.component.html`:
 
@@ -58,7 +60,7 @@ Edit `src/app/search/search.component.html`:
 </section>
 ```
 
-## Import Form functionality into the app
+## Import Form Functionality Into the App
 
 Edit `src/app/app.module.ts` to import `FormsModule` and place it as an import:
 
@@ -86,7 +88,7 @@ import { FormsModule } from '@angular/forms'; //import FormsModule
 export class AppModule { }
 ```
 
-## Set a component property to the value of an input
+## Set a Component Property to the Value of an Input
 
 In `src/app/search/search.component.html`, add `[(ngModel)]` to the text input:
 
@@ -101,9 +103,9 @@ In `src/app/search/search.component.html`, add `[(ngModel)]` to the text input:
 
 Test this by changing the text in the input field.
 
-## Invoke a function when the user clicks a button
+## Invoke a Function When the User Clicks a Button
 
-In `src/app/search/search.component.ts` add a `findCharacter` method to SearchComponent:
+In `src/app/search/search.component.ts`, add a `findCharacter` method to SearchComponent:
 
 ```javascript
 findCharacter(name){
@@ -123,7 +125,7 @@ Call it in `src/app/search/search.component.html` (also remove the `Search Strin
 
 Test this by looking in the console.
 
-## Add the ability to make AJAX requests
+## Add the Ability to Make AJAX Requests
 
 Add `HttpModule` to `src/app/app.module.ts`:
 
@@ -145,14 +147,14 @@ import { HttpModule } from '@angular/http'; //import module
 })
 ```
 
-Now edit `src/app/search/search.component.ts` to import appropriate modules:
+Now, edit `src/app/search/search.component.ts` to import appropriate modules:
 
 ```javascript
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 ```
 
-And tell the constructor of the `SearchComponent` class to add an `http` property:
+Tell the constructor of the `SearchComponent` class to add an `http` property:
 
 ```javascript
 constructor(
@@ -160,7 +162,7 @@ constructor(
 ) { }
 ```
 
-## Make an AJAX request
+## Make an AJAX Request
 
 In `src/app/search/search.component.ts`, `findCharacter(name)` should make a request to `swapi.io`:
 
@@ -176,9 +178,9 @@ The `rxjs/add/operator/toPromise` import that we previously wrote adds the abili
 
 You can test this by looking in the console.
 
-## Display AJAX results in app
+## Display AJAX Results in the App
 
-In `src/app/search/search.component.ts` add a public `results` property and set it to the results of the AJAX call when it succeeds:
+In `src/app/search/search.component.ts`, add a public `results` property and set it to the results of the AJAX call when it succeeds:
 
 ```javascript
 export class SearchComponent implements OnInit {
@@ -214,7 +216,7 @@ Now add some HTML to `src/app/search/search.component.html` to display the resul
 
 You can test this in the app.
 
-## Display more data in the HTML
+## Display More Data in the HTML
 
 Edit `src/app/search/search.component.html`:
 

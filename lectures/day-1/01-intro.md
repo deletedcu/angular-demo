@@ -4,20 +4,16 @@
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
 
-Welcome to the world of Angular! You're about to embark on a week-long journey of discovery, learning one of the hottest front end frameworks on the planet.
+Welcome to the world of Angular. You're about to embark on a week-long journey of discovery, learning one of the most popular front-end frameworks on the planet.
 
 ## What is Angular?
 
-Angular is a front end framework that was developed and is maintained by Google. As a front end framework, it offers developers a blueprint with which to organize their front end code and many useful APIs to help speed up development significantly. Angular in particular stresses:
+Angular is a front-end framework developed and maintained by Google. As a front-end framework, it offers developers a blueprint to help organize their front-end code, along with many useful application programming interfaces (APIs) to help speed up development significantly. In particular, Angular stresses:
 
-- Reusability and flexibility through component structure
-- Modularity
-- Component encapsulation
-- Ubiquity
-- Native TypeScript Integration
+- Reusability and flexibility through component structure.
+- Modularity.
+- Component encapsulation.
+- Ubiquity.
+- Native TypeScript integration.
 
-This short video will give you more context:
-
-VIDEO GOES HERE!!!!!!!!!!
-
-Now that we're acquainted with what we're going to be learning, it's time to get cracking! As eager as you may be to start writing Angular code, however, we first need to learn the basics of TypeScript.
+Now that we're acquainted with what we'll be learning, it's time to get cracking! As eager as you may be to start writing Angular code, however, we first need to learn the basics of TypeScript.

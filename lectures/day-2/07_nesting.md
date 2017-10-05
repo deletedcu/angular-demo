@@ -1,20 +1,20 @@
 # Nesting
 
 ## Lesson Objectives
-*By the end of this, developers will be able to:*
+*By the end of this, you will be able to:*
 
-- Describe nested routes
-- Create components for two sub sections
-- Move the appropriate HTML to each sub section component
-- Create a router just for the sub sections
-- Replace the old main route with the new routing module
-- Add the router outlet for the sub sections:
+- Describe nested routes.
+- Create components for two subsections.
+- Move the appropriate HTML to each subsection component.
+- Create a router just for the subsections.
+- Replace the old main route with the new routing module.
+- Add the router outlet for the subsection.
 
-## Describe nested routes
+## Describe Nested Routes
 
-Sometimes you want to have sub sections within a specific route (routes within routes).  We can accomplish this with nested routes.
+Sometimes you'll want to have subsections within a specific route (routes within routes). We can accomplish this with nested routes.
 
-## Create components for two sub sections
+## Create Components for Two Subsections
 
 We're going to split `/about` into `/early-life` and `/career`.
 
@@ -25,13 +25,13 @@ ng generate component early-life
 ng generate component career
 ```
 
-## Move the appropriate HTML to each sub section component
+## Move the Appropriate HTML to Each Subsection Component
 
 Cut the HTML from `src/app/about/about.component.html` and paste into `src/app/early-life/early-life.component.html`:
 
 ```html
 <h3>Early Life</h3>
-<p>Just a kid growing up rough on the streets.  Hustlin' code for ca$h</p>
+<p>Just a kid growing up rough on the streets. Hustlin' code for ca$h.</p>
 ```
 
 and `src/app/career/career.component.html`:
@@ -41,7 +41,7 @@ and `src/app/career/career.component.html`:
 <p>Now I'm makin' it raaaiiiiiinnnn!!!</p>
 ```
 
-## Create a router just for the sub sections
+## Create a Router Just for the Subsections
 
 Create `src/app/about/about-routing.module.ts`:
 
@@ -80,7 +80,7 @@ const aboutRoutes: Routes = [
 export class AboutRoutingModule { }
 ```
 
-## Replace the old main route with the new routing module
+## Replace the Old Main Route With the New Routing Module
 
 Remove the `about` route in `src/app/app-routing.module.ts`:
 
@@ -121,7 +121,7 @@ import { AboutRoutingModule} from './about/about-routing.module' //import the ne
 })
 ```
 
-## Add the router outlet for the sub sections:
+## Add the Router Outlet for the Subsections
 
 Edit `src/app/about/about.component.html`:
 
@@ -135,9 +135,9 @@ You can now test by going to:
 - http://localhost:4200/about/early-life
 - http://localhost:4200/about/career
 
-## Add links to the various sub sections:
+## Add Links to the Various Subsections
 
-You can now create links to these sub section in `src/app/about/about.component.html`:
+You can now create links to these subsections in `src/app/about/about.component.html`:
 
 ```html
 <h2>About Page</h2>
