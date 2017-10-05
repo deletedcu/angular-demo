@@ -2,7 +2,7 @@
 
 # Introduction to Angular
 
-![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
+![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
 
 Welcome to the world of Angular. You're about to embark on a week-long journey of discovery, learning one of the most popular front-end frameworks on the planet.
 
@@ -16,8 +16,4 @@ Angular is a front-end framework developed and maintained by Google. As a front-
 - Ubiquity.
 - Native TypeScript integration.
 
-This short video will provide you with more context:
-
-VIDEO GOES HERE!!!!!!!!!!
-
-Now that we're acquainted with what we'll be learning, it's time to get cracking. As eager as you may be to start writing Angular code, we first need to learn the basics of TypeScript.
+Now that we're acquainted with what we'll be learning, it's time to get cracking! As eager as you may be to start writing Angular code, however, we first need to learn the basics of TypeScript.

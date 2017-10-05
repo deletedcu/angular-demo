@@ -2,7 +2,7 @@
 
 # Angular Basics
 
-![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
+![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
 
 **Angular** is a superior front-end framework. 
 

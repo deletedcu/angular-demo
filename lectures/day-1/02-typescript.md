@@ -1,4 +1,4 @@
-![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # Introduction to TypeScript
 
@@ -21,7 +21,11 @@ TypeScript is an open-sourced programming language developed and maintained by M
 
 This is just a fancy way to say that TypeScript includes all of the types, semantics, and functionalities of JavaScript while adding a few bells and whistles of its own.
 
+<<<<<<< HEAD
+![TypeScript superset of JavaScript](https://qph.ec.quoracdn.net/main-qimg-b4ea5e4175b7ea1105895f131e9614cc)
+=======
 ![TypeScript Superset of JavaScript](http://alexander.holbreich.org/content/images/2016/01/typescript-es6-es5.png)
+>>>>>>> 7a2191781b98997151c047f825c1852644372593
 
 So why bother with TypeScript? It turns out that some of those extra bells and whistles are extremely useful.
 
@@ -34,6 +38,8 @@ npm install typescript -g
 ```
 
 This program will read our TypeScript, interpret it, and turn it into JavaScript (ES5). Pretty neat, right? Because our finished product is JavaScript, it can be run in browsers.
+
+> If you use Atom, you'll likely also want to install a package for syntax highlighting of TypeScript, [atom-typescript](https://atom.io/packages/atom-typescript).
 
 ![Transpiling](https://i1.wp.com/www.mithunvp.com/wp-content/uploads/2016/02/transpiling.png)
 
