@@ -2,11 +2,11 @@
 
 # Project: The **Observable** Death Square
 
-In the Galactic Empire, workplace safety and [a host of other issues](https://twitter.com/DeathStarPR) are very important to us. One thing we take very seriously is scalability.  Unfortunately, `promises` are not very scalable.  Enter: the `observable`. 
+In the Galactic Empire, workplace safety and [a host of other issues](https://twitter.com/DeathStarPR) are very important to us. One thing we take very seriously is scalability. Unfortunately, `promises` are not very scalable. Enter: the `observable`. 
 
 ### Instructions:
 
-1. Open up our data banks.  Go into `turret-api`, run `seed.js` and `server.js`...but don't forget to install those npm modules!
+1. Open up our data banks. Go into `turret-api` and run `seed.js` and `server.js` — don't forget to install those npm modules.
 
 2. Go into `imperial-starfleet` and start up our front end.
 
