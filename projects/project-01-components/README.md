@@ -16,7 +16,7 @@ Those pesky rebels destroyed yet another one of our death stars. We'll build an 
 
 4. Now that our death square is protected, let's create a component called `laser-cannon`. One instance of this component should also be placed and centered in our `death-square` component. It should be a square with a red background. 
 
-5. Our death square is complete, but we would still be vulnerable if the rebel fleet attacked. Let's create a new component called `tie-fighter`. Include [tie-fighter.png](images/tie-fighter.png) in its template and add as many instances as you feel necessary to protect our death square. Do NOT nest these in the `death-square` component.
+5. Our death square is complete, but we would still be vulnerable if the rebel fleet attacked. Let's create a new component called `tie-fighter`. Include [tie-fighter.png](images/tie-fighter.png) in its template, and add as many instances as you feel necessary to protect our death square. Do NOT nest these in the `death-square` component.
 
 6. This death square will surely not be destroyed now, but we still want to wrap up our code so future engineers can build another one easily. Move the `turret`, `death-square`, and `laser-cannon` into an `internal-defenses` repository, and create a feature module for `internal-defenses`.
 
