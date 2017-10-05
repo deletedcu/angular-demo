@@ -8,7 +8,7 @@ Those pesky rebels are planning yet another attack on our death square. Like any
 
 1. Open up the `imperial-starfleet` directory in Terminal and start up the app. If you're not sure how to do this, take a look at previous lessons for help.
 
-2. Look familiar? This is our "death square." However, we at the Empire demand a little more detail. Try clicking on one of the turrets. Nothing happened, right? Let's fix that.
+2. Look familiar? This is our "death square", which we'll use to bring doom for the Rebel Alliance. However, we at the Empire demand a little more detail. Try clicking on one of the turrets. Nothing happened, right? Let's fix that.
 
 3. Create a new component called `info-window` so we can see some information on our turrets.
 
