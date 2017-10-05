@@ -1,14 +1,12 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Vending Machine Kata: Drinking the ngCola?
+# Vending Machine Exercise: Drinking the ngCola?
 
 ## Introduction
 
-In this exercise you will build the brains of a vending machine.  It will accept money, maintain
-inventory, and dispense products.  All the things that you might expect a vending machine to accomplish.
+In this exercise you will build the brains of a vending machine. It will accept money, maintain inventory, and dispense products — all the things that you might expect a vending machine to do.
 
-The point of this kata is to provide a larger than trivial exercise that will enhance your understanding of Typescript and Angular 2.  A significant
-portion of the effort will be in determining how to create your components and interact with the provided Angular services for managing communication across components and external API calls.
+The point of this exercise is to to enhance your understanding of TypeScript and Angular 2. A significant portion of the effort will be in determining how to create your components and interact with the provided Angular services for managing communication across components and external API calls.
 
 ## Setup
 
@@ -39,56 +37,48 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 
 ## Features
 
-As a professional software engineer, you will most likely be working off of stories. We have split the work of creating our vending machine into three user stories.
+As a professional software engineer, you'll most likely be working off of stories. We have split the work of creating our vending machine into three user stories.
 
 ### Watch: Insert Coin
 
-_As a vendor_  
-_I want a vending machine that accepts coins_  
-_So that I can collect money from the customer_ 
+_As a vendor, I want a vending machine that accepts coins so I can collect money from the customer._ 
 
 - The vending machine will accept valid coins (nickels, dimes, and quarters). Coins are represented by three buttons.
 - When a valid coin is inserted (button pressed) the amount of the coin will be added to the current balance and the machine's display will be updated.
-- When there are no coins inserted, the machine displays INSERT COIN.
+- When there are no coins inserted, the machine will display INSERT COIN.
 
 ### Code Together: Display Items
 
-_As a vendor_  
-_I want customers to see what they can buy_  
-_So that I can give them an incentive to put money in the machine_
+_As a vendor, I want customers to see what they can buy so I can give them an incentive to put money in the machin._
 
 - The machine shows a list of items with their price and remaining inventory.
-- List of items is populated from item.service, which uses the external API to return an array of item objects.
+- The list of items is populated from item.service, which uses the external API to return an array of item objects.
 
 ### Code Together: Select Item
 
-_As a vendor_
-_I want customers to be able to select an item_
-_So that I know how much money to charge them and which item I should disperse_
+_As a vendor, I want customers to be able to select an item so I know how much money to charge them and which item I should dispense._
 
 - The machine includes a text input that accepts item codes.
 - The text input should not accept more than two characters.
-- The machine responds with "{{item.name}} selected." and selects item if user enters a code that matches an item code.
+- The machine responds with "{{item.name}} selected." and selects an item if a user enters a code that matches that item code.
 
 ### Pair Lab: Dispense Item
 
-_As a customer_  
-_I want to be told whether my item has been dispensed_  
-_So that I can know whether my transaction has been completed_  
+_As a customer, I want to be told whether my item has been dispensed so I can know whether my transaction has been completed._  
 
-- A button labeled 'Dispense' when pressed dispenses the selected item if there is enough current balance and the selected item has remaining stock.
-- The machine responds with "No item selected" if the user has not yet selected an item.
-- The machine responds with "Insufficient Balance" or "No Inventory Remaining," respectively if there is an error, and cancels dispensing of item.
-- The machine responds with success message (developer's choice :) ) when item is successfully dispensed.
-- The machine deducts item cost after successfully dispensing item.
+- When pressed, a button labeled 'Dispense' dispenses the selected item if there is enough current balance and the selected item has remaining stock.
+- The machine responds with "No Item Selected" if the user has not yet selected an item.
+- The machine responds with "Insufficient Balance" or "No Inventory Remaining" respectively if there's an error and cancels dispensing of item.
+- The machine responds with a success message (of your choice) when the item is successfully dispensed.
+- The machine deducts the item cost after successfully dispensing item.
 
-Please make liberal use of this [cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html).
+Please make liberal use of this [cheat sheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html).
 
 ## References
 
--   [Angular 2 Cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html)
--   [Angular-cli github page](https://github.com/angular/angular-cli)
--   [Official Angular Documentation](https://github.com/angular/angular-cli)
+-   [Angular 2 cheat sheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html).
+-   [Angular-cli github page](https://github.com/angular/angular-cli).
+-   [Official Angular documentation](https://github.com/angular/angular-cli).
 
 ## [License](LICENSE)
 
