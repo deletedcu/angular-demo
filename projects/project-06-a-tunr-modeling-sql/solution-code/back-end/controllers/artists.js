@@ -10,7 +10,7 @@ function index(req, res) {
 function show(req, res) {
   Artist.findById(req.params.id)
   .then(function(artist){
-    if(!artist) res.send(res, "not found");
+    if(!artist) res.send("artist not found");
     //Artist.sing();
     //artist.shout();
     res.json(artist);
@@ -19,7 +19,7 @@ function show(req, res) {
 
 function create(req, res) {
   Artist.create(req.body).then(function(artist){
-    if(!artist) res.send(res, "not saved");
+    if(!artist) res.send("artist not saved");
     res.json(artist);
   });
 }
@@ -27,7 +27,7 @@ function create(req, res) {
 function update(req, res) {
   Artist.findById(req.params.id)
   .then(function(artist){
-    if(!artist) res.send(res, "not found");
+    if(!artist) res.send("artist not found");
     return artist.updateAttributes(req.body);
   })
   .then(function(artist){
@@ -38,7 +38,7 @@ function update(req, res) {
 function destroy(req, res) {
   Artist.findById(req.params.id)
   .then(function(artist){
-    if(!artist) res.send(res, "not found");
+    if(!artist) res.send("artist not found");
     return artist.destroy();
   })
   .then(function(){

@@ -10,14 +10,14 @@ function index(req, res) {
 function show(req, res) {
   Manager.findById(req.params.id)
   .then(function(manager){
-    if(!manager) res.send(res, "not found");
+    if(!manager) res.send("manager not found");
     else res.json(manager);
   });	
 }
 
 function create(req, res) {
 	Manager.create(req.body).then(function(manager){
-    if(!manager) res.send(res, "not saved");
+    if(!manager) res.send("manager not saved");
     else res.json(manager);
   });
 }
@@ -25,7 +25,7 @@ function create(req, res) {
 function update(req, res) {
   Manager.findById(req.params.id)
   .then(function(manager){
-    if(!manager) res.send(res, "not found");
+    if(!manager) res.send("manager not found");
     else return manager.updateAttributes(req.body);
   })
   .then(function(manager){
@@ -36,7 +36,7 @@ function update(req, res) {
 function destroy(req, res) {
   Manager.findById(req.params.id)
   .then(function(manager){
-    if(!manager) res.send(res, "not found");
+    if(!manager) res.send("manager not found");
     else return manager.destroy();
   })
   .then(function(){

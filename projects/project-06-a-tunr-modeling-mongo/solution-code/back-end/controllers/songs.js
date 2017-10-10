@@ -11,7 +11,6 @@ function index(req, res) {
 function show(req, res) {
   Song.findById(req.params.id, function(err, song){
     if (err) res.send(err);
-    else if (!song) res.send(res, "not found");
     else res.json(song);
   });  
 }
@@ -19,7 +18,6 @@ function show(req, res) {
 function create(req, res) {
   Song.create(req.body, function(err, song){
     if (err) res.end(err);
-    else if (!song) res.send(res, "not saved");
     else res.json(song);
   });
 }
@@ -35,7 +33,6 @@ function update(req, res) {
 function destroy(req, res) {
   Song.findByIdAndRemove(req.params.id, function(err, song){
     if (err) res.send(err);
-    else if (!song) res.send(res, "not found");
     else res.send("song deleted");
   }); 
 }

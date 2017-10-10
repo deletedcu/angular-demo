@@ -10,14 +10,14 @@ function index(req, res) {
 function show(req, res) {
   Song.findById(req.params.id)
   .then(function(song){
-    if(!song) res.send(res, "not found");
+    if(!song) res.send("song not found");
     else res.json(song);
   });	
 }
 
 function create(req, res) {
 	Song.create(req.body).then(function(song){
-    if(!song) res.send(res, "not saved");
+    if(!song) res.send("song not saved");
     else res.json(song);
   });
 }
@@ -25,7 +25,7 @@ function create(req, res) {
 function update(req, res) {
   Song.findById(req.params.id)
   .then(function(song){
-    if(!song) res.send(res, "not found");
+    if(!song) res.send("song not found");
     else return song.updateAttributes(req.body);
   })
   .then(function(song){
@@ -36,7 +36,7 @@ function update(req, res) {
 function destroy(req, res) {
   Song.findById(req.params.id)
   .then(function(song){
-    if(!song) res.send(res, "not found");
+    if(!song) res.send("song not found");
     else return song.destroy();
   })
   .then(function(){
