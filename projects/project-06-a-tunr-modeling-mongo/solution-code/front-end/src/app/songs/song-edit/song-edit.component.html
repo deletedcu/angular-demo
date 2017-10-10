@@ -1,0 +1,17 @@
+<h2>Edit Song</h2>
+
+<form (ngSubmit)="updateSong(updatedSong)">
+  <label for="title">Title:</label>
+  <input name="title" [(ngModel)]="updatedSong.title">
+
+  <label for="duration">Duration:</label>
+  <input name="duration" [(ngModel)]="updatedSong.duration">
+
+  <label for="date_of_release">Release Date:</label>
+  <input name="date_of_release" [(ngModel)]="updatedSong.date_of_release">
+
+  <label for="album_title">Album:</label>
+  <input name="album_title" [(ngModel)]="updatedSong.album_title">
+
+  <input type="submit" value="Update">
+</form>
