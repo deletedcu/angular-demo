@@ -1,0 +1,10 @@
+<div *ngIf="oneArtist">
+	<h2>{{oneArtist.name}}</h2>
+	<h3>{{oneArtist.nationality}}</h3>
+	<h3>{{oneArtist.instrument}}</h3>
+	<h3>{{oneArtist.home_address}}</h3>
+	<img [src]="oneArtist.photoUrl">
+	<ul>
+	  <li *ngFor="let song of oneArtist.songs">{{song.title}}</li>
+	</ul>
+</div>

@@ -1,0 +1,20 @@
+<h2>Edit Artist</h2>
+
+<form (ngSubmit)="updateArtist(updatedArtist)">
+  <label for="name">Name:</label>
+  <input name="name" [(ngModel)]="updatedArtist.name">
+
+  <label for="photoUrl">Photo URL:</label>
+  <input name="photoUrl" [(ngModel)]="updatedArtist.photoUrl">
+
+  <label for="nationality">Nationality:</label>
+  <input name="nationality" [(ngModel)]="updatedArtist.nationality">
+
+  <label for="instrument">Instrument:</label>
+  <input name="instrument" [(ngModel)]="updatedArtist.instrument">
+
+  <label for="home_address">Home Address:</label>
+  <input name="home_address" [(ngModel)]="updatedArtist.home_address">
+
+  <input type="submit" value="Update">
+</form>
