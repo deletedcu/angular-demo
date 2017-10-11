@@ -32,9 +32,9 @@ way, for instance, artists play multiple songs. Mongoose provides helpful method
 ## Relationships 
 
 It's time to start adding some relationships to the existing Tunr database. We're going to 
-include information from the various models on different pages. We'll end up adding 
+include information from the various models on different pages - we'll add 
 song information to artists and help managers gain some credibility by listing their 
-clients. Finally we'll add an optional revenue source by enabling managers to create an ad 
+clients. Finally, we'll add an optional revenue source by enabling managers to create an ad 
 to help attract new clients.
 
 Now that our Tunr app has artists, managers, and songs, we need to connect them. Enter the ERD (Entity Relationship Diagram): 
@@ -152,7 +152,7 @@ Now, we should be able to access a artist's songs with the ``populate('song')`` 
 
 __Update our Views:__
 
-First, we must update what we're getting back from the Database to include songs with our artist.
+First, we must update what we're getting back from the database to include songs with our artist.
 
 To do this, we need to include any Song that matches our artist ID in our `show` function in our `artists` (server-side) controller:
 
@@ -185,7 +185,7 @@ Now we have a ``has_many`` relationship between ``Manager`` and ``Artist``, so w
 
 >**Hint:** We created a `new` `Artist` called `lucy` before then `save`d him.  How might we create a `new` `Managaer` called `bobby` then `save` him?
 
-Now, let's add an unordered list of the manager's songs to `manager-show/manager-show.component.html`.  Again, try to do this without looking at the Sprint above, then correct as needed.  Don't forget to change the `managers.js` controller as well.
+Now, let's add an unordered list of the manager's songs to `manager-show/manager-show.component.html`.  Again, try to do this without looking at the Sprint above, then correct as needed.  Don't forget to change the `managers.js` controller!
 
 #### Sprint 3 Manager Ads
 Last, but not least, let's start adding some revenue to Tunr. We're enabling managers to create
@@ -201,8 +201,8 @@ We'll do the following steps to add ads to our managers.
 
 ## Closing Thoughts
 Relationships are one of the most powerful ways we have of manipulating data. They let us 
-use the JS methods and object that we are much more comfortable with rather than Mongo which 
-can be messy and lead to bugs.
+use the JS methods and object that we are much more comfortable with rather than Mongo (which 
+can be messy and lead to bugs).
 
 ## Resources
 
