@@ -44,7 +44,7 @@ Now, let's bring Angular Universal into the picture. In order to do this, we'll 
 2) Next, we need to connect the client to this Node server. Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
 
 ```js
-BrowserModule.withServerTransition({appId: 'cli-universal-demo'})
+BrowserModule.withServerTransition({appId: 'first-angular-universal'})
 ```
 
 3) Now, we need to add our server module to our Angular app. Create an `app.server.module.ts` in your `app` folder and fill it out with the following code:
