@@ -4,7 +4,7 @@
 
 Look around [the comments app](comments/). This is just a basic app that displays a list of comments. You may need to run `npm install` for it to work.
 
-- Alter it so that each comment has an author (represented by a string).
+- Alter your comments so that each comment has an author (represented by a string).
 - Add a feature that allows you to add more comments.
     - This should all be within the same component.
     - Visually, it should consist of two text inputs (one for author, one for comment) and a submit button.
@@ -18,7 +18,7 @@ Look again at what you did in [the comments app](comments/). It's all in one com
 
 1. First, abstract out all the comments logic into a service called `comment-service.ts`. Create a `commment/` directory, and run `ng g service comment`. Look at your `balance.service.ts` from the Vending Machine Lab as reference.
     - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `setComments()`, `addComment()`, `deleteComment()`, `editComment()`, and `onCommentUpdated()`. 
-    - Your comment service should have the following variables: `comments` and `subject` (an Observable).
+    - Your comment service should have the following variables: `comments` (array) and `subject` (Observable).
     - Make sure your code is working as before, but using the Comment Service. 
 
 2. Separate the list of comments and the new comments form into separate components. Use the Comment Service / Observable in the comment service to communicate between the 2 components.
