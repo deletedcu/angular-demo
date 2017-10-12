@@ -14,9 +14,16 @@ Look around [the comments app](comments/). This is just a basic app that display
 
 ## Changing a Feature
 
-Look again at what you did in [the comments app](comments/). It's all in one component, which isn't very modular. Put the list of comments into one component and the new comments form into another component. Use Observables to communicate between the two.
+Look again at what you did in [the comments app](comments/). It's all in one component, which isn't very modular. 
 
-At the moment, there's no styling. Add some by incorporating [Bootstrap](http://getbootstrap.com/), [Materialize](http://materializecss.com/), or [Skeleton](http://getskeleton.com/). Feel free to write your own CSS as an alternative to using one of these CSS frameworks.
+1. First, abstract out all the comments logic into a service called `comment-service.ts`. Create a `commment/` directory, and run `ng g service comment`. Look at your `balance.service.ts` from the Vending Machine Lab as reference.
+    - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `setComments()`, `addComment()`, `deleteComment()`, `editComment()`, and `onCommentUpdated()`. 
+    - Your comment service should have the following variables: `comments` and `subject` (an Observable).
+    - Make sure your code is working as before, but using the Comment Service. 
+
+2. Separate the list of comments and the new comments form into separate components. Use the Comment Service / Observable in the comment service to communicate between the 2 components.
+
+3. At the moment, there's no styling. Add some by incorporating [Bootstrap](http://getbootstrap.com/), [Materialize](http://materializecss.com/), or [Skeleton](http://getskeleton.com/). Feel free to write your own CSS as an alternative to using one of these CSS frameworks.
 
 ## Fixing Bugs
 
