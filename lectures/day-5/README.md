@@ -17,7 +17,7 @@ Look around [the comments app](comments/). This is just a basic app that display
 Look again at what you did in [the comments app](comments/). It's all in one component, which isn't very modular. 
 
 1. First, abstract out all the comments logic into a service called `comment-service.ts`. Create a `commment/` directory, and run `ng g service comment`. Look at your `balance.service.ts` from the Vending Machine Lab as reference.
-    - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `setComments()`, `addComment()`, `deleteComment()`, `editComment()`, and `onCommentUpdated()`. 
+    - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `addComment()`, `deleteComment()`, and `onCommentUpdated()`. The methods `setComments()` and `editComment()` are nice-to-haves, but not necessary.
     - Your comment service should have the following variables: `comments` (array) and `subject` (Observable).
     - Make sure your code is working as before, but using the Comment Service. 
 
