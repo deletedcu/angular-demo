@@ -1,27 +1,3 @@
 <h1>Comments</h1>
-<ul>
-  <li *ngFor="let comment of comments">
-    <div *ngIf="commentToEdit !== comment">
-      {{comment.text}} - {{comment.author}}
-
-      <button (click)="deleteComment(comment)">
-        Delete
-      </button>
-      <button (click)="makeCommentEditable(comment)">
-        Edit
-      </button>
-    </div>
-
-    <div *ngIf="commentToEdit == comment">
-      <section>
-        <input [(ngModel)]="comment.text" type="text" placeholder="text">
-        <input [(ngModel)]="comment.author" type="text" placeholder="author">
-        <button (click)="doneEditing()">
-          Done Editing
-        </button>
-      </section>
-    </div>
-  </li>
-</ul>
-
+<app-comments></app-comments>
 <app-new-comment></app-new-comment>
