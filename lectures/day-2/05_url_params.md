@@ -146,7 +146,7 @@ Test that this works by showing `jobIndex` in `src/app/resume/resume.component.h
 
 ## Show Specific Job Data Based on the ID Param
 
-Import the `JOBS` data object:
+Import the `JOBS` data object into `src/app/resume/resume.component.ts`:
 
 ```javascript
 import { JOBS } from './jobs';
