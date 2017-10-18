@@ -1,3 +1,5 @@
+<!-- Note: Similar to React -->
+
 # What is Routing?
 
 <!--1:57 WDI4 -->
@@ -14,6 +16,15 @@
 - The process:
     - Define a set of URLs for which the app will listen.
     - When a user visits those particular URLs, the app will load a component into a specific part of the page.
+
+
+It's great that HTML5 introduced new browser history mechanics to make it easier
+  for us as developers to build Single Page Applications, and it's important to know what's going on under the hood.
+
+However, on an important note - we're actually not going to
+  be using these new features directly ourselves!
+
+Instead, we'll use a tool called `RouterModule`, which bundles everything together so we don't have to worry about the fine print.
 
 ## Demonstrate Routing
 <!--

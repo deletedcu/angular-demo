@@ -1,3 +1,5 @@
+<!-- Note: Signing up for Heroku and installing it is in 01-heroku-intro.md -->
+
 # Angular and Heroku Deployment
 
 >Modern full-stack deployment can be a little complicated.  We want the flexibility to be able to dynamically test our code locally, but we also want a quick-to-load, seamless app for our users.  In order to set this up, we need to do a few things.
@@ -15,36 +17,14 @@ We will be following the pattern of our [tunr](https://github.com/den-materials/
 3. Create a `front-end` folder with `ng new` if you don't already have one.
 4. Create a `back-end` folder, go inside, initialize it as an npm repository, and create a `server.js` file.
 
-## Heroku Setup
-
-1. Stop and commit. Make sure your app is under version control with `git`.  If you're not sure whether your project is under version control yet, you definitely haven't been commiting often enough! But run `git status` to check if your project directory is a repo and `git init` to make it into one if necessary. __Stop and commit your changes.__
-
-2. Sign up for an account with heroku: https://www.heroku.com/
-
-3. Install the [heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) (if you haven't done so already):
-
-Once installed, you can use the heroku command from your command shell.
-
-4. Log in using the email address and password you used when creating your Heroku account:
-
-```bash
-heroku login
-# Enter your Heroku credentials.
-# Email: zeke@example.com
-# Password:
-# ...
-```
-
-Authenticating is required to allow both the heroku and git commands to operate.
-
-**(NOTE YOUR PROJECT MUST BE A GIT REPO TO CONTINUE.)**.
+**(NOTE: YOUR PROJECT MUST BE A GIT REPO TO CONTINUE.)**.
 
 ### Preparing for Heroku Deploy
 
 5. Add a new remote to your project that points to Heroku's servers:
 
 ```bash
-    heroku create
+    Heroku create
 ```
 
 ## Top level `package.json`
@@ -143,7 +123,7 @@ Delete the `/dist` line toward the top of the `.gitignore` file and save it.
 
 1. If you are using postgres for your DB, you will need to run the command below to add a PSQL addon:
 
-`heroku addons:create heroku-postgresql:hobby-dev`
+`Heroku addons:create Heroku-postgresql:hobby-dev`
 
 2. Now go into your `index.js` file and change your Sequelize setup line to the following:
 
@@ -155,13 +135,13 @@ Delete the `/dist` line toward the top of the `.gitignore` file and save it.
 
 1. If you are using mongo for your DB, you will need to run the command below to add a MongoDB addon:
 
-`heroku addons:create mongolab`
+`Heroku addons:create mongolab`
 
 At this point, the command line will probably ask you to enter a credit card number. Follow the prompt.
 
 > Heroku is a "freemium" service. Be careful! They will charge you if you exceed their data limits -- but our projects are tiny so we don't expect to get a lot of traffic!
 
-**Patience...**  If you had to enter in a credit card, you can run `heroku addons` to check/confirm that mongolab was addded. __You may need to wait a few minutes for mogolab to become active.__
+**Patience...**  If you had to enter in a credit card, you can run `Heroku addons` to check/confirm that mongolab was addded. __You may need to wait a few minutes for mogolab to become active.__
 
 2. Update your database connection to point to Heroku's database. Open `models/index.js` and add the following to the `mongoose.connect` method:
 
@@ -171,10 +151,10 @@ At this point, the command line will probably ask you to enter a credit card num
 
 ### Remoting to Heroku
 
-If you have a `seed` or `dbSetup` task, you can run any commands on your heroku server just like you can locally, like this (assuming everything else is working):
+If you have a `seed` or `dbSetup` task, you can run any commands on your Heroku server just like you can locally, like this (assuming everything else is working):
 
 ``` bash
-heroku run bash
+Heroku run bash
 > ls
 > node back-end/db/seed.js
 ```
@@ -184,19 +164,19 @@ heroku run bash
 Whenever you push to GitHub, you should also run the following commands to get your code to Heroku:
 
 1. `npm run deploy` in the top level of your folder.
-2. Git add, git commit, and push to `heroku master`.
+2. Git add, git commit, and push to `Heroku master`.
 3. Visit your application by running the following in Terminal:
 
 ```bash
-    heroku open
+    Heroku open
 ```
 
 ## Debugging Tips
 
 Here are some helpful commands for debugging your application on Heroku:
 
-#### `heroku logs`
+#### `Heroku logs`
 This command lists your most recent application server logs. Helpful for figuring out why your application may be crashing and burning.
 
-#### `heroku run bash`
+#### `Heroku run bash`
 This command allows you to run terminal _on Heroku's servers_. This is a handy way for us to poke around and run commands on our application (like seeding the database, and checking that everything was installed correctly).
