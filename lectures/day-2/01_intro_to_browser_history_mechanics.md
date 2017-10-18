@@ -133,7 +133,7 @@ Open your browser and navigate to Gmail (or whichever email site you use):
 * You can start instant messaging a friend in a sidebar.
 * You can start to compose a new email to your manager to request time off.
 * You can search for an email with flight information.
-* You can browse through more emails to make sure you've talked your manager about getting time off and aren't just disappearing for a week.
+* You can browse through more emails to make sure you've talked to your manager about getting time off and aren't just disappearing for a week.
 
 This all happens on one page! The page never refreshes. The chat bar with your friend never disappears as you compose an email and search through your inbox.
 
