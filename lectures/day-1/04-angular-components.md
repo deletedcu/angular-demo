@@ -1,3 +1,5 @@
+<!-- note: components match React module -->
+
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # Angular 2: Components & Modules
@@ -19,9 +21,39 @@ By the end of this lesson, you will be able to:
 
 We've used the term "component" a lot recently, but what exactly **is** a component?
 
-Generally speaking, a component is a reusable piece of code that addresses a specific concern. When developers separate their concerns successfully, the result is a series of reusable components that can be composed differently to create new applications.
+Generally speaking, a component is a reusable piece of code that addresses a specific concern. When developers separate their concerns successfully, the result is a series of reusable components that can be composed differently to create new applications. Components are pieces of our application that we can define once and reuse all over the place.
 
 Angular 2 leans heavily into component structure. Everything is a component.
+
+If you're used to writing out all of a page's view in a single HTML file, using components is a very different way of approaching web development.
+
+When using Angular, building components will be your main front-end task.
+- Because they're so encapsulated, components make it easy to reuse your code, test, and separate concerns.
+
+### Identifying Components
+
+Take a look at [CraigsList](https://boston.craigslist.org/search/aap) (note: right click to open in a new tab!).
+
+![Components](images/craigslist.png)
+
+Each listing is a component. How can you identify this?
+- Listings look identical in structure, but have different information populating them
+- Listings are dynamically generated based on the user's search
+
+Now, go to [Amtrak.com](https://www.amtrak.com/home) (note: right click to open in a new tab!). We want to look at the listing page, so put in any "From" (for example, New York - Penn Station), any "To" (for example, Boston - South Station), and pick any date. Hit "Find Trains". Now look at the listing page:
+
+![Amtrak](images/amtrak.png)
+
+Scrolling down it, identify the visual "components" the website is comprised of. We suggest drawing this out on paper! So something like this...
+
+![Component diagram](images/wireframe_deconstructed.png)
+
+As you're drawing this out, think about the following questions...
+* Where do you see "nested components;" that is, where are there components inside another component? Where do you see just one "layer" instead?
+* Are there any components that share the same structure?
+* For components that share the same structure, what is different about them?
+
+Here's a basic component tree in Angular:
 
 ![Component Tree](https://i.stack.imgur.com/sV364.png)
 
