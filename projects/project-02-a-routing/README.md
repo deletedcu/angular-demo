@@ -20,7 +20,7 @@ Those pesky rebels are planning yet another attack on our death square. Like any
 
 7) That's great, but we need to be able to click a turret and quickly get all its information. Wrap the `img` tag in `turret.component.html` in an `a` tag with a `routerLink` like the one we used in the previous lesson.
 
-8) Now, import `RouterModule` in the `death-square.module.ts` file.
+8) Now, import `RouterModule` in the `internal.defenses.module.ts` file.
 
 9) Finally, change the `info-window` component's HTML to say `Turret is functional`.
 

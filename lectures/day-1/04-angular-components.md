@@ -17,7 +17,7 @@ By the end of this lesson, you will be able to:
 
 ## Angular Components
 
-We've used the term "component" a lot recently, but what exactly is a component?
+We've used the term "component" a lot recently, but what exactly **is** a component?
 
 Generally speaking, a component is a reusable piece of code that addresses a specific concern. When developers separate their concerns successfully, the result is a series of reusable components that can be composed differently to create new applications.
 
@@ -39,11 +39,11 @@ Our `app` component is composed of five files:
 
 Besides the module file, which can be unique to the root component, the Angular 2 development team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game.
 
-We'll put all of the styles that pertain to our component in **app.component.css**. Sick of namespacing your styles to avoid collisions? Angular 2 has you covered — these styles **are scoped exclusively to its component.** 
+We'll put all of the styles that pertain to our component in `app.component.css`. Sick of namespacing your styles to avoid collisions? Angular 2 has you covered — these styles **are scoped exclusively to its component.**
 
-All of our unit tests for the component will live in **app.component.spec.ts**. We'll dive into testing a little later, but for now, just know that Angular 2 natively supports the Jasmine testing framework.
+All of our unit tests for the component will live in `app.component.spec.ts`. We'll dive into testing a little later, but for now, just know that Angular 2 natively supports the Jasmine testing framework.
 
-With **app.component.html**, we see an Angular template once again:
+With `app.component.html`, we see an Angular template once again:
 
 ```html
   <h1>
@@ -53,7 +53,7 @@ With **app.component.html**, we see an Angular template once again:
 
 Angular uses a double-bracket binding syntax, which is pretty common among front-end frameworks and template libraries.
 
-The values in brackets will be replaced by values in our next file, **app.component.ts**.
+The values in brackets will be replaced by values in our next file, `app.component.ts`.
 
 ```typescript
 @Component({
@@ -74,7 +74,7 @@ Our component's **selector** is the name of the HTML element we use to summon th
 <app-root></app-root>
 ```
 
-That's our component.
+That's our component!
 
 The next two properties of our component's decorator argument are relative paths to the template and the component's style sheet.
 
@@ -107,9 +107,9 @@ installing component
   update src/app/app.module.ts
 ```
 
-The Angular CLI does most of the heavy lifting for us. It creates a new component directory nested within the root component directory and fills it out with all of the files that will compose our new component.
+Boom! The Angular CLI does most of the heavy lifting for us. It creates a new component directory nested within the root component directory and fills it out with all of the files that will compose our new component.
 
-Also, if we turn to our **app.module.ts**, we'll see that the component has already been declared for us.
+Also, if we turn to our `app.module.ts`, we'll see that the component has already been declared for us.
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -162,7 +162,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master-sword.component.css']
 })
 export class MasterSwordComponent implements OnInit {
-  
+
   //Create the proclamation variable for the view model
   proclamation: string = 'Behold! The Master Sword!';
 
@@ -174,7 +174,7 @@ export class MasterSwordComponent implements OnInit {
 }
 ```
 
-Finally, we'll use it in **app.component.html**:
+Finally, we'll use it in `app.component.html`:
 
 ```html
 <app-master-sword></app-master-sword>
@@ -184,9 +184,13 @@ Finally, we'll use it in **app.component.html**:
 
 Now run `ng serve` in your `ga-ui` folder, and navigate to `localhost:4200` in your browser. Look at that sword!
 
+
+
 ### Lab: Make Your Own Component
 
-Use the Angular CLI to generate a `hylian-shield` component. Have the component display a picture of a hylian shield and text that reads "Behold! The Hylian Shield!" with a blue background. If you have extra time, play around with the directives listed in the [Angular Cheat Sheet](https://angular.io/guide/cheatsheet).
+Use the Angular CLI to generate a `hylian-shield` component. Have the component display a picture of a hylian shield and text that reads "Behold! The Hylian Shield!" with a blue background.
+
+<!-- Reference: WDI4 done with shield @ 9:47 -->
 
 ## Services: Abstracting and Reusing Business Logic
 
@@ -196,9 +200,9 @@ Services are a way to abstract out business logic into a form that allows us to 
 
 ### Code-Along: Our First Service
 
-At the moment, we have two components that render different items. But what if we want both of those items to be owned by the same person? We could either hard-code our information in both components or use a service to share the logic.
+At the moment, we have two components that render different items, but what if we want both of those items to be owned by the same person? We could either hard-code our information in both components (bad!) or use a service to share the logic (good!).
 
-Let's go behind Door No. 2.
+Let's go behind door number two.
 
 First, let's create a directory to house all of the services for our app:
 
@@ -227,9 +231,11 @@ installing service
   WARNING Service is generated but not provided, it must be provided to be used
 ```
 
+<!-- @9:52 WDI4 turning over to devs, coming back @ 9:58, some people saw the service installing into /src/app even though they were in the /services/user folder -->
+
 Our generator created our service and a test file for it. It's also warning us that we still need to **provide** our service to use it. Let's go ahead and do that.
 
-You may have noticed an empty **providers** array property in our **app.module** when we first looked at it. If we add a reference to our service class to our array...
+You may have noticed an empty `providers` array property in our `app.module` when we first looked at it. If we add a reference to our service class to our array...
 
 ```typescript
 // Import UserService
@@ -275,9 +281,11 @@ export class UserService {
 }
 ```
 
-Our new method approximates an AJAX request (don't worry, we'll get to that in a later lesson) and returns something useful to both of our components.
+<!--10:04 WDI4 -->
 
-Returning to our `MasterSword` component, we can now incorporate the service by importing the service class into our file and modifying the constructor:
+Our new method approximates an AJAX request (don't worry; we'll get to that in a later lesson) and returns something useful to both of our components.
+
+Returning to our `MasterSword` component, we can now inject the service by importing the service class into our file and modifying the constructor:
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -302,6 +310,8 @@ export class MasterSwordComponent implements OnInit {
 
 }
 ```
+
+<!--10:12 WDI4 -->
 
 A bit of TypeScript magic will automatically add our service as a property of our component, which allows us to make these modifications:
 
@@ -329,7 +339,34 @@ There you have it. We've injected our new service and used its logic to enrich o
 
 Use our new service to update the `hylian-shield` component in the same manner we just updated our `master-sword` component.
 
-## Feature Modules: Adding Organization to Unruly Code Bases
+
+
+### Directives
+
+As you've seen, Angular is dynamic. When Angular renders a webpage, it transforms the DOM according to the instructions given by **directives**. This is a word tossed around in Angular often, so it's good to know what they are!
+
+A directive is, very simply, a class which tells the browser what to display.
+- A component is technically a directive (components are something that's displayed!), but components are so distinctive and central to Angular applications that generally, developers think of directives and components as distinct entities.
+
+All directives have a a @Directive decorator on the class.
+- In fact, a @Component decorator is actually a @Directive decorator extended with template-oriented features.
+
+Two other kinds of directives exist: structural and attribute directives.
+
+Directives tend to be inside an element tag like attributes do, often as the target of an assignment or a binding.
+
+The first type of directive is a structural directive. Structural directives change which elements are in the DOM (adding or removing them).
+- For example, here is a structural directive called `*ngFor`: `<li *ngFor="let hero of heroes"></li>`.
+- In this example, `ngFor` tells Angular to print one `<li>` per `hero` in the `heroes` list (a `for` loop, running through `heroes` with `let... of ...`).
+
+The second kind of directive is a attribute directive. These directives change the appearance or behavior of an existing element.
+- For example, here is an attribute directive called `ngModel`: `<input [(ngModel)]="hero.name">`
+- In this example, `ngModel` changes what's displayed on the `<input>` based on the current `hero.name`. Unlike structural directives, the attribute directive `ngModel` isn't adding or removing the `<input>` - it's simply changing what it looks like.
+
+If you have extra time, play around with the directives listed in the [Angular Cheat Sheet](https://angular.io/guide/cheatsheet).
+
+
+## Feature Modules: Adding Organization to Unruly Codebases
 
 Our current app is small, but let's imagine what a mature application running in production would look like. We could have hundreds of components and dozens of services vying for our attention. Now imagine coming into the project for the first time and trying to make sense of the madness. It's not such a fun prospect.
 
@@ -379,7 +416,7 @@ import { HylianShieldComponent } from './hylian-shield/hylian-shield.component';
 export class EquipmentModule { }
 ```
 
-Now we need to remove references to the individual components from our main import, **app.module**, and replace them by importing our feature module:
+Now we need to remove references to the individual components from our main import, `app.module`, and replace them by importing our feature module:
 
 ```typescript
 //Remove these

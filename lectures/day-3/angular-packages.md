@@ -1,20 +1,23 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+
+<!--WDI4 3:47 -->
+
 # Major Angular Packages Breakdown
 
 In this lesson, we'll discuss the most popular and frequently used packages in Angular.
 
 ### Why Is This Important?
 
-Angular — and front-end web development in general — can be an intimidating field because there are so many tools to choose from.
+Angular (and front-end web development in general) can be an intimidating field because there are so many tools to choose from.
 
 By the end of this lesson, we'll have covered the essentials so developers can focus solely on what they need and filter out the rest until later.
 
 ### What Are the Objectives?
 *After this lesson, you will be able to:*
 
-- **List** the most important packages in Angular.
-- **Integrate** these packages into an Angular project.
+- List the most important packages in Angular.
+- Integrate these packages into an Angular project.
 
 ## Feature Packages
 
@@ -106,6 +109,9 @@ Make sure you switch drivers halfway through.
 
 - What does `rxjs` add to Angular?
 - What is `lite-server`?
+
+
+<!--3:56 WDI4, turning over to devs for the activity above (30-40 minutes) -->
 
 ### Resources
 

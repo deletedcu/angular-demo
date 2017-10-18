@@ -1,5 +1,7 @@
 # Exercises With Code Bases
 
+<!--WDI4 1:35 introing to devs, 1:41 turning over to devs for independent work-->
+
 ## Adding a Feature
 
 Look around [the comments app](comments/). This is just a basic app that displays a list of comments. You may need to run `npm install` for it to work.
@@ -12,9 +14,13 @@ Look around [the comments app](comments/). This is just a basic app that display
 - Add a feature that allows you to edit comments.
     - When you click on a comment, the text should be replaced by two text inputs (one for author, one for comment).
 
+
+<!--WDI4 2:31 taking a break -->
+<!--WDI4 2:42 coming back, few minutes to explain, then devs on their own at 2:46, let devs run with it till 4-->
+
 ## Changing a Feature
 
-Look again at what you did in [the comments app](comments/). It's all in one component, which isn't very modular. 
+Look again at what you did in [the comments app](comments/). It's all in one component, which isn't very modular. Put the list of comments into one component and the new comments form into another component. Use Observables to communicate between the two.
 
 1. First, abstract out all the comments logic into a service called `comment-service.ts`. Create a `commment/` directory, and run `ng g service comment`. Look at your `balance.service.ts` from the Vending Machine Lab as reference.
     - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `addComment()`, `deleteComment()`, and `onCommentUpdated()`. The methods `setComments()` and `editComment()` are nice-to-haves, but not necessary.
@@ -33,7 +39,7 @@ Someone has hacked up the [Tour Of Heroes](https://angular.io/tutorial/toh-pt5) 
 
 Choose something to do during this time. Here are some suggestions:
 
-- Extend your [comments app](comments/) even further by creating sign-up/login functionality:
+- Extend your [comments app](https://github.com/den-materials/angular-comments) even further by creating sign-up/login functionality:
         - Use routing to display a main page that prompts the user with links to two pages (login/sign up).
         - On the sign-up page, users can create a profile with a username, full name, password, and email.
             - The username and email must be unique. No two users can have the same username or email address.

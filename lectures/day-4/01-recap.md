@@ -1,5 +1,8 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+
+<!--WDI4 ~10-12 minutes -->
+
 # Recap
 
 ![Angular Logo](http://mbtcheck.com/v2/wp-content/uploads/2016/08/angular.png)
@@ -14,9 +17,9 @@ We started our first day by dipping our toes into Angular, and by the end of it 
 
 ### Day Two: Navigation and AJAX
 
-On day two, we pushed the boundaries of what our simple applications could do. We learned about what single-page applications are and how they differ from the traditional web application model. Next, we learned how to use the Angular router to break our SPAs out into distict pages and how to use `pushState()` to get these pages to play nicely with our browsers. 
+On day two, we pushed the boundaries of what our simple applications could do. We learned about what single-page applications are and how they differ from the traditional web application model. Next, we learned how to use the Angular router to break our SPAs out into distinct pages and how to use `pushState()` to get these pages to play nicely with our browsers.
 
-Afterward, we pushed the envelope even further by incorporating AJAX into our applications. We used Angular's HTTP service and our knowledge of URL parameters to interact with an API and make our app more dyanmic.
+Afterward, we pushed the envelope even further by incorporating AJAX into our applications. We used Angular's HTTP service and our knowledge of URL parameters to interact with an API and make our app more dynamic.
 
 ### Day Three: Asynchronicity, Testing, and Everything In Between
 
@@ -29,4 +32,3 @@ Let's make sure that everything we've covered so far has sunk in. Answer the fol
 1) What is a component and why do we use them?
 2) What is an SPA? What are the advantages of using SPAs over more tradition web application models?
 3) What are the differences between Observables and Promises?
-

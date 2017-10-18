@@ -1,6 +1,6 @@
 # Lessons
 
-1. [:05] Video: [Quick intro to SPAs and Push state](01_video_intro_to_spa.md)
+1. [:05 if needed] [Quick intro to SPAs and Push state](01_video_intro_to_spa.md)
 1. [:10] Lecture/Demo: [What is a SPA?](02_what_is_a_spa.md)
 1. [:05] Lecture/Demo: [What is Push State?](03_what_is_push_state.md)
 1. [:05] Lesson: [What is routing?](04_what_is_routing.md)

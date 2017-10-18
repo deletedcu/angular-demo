@@ -155,7 +155,7 @@ ned.hello("Bobert");
 
 ### Inheritance
 
-**Inheritance** is a way for objects to access properties and methods of other objects. Think back to **inheriting** from **prototypes** in Unit 1. This is slightly different, but is a good base from which to start.
+**Inheritance** is a way for objects to access properties and methods of other objects. Think back to **inheriting** from **prototypes** in Unit 1. This is slightly different (you will find many people online who can tell you how), but is a good base from which to start.
 
 Create a new file called `inheritance.ts` and follow along.
 
@@ -242,7 +242,11 @@ console.log(multiplication.timesTwo(9));
 
 <!--0:55 10 minutes -->
 
-It'd be frustrating if the only way to convert TypeScript into JavaScript was by running `tsc` every time we made a change.  Luckily we have a tool that can do this for us automatically — Gulp.
+Wouldn't it be frustrating if the only way to convert TypeScript into JavaScript was by running `tsc` every time we made a change?  It's too bad we don't know any tools that could do this automatically for us...
+
+...
+
+...just kidding. We know Gulp!
 
 Let's use Gulp to take this `task` off our hands. While we're at it, we can use Gulp to compile all of our JavaScript into one file to reduce HTTP requests and speed up our website's load time. Awesome, right?
 
@@ -274,7 +278,7 @@ gulp.task('default', function () {
 });
 ```
 
-Next, run `node scripts/output.js`. We see all of our files' output. Pretty cool. Now we only need to include one file in our HTML — but when we're coding, we have several files to keep everything organized.
+Next, run `node scripts/output.js`. We see all of our files' output. Pretty cool. We only need to include one file in our HTML — but when we're coding, we have several files to keep everything organized in our heads.
 
 ## Resources
 

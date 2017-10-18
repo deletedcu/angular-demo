@@ -5,7 +5,7 @@
 
 # Pair Programming Project: The **Full-Stack** Death Square
 
-The rebel attack has begun. At the moment, all of our turrets are still operational, but some may have been damaged. We need to know which ones need to be reapired. Luckily, this information is available in our data banks; we just need to bring it to our dashboard to quickly deploy repair droids. 
+The rebel attack has begun. At the moment, all of our turrets are still operational, but some may have been damaged. We need to know which ones need to be repaired. Luckily, this information is available in our data banks; we just need to bring it to our dashboard to quickly deploy repair droids.
 
 ### Instructions:
 

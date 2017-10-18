@@ -1,5 +1,7 @@
 # URL Params
 
+<!--WDI4 2:55 -->
+
 ## Lesson Objectives
 *By the end of this lesson, you will be able to:*
 
@@ -106,9 +108,9 @@ const routes: Routes = [
 ];
 ```
 
-## Have the Resume Component Display the ID Param
+## Have the `Resume` Component Display the ID Param
 
-At this point, the resume shows all of the jobs. We want it to show just one job. 
+At this point, the resume shows all of the jobs. We want it to show just one job.
 
 Edit `src/app/resume/resume.component.ts` to import `ActivatedRoute`:
 
@@ -139,6 +141,8 @@ Test that this works by showing `jobIndex` in `src/app/resume/resume.component.h
 ```html
 <h2>Resume: {{jobIndex}}</h2>
 ```
+
+<!--WDI4 3:21 -->
 
 ## Show Specific Job Data Based on the ID Param
 
@@ -189,3 +193,5 @@ Now, display the data in `src/app/resume/resume.component.html`:
     <dd>{{job.description}}</dd>
 </dl>
 ```
+
+<!--WDI4 3:32 -->

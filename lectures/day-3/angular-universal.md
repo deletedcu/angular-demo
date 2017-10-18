@@ -1,5 +1,7 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--2:14 WDI4-->
+
 # Angular Universal
 
 ![](resources/siteBroken.jpeg)
@@ -13,8 +15,8 @@ This gives us the flexibility to lean on the back end when it's the better tool 
 ### What Are the Objectives?
 *After this lesson, you will be able to:*
 
-- **Integrate** Angular Universal into an Angular CLI project.
-- **Use** Angular Universal to render views on a Node server.
+- Integrate Angular Universal into an Angular CLI project.
+- Use Angular Universal to render views on a Node server.
 
 ### What is Angular Universal?
 
@@ -30,6 +32,9 @@ That's true, except for a couple of cases:
 
 In this lesson, we will address the second issue.
 
+
+<!--WDI4 2:17 -->
+
 ### Set Up
 
 First, we'll need to create a new project with the Angular CLI called `first-angular-universal`. If you can't remember how to do this, use the earlier lessons for reference.
@@ -40,6 +45,10 @@ Now, let's bring Angular Universal into the picture. In order to do this, we'll 
 
 `npm install -S @angular/platform-server`
 `npm install -D ts-node`
+
+
+<!--2:20 turning over to devs WDI4-->
+<!--WDI4 2:26 coming back -->
 
 2) Next, we need to connect the client to this Node server. Open your `app.module.ts` file and replace the `BrowserModule` in the `imports` array with the following line:
 
@@ -64,6 +73,10 @@ import { AppComponent } from './app.component';
 })
 export class AppServerModule { }
 ```
+
+
+<!--2:31 WDI4 turning over to devs -->
+<!--WDI4 coming back 2:37 -->
 
 4) Next, we'll add compiler options to our `tsconfig.json` file:
 
@@ -119,6 +132,10 @@ Look familiar?
 
 Besides the code you're used to from a typical Node `server.js` file, this file also includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
 
+
+<!--WDI4 2:41 turning over to devs -->
+<!--WDI4 coming back 2:46 -->
+
 6) Next, we'll ignore `server.ts` in our `tsconfig.app.json` file:
 
 ```js
@@ -144,9 +161,14 @@ Besides the code you're used to from a typical Node `server.js` file, this file 
 
 Cool, right? But we haven't changed any functionality yet. Next we'll set our site up for easy searching.
 
+<!--2:52 WDI4 turning over to devs -->
+<!--WDI4 coming back 2:57-->
+
+<!--After break, WDI4 3:12 -->
+
 ### Search Engine Optimization (SEO)
 
-A cornerstone of on-page SEO factors are unique titles, meta descriptions, and meta keywords. 
+A cornerstone of on-page SEO factors are unique titles, meta descriptions, and meta keywords.
 
 Let's add support for these to our fledgling app.
 
@@ -161,6 +183,11 @@ import { Meta, Title } from "@angular/platform-browser";
 ```typescript
   constructor(meta: Meta, title: Title) {}
 ```
+
+
+<!--3:15 WDI4 turning over to devs -->
+<!--3:19 WDI4 -->
+
 
 3) Then, add a title and some meta tags for your app:
 
