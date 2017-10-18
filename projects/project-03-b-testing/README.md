@@ -12,11 +12,11 @@ The rebels have boarded our death square and are heading for our data banks. A p
 
 2) Navigate into `imperial-starfleet` and start up our front end.
 
-3) Run `ng test` inside `imperial-starfleet`. Nice, we're passing two tests! But there's one failing test on `InfoWindow`. Let's make it pass.
+3) Run `ng test` inside `imperial-starfleet`. Nice - we're passing two tests! But there's one failing test on `InfoWindow`. Let's make it pass.
 
 4) That failing test is complaining that there is `No provider for Http`. What `Module` could we import to `info-window.component.spec.ts`? Hint: It's toward the top of `app.module.ts`. Don't forget to add it to an `imports` array below the `declarations` array in `TestBed.configureTestingModule`. Save the file and check the `ng test` browser output.
 
-5) We're still failing. We need to import one more thing. It's called `RouterTestingModule`, and it comes from the `@angular/router/testing` package. Don't forget to add it to the `imports` array, too. Save the file and check the `ng test` browser output one more time.
+5) We're still failing! We need to import one more thing. It's called `RouterTestingModule`, and it comes from the `@angular/router/testing` package. Don't forget to add it to the `imports` array, too. Save the file and check the `ng test` browser output one more time.
 
 6) Create a new test below the "should be created" one and call it "should have a `findTurret()` function to get data from the data banks." Fail this test the old-fashioned way by making it test `expect(true).toEqual(false);`.
 

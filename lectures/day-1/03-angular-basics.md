@@ -4,7 +4,7 @@
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
 
-**Angular** is a superior front-end framework. 
+**Angular** is a superior front-end framework.
 
 ## Objectives
 
@@ -37,7 +37,7 @@ os: darwin x64
 
 ## From Nil to Angular App in Five Seconds
 
-The Angular CLI let's us scaffold an application quickly and run it.
+The Angular CLI lets us scaffold an application quickly and run it.
 
 Type:
 
@@ -45,13 +45,13 @@ Type:
 ng new ga-ui
 ```
 
-Then let's move into the repository:
+Then let's move into the repo:
 
 ```bash
 cd ga-ui
 ```
 
-We should be able to run our web application immediately:
+We should be able to run our web application immediately!
 
 ```bash
 ng serve
@@ -125,21 +125,21 @@ Our scaffolded application looks like this:
 
 At the root of our application, we have a README, a folder for our end-to-end tests, the source folder where our code will live, and a series of configuration files. These config files relate to TypeScript and its linting. We won't be touching any files that live here or in the end-to-end folder.
 
-In **src**, we'll find all of the files that are important to us and a few more configuration files we'll be ignoring.
+In `src`, we'll find all of the files that are important to us and a few more configuration files we'll be ignoring.
 
-We have our **index** that, like with most web frameworks, we'll leave largely untouched.
+We have our `index.html` that, like with most web frameworks, we'll leave largely untouched.
 
 We have a few more TypeScript and test configuration files that suit us as is.
 
-We have a polyfill file, which the Angular CLI mercifully supplies to ensure our code works well on all browsers.
+We have a `polyfill.ts` file, which the Angular CLI mercifully supplies to ensure our code works well on all browsers.
 
-We have **main.ts**, where our app is bootstrapped. This file is very important but works just fine as is.
+We have `main.ts`, where our app is bootstrapped. This file is very important but works just fine as is.
 
-And we have an app folder, which houses our first component. We'll take a deeper dive into this folder in a minute.
+And we have an `app` folder, which houses our first component. We'll take a deeper dive into this folder in a minute.
 
 ## Starting From Our Bootstraps
 
-Let's take a look at **main.ts**:
+Let's take a look at `main.ts`:
 
 ```TypeScript
 import { enableProdMode } from '@angular/core';
@@ -159,9 +159,9 @@ We have the modularity of Angular 2 on display here. We pluck a few modules from
 
 ## Our Root Component
 
-At this point, you may be asking yourself "Where does the code that I write live?" For that, we turn to our root component — the app component in the app folder.
+At this point you may be asking yourself "Where does the code that I write live?" For that, we turn to our root component — the app component in the app folder.
 
-With **app.component.html**, we see our first Angular 2 template:
+With `app.component.html`, we see our first Angular 2 template:
 
 ```html
   <h1>
@@ -171,7 +171,7 @@ With **app.component.html**, we see our first Angular 2 template:
 
 Notice that Angular uses a double bracket syntax to bind JavaScript expressions, which is the same as Ember and similar to Handlebars, if you've used either of those before. This will come in handy very soon.
 
-The beating heart of our component exists in **app.component.ts**.
+The beating heart of our component exists in `app.component.ts`.
 
 ```typescript
 @Component({
@@ -190,7 +190,7 @@ Our component's `selector` is the name of the HTML element we use to summon the 
 <app-root></app-root>
 ```
 
-Finally, our app component is neatly packaged up to be exported and then bootstrapped in **app.module.ts**.
+Finally, our app component is neatly packaged up to be exported and then bootstrapped in `app.module.ts`.
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -225,7 +225,7 @@ Go back to your browser and you'll see your new title.
 
 ## Wrapping Up
 
-By now, you should have a broad-yet-shallow understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular just yet. In the coming lessons, we'll flesh out your understanding so you'll be ready to go out and conquer the world of front-end web development.
+By now, you should have a broad, yet shallow, understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular just yet. In the coming lessons, we'll flesh out your understanding so you'll be ready to go out and conquer the world of front-end web development.
 
 ## References
 

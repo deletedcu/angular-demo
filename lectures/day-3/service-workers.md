@@ -1,29 +1,31 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI4 11:34 -->
+
 # Service Workers
 
 ### Why Is This important?
 
 Users of modern web apps have grown accustomed to:
 
-- **Fast response times**.
-- **Cached offline resources** when the internet connection is slow or nonexistent.
-- **Pleasant offline responses**/error messages in all other circumstances.
+- Fast response times.
+- Cached offline resources when the internet connection is slow or nonexistent.
+- Pleasant offline responses/error messages in all other circumstances.
 
 With that in mind, we can take advantage of Service Workers to give users what they want.
 
 ### What Are the Objectives?
 *After this lesson, you will be able to:*
 
-- **Install** and **activate** a Service Worker.
-- **Utilize** a Service Worker to fetch a resource.
-- **Utilize** a Service Worker to cache a resource.
+- Install and activate a Service Worker.
+- Utilize a Service Worker to fetch a resource.
+- Utilize a Service Worker to cache a resource.
 
 ![](resources/noService.png)
 
 ### What is a Service Worker?
 
-*A Service Worker is a script that your browser runs in the background — separate from a web page — that opens the door to features that don't need a web page or user interaction.* 
+*A Service Worker is a script that your browser runs in the background — separate from a web page — that opens the door to features that don't need a web page or user interaction.*
 
 **— Google**
 
@@ -37,6 +39,10 @@ In order to get started, we need to do a little front-end setup:
 2) Create a new `index.html` file inside this folder.
 3) Fill `index.html` out with the basic HTML boilerplate and a "Hello, World" heading.
 4) Create a `service-worker.js` file inside the same folder.
+
+
+<!--WDI4 11:37 turning over to devs -->
+<!--WDI4 coming back 11:42 -->
 
 #### Dev Tools, Revisited
 
@@ -73,8 +79,9 @@ Let's walk through what's happening here.
 
 Save your work and start a web server like Python's `SimpleHTTPServer` in your folder.
 
-1. Create a `server.py` file in your project folder with the following code: 
-```
+1. Create a `server.py` file in your project folder with the following code:
+
+```js
 import sys
 from SimpleHTTPServer import SimpleHTTPRequestHandler
 import BaseHTTPServer
@@ -183,6 +190,10 @@ self.addEventListener('install', function(event) {
 
 >**Note:** Sometimes the cache doesn't update immediately. If it looks empty, you can close Dev Tools and open it again to bring in the newest cache.
 
+
+<!--12:05 WDI4 turning over to devs -->
+<!--WDI4 coming back 12:12-->
+
 10) Our resources are in the cache. Now we need to reference these any time we're offline. To do that, add the following `fetch` handler to `service-worker.js`. `fetch` is an API that Service Workers use to grab online resources — similar to XML/HTTP requests:
 
 ```js
@@ -203,9 +214,16 @@ self.addEventListener('fetch', function(event) {
 
 11) Refresh your browser, cross your fingers, select `Offline` again, and refresh your browser one more time. Good job!
 
+<!--WDI4 12:16 turning over to devs -->
+<!--WDI4 coming back 12:25 -->
+
 ### Conclusion
 
 - What is a Service Worker?
 - Why is a Service Worker useful?
 - Name two steps in the Service Worker life cycle.
 - What is `fetch`?
+
+
+
+<!--WDI4 12:28 -->

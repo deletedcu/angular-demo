@@ -1,5 +1,7 @@
 # What is `pushState()`?
 
+<!--WDI4 1:50 -->
+
 # Lesson Objectives
 *By the end of this lesson, you will be able to:*
 
@@ -16,6 +18,7 @@
 
 ## Demonstrate an SPA That Uses `pushState()`.
 
+<!--
 1. Go to [Google Maps](https://www.google.com/maps/).
     - Pan/zoom around.
     - Observe how the URL changes.
@@ -32,4 +35,4 @@
     - Note which card has been opened.
     - Close the window.
     - Open a new window and paste the copied URL into the URL bar. Hit enter.
-    - Note that the page has opened to display the card that was open when we copied the URL.
+    - Note that the page has opened to display the card that was open when we copied the URL. -->

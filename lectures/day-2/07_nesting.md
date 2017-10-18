@@ -1,5 +1,7 @@
 # Nesting
 
+<!--3:33 WDI4 -->
+
 ## Lesson Objectives
 *By the end of this, you will be able to:*
 
@@ -12,7 +14,7 @@
 
 ## Describe Nested Routes
 
-Sometimes you'll want to have subsections within a specific route (routes within routes). We can accomplish this with nested routes.
+Sometimes, you'll want to have subsections within a specific route (routes within routes). We can accomplish this with nested routes.
 
 ## Create Components for Two Subsections
 
@@ -40,6 +42,8 @@ and `src/app/career/career.component.html`:
 <h3>Career</h3>
 <p>Now I'm makin' it raaaiiiiiinnnn!!!</p>
 ```
+
+<!--WDI4 3:40 -->
 
 ## Create a Router Just for the Subsections
 
@@ -153,3 +157,6 @@ You can now create links to these subsections in `src/app/about/about.component.
 </nav>
 <router-outlet></router-outlet>
 ```
+
+
+<!--WDI4 3:59 -->

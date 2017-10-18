@@ -1,5 +1,7 @@
 # Routing in Angular
 
+<!--2:03 WDI4 -->
+
 ## Lesson Objectives
 *By the end of this lesson, you will be able to:*
 
@@ -31,6 +33,9 @@ ng serve --open
 
 You should now see the welcome screen.
 
+
+<!--WDI4 2:09 -->
+
 ## Clean Up the App's HTML
 
 Go into `src/app/app.component.html` and change the HTML to:
@@ -48,6 +53,8 @@ ng generate component about
 ng generate component links
 ng generate component resume
 ```
+
+<!--2:14 WDI4 -->
 
 ## Edit the HTML for the About, Links, and Resume Components
 
@@ -119,6 +126,8 @@ Edit `src/app/app.component.html`:
 ```
 
 You should now see all of the components displayed on the page.
+
+<!-- WDI4 2:20-->
 
 ## Set Up the Router
 
@@ -253,3 +262,7 @@ import { AppRoutingModule } from './app-routing.module'
 })
 export class AppModule { }
 ```
+
+
+
+<!--WDI4 2:45 -->

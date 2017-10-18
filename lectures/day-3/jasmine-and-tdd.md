@@ -1,5 +1,7 @@
 <!-- 5 minutes (5)-->
 
+<!--WDI4 9:39 -->
+
 <!--Hook: Has anyone here tried fixing a car or complicated appliance? After two hours, you get the piece back in place or the wheel on straight. Then what do you do? (Personally, I back up and cross my fingers that it works.) The idea behind test-driven development is to gain a higher confidence that, before we flip the switch, the app we're building does what the customer wants.  
 
 Before you take your software to your users, you'll have to test it. Today, we'll talk about how to do that *with software itself*.  -->
@@ -17,15 +19,15 @@ Test-driven development (TDD) leads to better code. TDD is extremely helpful whe
 ### What Are the Objectives?
 *After this lesson, you will be able to:*
 
-- **Write** unit tests using Jasmine `expectations` and `matchers`.
-- **Define** common Jasmine terms including `describe` and `it`.
-- **Refactor** tests with `before()` and `beforeEach()`.
+- Write unit tests using Jasmine `expectations` and `matchers`.
+- Define common Jasmine terms including `describe` and `it`.
+- Refactor tests with `before()` and `beforeEach()`.
 
 ### Where Should We Be Now?
 *Before this lesson, you should already be able to:*
 
-- **Program** in JavaScript.
-- **Pass tests** in a TDD manner.
+- Program in JavaScript.
+- Pass tests in a TDD manner.
 
 <!--5 minutes (10)-->
 
@@ -52,7 +54,7 @@ Test-driven development (TDD) leads to better code. TDD is extremely helpful whe
  * **Time**: It's a waste of time and effort to test.
  * **It's too much**:You can test sufficiently using the console.
  * **App complexity**: The app is too simple to require testing.
- 
+
 * Pros
  * **Bug detection**: It quickly identifies unanticipated errors.
  * **Code quality**: It can create standards for our code before we write it.
@@ -94,8 +96,9 @@ When we think of testing, we tend to think of it as something you do *after* you
 
 ![TDD Example](resources/tdd_chart.png)
 
+<!--9:45 WDI4 -->
 <!--10 minutes (30)-->
-<!-- Key point: This is just a demo, devs should NOT clone this repo, it will just confuse them when we move to the exercise -->
+<!-- Key point: this is just a demo, devs should NOT clone this repo, it will just confuse them when we move to the exercise -->
 
 ## What is Jasmine?
 
@@ -188,12 +191,13 @@ describe('PersonComponent', () => {
 >What does `expect(person.language).toEqual('English');` mean in plain English?
 
 <!-- 15 minutes (45)-->
+<!--WDI4 9:55 -->
 
 <!-- Half Mast -->
 
 ## Creating a Unit Test Using Jasmine
 
-We are going to be creating something similar to the example above. However, we'll be writing a spec for a `dog` component.
+We are going to be creating something similar to the example above. However, we'll be writing a spec for a `DogComponent`.
 
 ### Set Up
 
@@ -212,13 +216,16 @@ Run `ng test`. You should see a browser open with the following output:
     ✓ should be created
 ```
 
+<!--WDI4 would have been 10:01 but had to resolve student issues...some really confusing ones depending on where ng g c was run, folder names, etc -->
+<!--WDI4 actually 10:07 -->
+
 ### Writing Our First Specification
 
-Let's spec out our `dog` with some pseudocode. That's right — we're writing our tests first.
+Let's spec out our `Dog` with some pseudocode. That's right — we're writing our tests first.
 
 All tests in Jasmine are contained within an `it` block. Notice we already have one test written in `dog.component.spec.ts`. We're going to write one just below that:
 
-**dog.component.spec.ts**
+`dog.component.spec.ts`
 
 ```typescript
   it('should be created', () => {
@@ -235,7 +242,7 @@ Now add a callback function to our new `it` block.
 
 ```typescript
   it('should have a name', () => {
-    
+
   });
 ```
 
@@ -251,7 +258,7 @@ Let's have our specs actually test something:
   });
 ```
 
-> Expectation: `expect(component.dogName)` 
+> Expectation: `expect(component.dogName)`
 
 > Matcher: `toBeTruthy()`
 
@@ -263,7 +270,7 @@ If you look in the terminal tab that's running `ng test`, you'll see some red te
 
 Does the property `dogName` exist? Let's give our component just enough code to satisfy the current minimal specifications.
 
-**dog.component.ts**
+`dog.component.ts`
 
 ```javascript
 export class DogComponent implements OnInit {
@@ -271,6 +278,7 @@ export class DogComponent implements OnInit {
   dogName = "Fido";
 
   ...
+}
 ```
 
 We did it! Now everything is green again.
@@ -278,6 +286,8 @@ We did it! Now everything is green again.
 <!-- End half-mast, stress "pending", "failing", "passing" order -->
 
 <!-- Half-mast again -->
+
+<!--10:19 WDI4 - stuck on some student issues. -->
 
 ## More Expectations
 
@@ -291,6 +301,8 @@ Add an expectation to `dog` that "allows the reading of a hunger level." This te
 
 Add another expectation to `dog` that "allows the writing of a hunger level" and follow the same pattern as with the earlier expectation. This test should set the `hungerLevel` property in the component to `5` and then check that it's equal to `5` once it is set.  
 
+<!--WDI4 10:30 -->
+
 <!-- End half-mast -->
 
 ### Feeding the Dog
@@ -299,7 +311,7 @@ Add another expectation to `dog` that "allows the writing of a hunger level" and
 
 Let's implement a method, `eat`, which decrements a dog's hunger level when invoked. How would we translate this specification into a Jasmine test?
 
-**dog.component.spec.ts**
+`dog.component.spec.ts`
 
 ```javascript
   ...
@@ -318,13 +330,15 @@ Let's implement a method, `eat`, which decrements a dog's hunger level when invo
 
 Write the code that passes the specifications above.
 
+<!--WDI4 10:39 -->
+
 ### Edge Case
 
 <!-- Half-mast -->
 
 Imagine we want the `eat` method to behave differently in different contexts. For example, if the dog is not hungry and has a `hunger_level` of `0`, we don't want the `eat` method to continue decrementing. In order to set up different scenarios or contexts in our specifications, we can use different `describe` blocks.
 
-**dog.component.spec.ts**
+`dog.component.spec.ts`
 
 ```javascript
 describe("Dog", function() {
@@ -352,8 +366,9 @@ describe("Dog", function() {
 
 ### Challenge: Don't Overeat
 
-Write the code to pass the specifications above. 
+Write the code to pass the specifications above.
 
+<!--WDI4 10:47 -->
 <!-- 5 minutes (70)-->
 
 ### Before Blocks
@@ -368,10 +383,11 @@ Any time you see the same line written twice or more in a test suite, you can us
 
 While Angular uses the **Jasmine** framework for unit tests, it uses **Protractor** to write end-to-end tests.
 
-In end-to-end testing, one process runs the real application and a second process runs protractor tests that simulate user behavior and assert that the application responds in the browser as expected.
+In end-to-end (e2e) testing, one process runs the real application and a second process runs protractor tests that simulate user behavior and assert that the application responds in the browser as expected.
 
 If you would like to dive deeper into end-to-end tests, check out [this tutorial](https://blog.jscrambler.com/getting-started-with-angular-2-end-to-end-testing/).
 
+<!--WDI4 10:50 -->
 <!--5 minutes (75)-->
 
 ## Closing
@@ -382,6 +398,9 @@ If you would like to dive deeper into end-to-end tests, check out [this tutorial
 - Explain the role Jasmine plays in testing.
 - How can `before()` and `beforeEach()` be helpful?
 - What does Angular use to write end-to-end tests by default?
+
+
+<!--WDI4 10:53 -->
 
 
 ### Additional Resources

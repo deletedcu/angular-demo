@@ -1,3 +1,5 @@
+<!--9:48 WDI4-->
+
 # What is an API?
 
 ## Lesson Objectives
@@ -19,6 +21,10 @@ An application programming interface (API) is a set of subroutine definitions, p
 
 ## Describe How an API Fits in With SPAs
 
-- In a traditional, server-side-rendered application, the server retrieves data from the database and uses that information to format the HTML on the server side (Demo https://www.amazon.com).
-- Now, a server retrieves the data from the database and responds to requests with JSON (Demo http://www.swapi.co/).
-- We can use various web-based APIs to populate our SPAs with data asynchronously. This way the user can interact with the application and see it respond with new data without needing to refresh or navigate to a new page (demo [/starwars](/starwars)).
+- In a traditional, server-side-rendered application, the server retrieves data from the database and uses that information to format the HTML on the server side <!-- (Demo https://www.amazon.com). -->
+- Now, a server retrieves the data from the database and responds to requests with JSON <!-- (Demo http://www.swapi.co/). -->
+- We can use various web-based APIs to populate our SPAs with data asynchronously. This way the user can interact with the application and see it respond with new data without needing to refresh or navigate to a new page <!-- (demo [/starwars](/starwars)). -->
+
+
+
+<!--9:56 WDI4 -->

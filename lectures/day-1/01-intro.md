@@ -16,4 +16,21 @@ Angular is a front-end framework developed and maintained by Google. As a front-
 - Ubiquity.
 - Native TypeScript integration.
 
+Here's a short story to give you more context:
+
+Angular began as a side project of two Google engineers in 2009. One of the engineers bet his manager that he could rewrite the application that they were working on in Angular in two weeks.
+
+He lost the bet by a week, but won Google’s heart. They have been maintaining and supporting it ever since.
+
+In 2016, Google released a re-imagining of Angular that at the time was called Angular 2.
+
+Now, this version is referred to as Angular, 
+while the version of the framework that existed previous to 2016 is called AngularJS.
+
+We are learning Angular.
+
+Angular applications consist of a series of cascading **components**.
+
+**Components** are bundles of html, css and typescript that represent unique entities that appear on web pages, like user icons and buttons.
+
 Now that we're acquainted with what we'll be learning, it's time to get cracking! As eager as you may be to start writing Angular code, however, we first need to learn the basics of TypeScript.

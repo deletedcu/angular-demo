@@ -1,5 +1,7 @@
 # Using an API With AJAX
 
+<!--WDI4 9:57 -->
+
 ## Lesson Objectives
 
 *By the end of this lesson, you will be able to:*
@@ -88,6 +90,8 @@ import { FormsModule } from '@angular/forms'; //import FormsModule
 export class AppModule { }
 ```
 
+<!--10:12 WDI4 -->
+
 ## Set a Component Property to the Value of an Input
 
 In `src/app/search/search.component.html`, add `[(ngModel)]` to the text input:
@@ -124,6 +128,8 @@ Call it in `src/app/search/search.component.html` (also remove the `Search Strin
 ```
 
 Test this by looking in the console.
+
+<!--WDI4 10:24 -->
 
 ## Add the Ability to Make AJAX Requests
 
@@ -177,6 +183,8 @@ findCharacter(name){
 The `rxjs/add/operator/toPromise` import that we previously wrote adds the ability to change the `Observable` (more on this in another lecture) into a `Promise`.
 
 You can test this by looking in the console.
+
+<!--10:35 WDI4 -->
 
 ## Display AJAX Results in the App
 
@@ -246,3 +254,5 @@ Edit `src/app/search/search.component.html`:
     </ul>
 </section>
 ```
+
+<!--10:45 WDI4 -->
