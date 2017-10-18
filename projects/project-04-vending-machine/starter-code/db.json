@@ -1,32 +1,32 @@
 {
-"items": [
-  {
-    "id": 1,
-    "name": "Sprite",
-    "cost": 0.5,
-    "remaining": 10,
-    "code": "A1"
-  },
-  {
-    "id": 2,
-    "name": "Coke",
-    "cost": 0.5,
-    "remaining": 10,
-    "code": "B2"
-  },
-  {
-    "id": 3,
-    "name": "Dr. Pepper",
-    "cost": 0.75,
-    "remaining": 10,
-    "code": "C3"
-  },
-  {
-    "id": 4,
-    "name": "Mr Pibbs",
-    "cost": 0.5,
-    "remaining": 10,
-    "code": "D4"
-  }
-]
+  "items": [
+    {
+      "id": 1,
+      "name": "Sprite",
+      "cost": 50,
+      "remaining": 8,
+      "code": "A1"
+    },
+    {
+      "id": 2,
+      "name": "Coke",
+      "cost": 50,
+      "remaining": 9,
+      "code": "B2"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Pepper",
+      "cost": 75,
+      "remaining": 10,
+      "code": "C3"
+    },
+    {
+      "id": 4,
+      "name": "Mr Pibbs",
+      "cost": 50,
+      "remaining": 8,
+      "code": "D4"
+    }
+  ]
 }
