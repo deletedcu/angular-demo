@@ -24,10 +24,12 @@ He lost the bet by a week, but won Google’s heart. They have been maintaining 
 
 In 2016, Google released a re-imagining of Angular that at the time was called Angular 2.
 
-Now, this version is referred to as Angular, 
+Now, this version is referred to as Angular,
 while the version of the framework that existed previous to 2016 is called AngularJS.
 
 We are learning Angular.
+
+For some real world Angular websites, check out [Wolfram Alpha](https://www.wolframalpha.com/), [Pacific Standard](https://psmag.com/), and [Lyft](https://www.lyft.com/).
 
 Angular applications consist of a series of cascading **components**.
 

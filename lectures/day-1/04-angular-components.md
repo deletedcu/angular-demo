@@ -32,21 +32,17 @@ When using Angular, building components will be your main front-end task.
 
 ### Identifying Components
 
-Take a look at [CraigsList](https://boston.craigslist.org/search/aap) (note: right click to open in a new tab!).
+Take a look at [Wolfram Alpha](https://www.wolframalpha.com/) (note: right click to open in a new tab!).
 
-![Components](images/craigslist.png)
+![Components](images/wolfram.png)
 
-Each listing is a component. How can you identify this?
+Each explore link is a component. How can you identify this?
 - Listings look identical in structure, but have different information populating them
 - Listings are dynamically generated based on the user's search
 
-Now, go to [Amtrak.com](https://www.amtrak.com/home) (note: right click to open in a new tab!). We want to look at the listing page, so put in any "From" (for example, New York - Penn Station), any "To" (for example, Boston - South Station), and pick any date. Hit "Find Trains". Now look at the listing page:
+Now, go to [Pacific Standard](https://psmag.com/) (note: right click to open in a new tab!).
 
-![Amtrak](images/amtrak.png)
-
-Scrolling down it, identify the visual "components" the website is comprised of. We suggest drawing this out on paper! So something like this...
-
-![Component diagram](images/wireframe_deconstructed.png)
+Scrolling down it, identify the visual "components" the website is comprised of. We suggest drawing this out on paper!
 
 As you're drawing this out, think about the following questions...
 * Where do you see "nested components;" that is, where are there components inside another component? Where do you see just one "layer" instead?
