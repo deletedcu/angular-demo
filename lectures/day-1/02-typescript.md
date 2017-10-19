@@ -23,7 +23,37 @@ This is just a fancy way to say that TypeScript includes all of the types, seman
 
 ![TypeScript superset of JavaScript](https://qph.ec.quoracdn.net/main-qimg-b4ea5e4175b7ea1105895f131e9614cc)
 
-So why bother with TypeScript? It turns out that some of those extra bells and whistles are extremely useful.
+So why bother with TypeScript? It turns out that some of those extra bells and whistles are extremely useful. Typescript was created to "statically identify constructs that are likely to be errors." For example, look at this code:
+
+```js
+// Basic JavaScript
+function getPassword(clearTextPassword) {
+    if(clearTextPassword) {
+        return 'password';
+    }
+    return '********';
+}
+
+let password = getPassword('false'); // "password"
+```
+
+We could call `let password = getPassword()` with anything other than a boolean, and JS would still run the code (which would then error at runtime!). With TypeScript, we can check to be sure that what's passed in to `getPassword()` is a boolean.
+
+```js
+// Written with TypeScript
+function getPassword(clearTextPassword: boolean) : string {
+    if(clearTextPassword) {
+        return 'password';
+    }
+    return '********';
+}
+
+let password = getPassword('false'); // throws: error TS2345: Argument of type "false" is not assignable to parameter of type 'boolean'.
+```
+
+What's the difference? It still looks like JavaScript, but you can see that it's strictly typed (thus, "TypeScript"). Let's look into this.
+
+
 
 ## Getting Started
 
