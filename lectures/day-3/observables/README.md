@@ -59,7 +59,7 @@ import 'rxjs/add/operator/toPromise';
 `this.http.get()` returns an observable, but how can we make our own?  Let's make typing into the input field an observable action.  To do this, we'll need to import the `Subject` module from `rxjs` in `src/app/search/search.component.ts`:
 
 ```javascript
-import { Subject } from 'rxjs/Subject'
+import { Subject } from 'rxjs/Subject';
 ```
 
 A Subject, is just like an Observable, but it allows us to tell it when to publish events. Let's create a property on `SearchComponent` that is a `Subject` that we'll tell to publish events when the user types.
