@@ -231,7 +231,7 @@ export class SearchService {
 Now in `src/app/search/search.component.ts` import the new service:
 
 ```javascript
-import { SearchService } from './search.service'
+import { SearchService } from './search.service';
 ```
 
 Inject the service into the component in `src/app/search/search.component.ts`:
@@ -258,7 +258,7 @@ this.searchSubject
 You might see an error in your Chrome console.  We still need to specify our new service as a provider, either at the app level or at the component level.  Let's do at the app level, so that other components can use it if they need to later.  Edit `src/app/app.module.ts` to add the import:
 
 ```javascript
-import { SearchService } from './search/search.service'
+import { SearchService } from './search/search.service';
 ```
 
 Now add it as a provider in `src/app/app.module.ts`:
@@ -295,7 +295,7 @@ In `src/app/search/search.service.ts`, add the following:
 ```javascript
 createAPIObservable(name){
     return this.http.get('http://swapi.co/api/people/?search=' + name)
-        .map(response=> response.json().results );
+        .map(response => response.json().results);
 }
 ```
 
