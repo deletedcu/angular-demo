@@ -163,7 +163,7 @@ At this point, if you look at your website and click between the job links in th
 
 ## Show Specific Job Data Based on the ID Param
 
-But we'd still only like to display one job at a time, so back to the `resume.component.ts`, import the `JOBS` data object:
+But we'd still only like to display one job at a time, so back to the `resume.component.ts`, import the `JOBS` data object `src/app/resume/resume.component.ts`:
 
 ```javascript
 import { JOBS } from './jobs';
