@@ -71,6 +71,8 @@ Edit `src/app/about/about.component.html` with anything you want, like...:
 <h2>This is the About Section of the Site</h2>
 <h3>Early Life</h3>
 <p>Just a kid growing up on the streets.</p>
+<h3>Current Life</h3>
+<p>Still loving my life!</p>
 ```
 
 Edit `src/app/links/links.component.html` with anything you'd like, like...
