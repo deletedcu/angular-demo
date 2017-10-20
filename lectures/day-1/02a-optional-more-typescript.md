@@ -278,7 +278,9 @@ gulp.task('default', function () {
 });
 ```
 
-Next, run `node scripts/output.js`. We see all of our files' output. Pretty cool. We only need to include one file in our HTML — but when we're coding, we have several files to keep everything organized in our heads.
+Next, run `gulp` in your work folder to transpile your TypeScript into JavaScript.
+
+Finally, run `node scripts/output.js`. We see all of our files' output. Pretty cool. We only need to include one file in our HTML — but when we're coding, we have several files to keep everything organized in our heads.
 
 ## Resources
 
