@@ -87,7 +87,7 @@ Looks just like JavaScript, right? Let's see what happens when we run it through
 tsc hello.ts
 ```
 
-Then, look around in your repo. You should see the exact same file with a ".js" extension. Not exactly novel, but we're on the way to doing more exciting things with TypeScript.
+Then, look around in your repo. You should see the exact same file with a ".js" extension. This doesn't seem exciting, but it's the first step! Now, we can write in TypeScript and have it compile into JavaScript. We're on our way to doing exciting things with TypeScript.
 
 ### Type Annotations
 
