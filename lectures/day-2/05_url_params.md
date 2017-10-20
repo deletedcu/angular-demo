@@ -13,11 +13,15 @@
 
 ## Define URL Params
 
+Many applications aren't completely static - they have data in them, whether it's pulled from a database, somewhere else on the internet, or just kept in a file.
+
+Let's look at keeping information (data) in a file and handing it to our Angular application.
+
 URL params allow us to pass data into the application from the URL.
 
 ## Create an External Data File
 
-Now, we're going to make our app a little more data driven. Create `src/app/resume/jobs.ts`:
+We're going to make our app a little more data driven. Create `src/app/resume/jobs.ts`:
 
 ```javascript
 export const JOBS = [
