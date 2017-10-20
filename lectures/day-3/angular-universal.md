@@ -39,7 +39,7 @@ In this lesson, we will address the second issue.
 
 First, we'll need to create a new project with the Angular CLI called `first-angular-universal`. If you can't remember how to do this, use the earlier lessons for reference.
 
-Now, let's bring Angular Universal into the picture. In order to do this, we'll need something you have probably seen before: a Node server.
+Now, let's bring Angular Universal into the picture. In order to do this, we'll need to bring in something we've avoided all this time we were building our Angular front-ends: a Node back-end.
 
 1) We need to install the `platform-server` package and the `ts-node` package that allow us to run `node` on a TypeScript file. Enter the `first-angular-universal` directory in the terminal and run the following command:
 
@@ -167,6 +167,14 @@ Cool, right? But we haven't changed any functionality yet. Next we'll set our si
 <!--After break, WDI4 3:12 -->
 
 ### Search Engine Optimization (SEO)
+
+**Search engine optimization** (SEO) is the practice of increasing the quantity and quality of traffic to your website through organic search engine results.
+
+#### Why do we care?
+
+It is really easy for an amazing page to drop in search rankings because they don't do some simple steps.  In Angular, if you view the page source in a browser, it will only show what's inside the regular `index.html` -- the infamous `loading..` content.  We're going to work on that.
+
+#### What will we do about it?
 
 A cornerstone of on-page SEO factors are unique titles, meta descriptions, and meta keywords.
 
