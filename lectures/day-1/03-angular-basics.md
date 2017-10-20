@@ -27,17 +27,17 @@ Let's install it globally:
 npm install -g @angular/cli
 ```
 
-To verify that everything is working, run the command `ng -v`. You should see a response that looks something like this:
+To verify that Angular install properly, run the command `ng -v`. You should see a response that looks something like this:
 
 ```bash
-@angular/cli: 1.2.7
+@angular/cli: 1.4.9
 node: 8.1.4
 os: darwin x64
 ```
 
 ## From Nil to Angular App in Five Seconds
 
-The Angular CLI lets us scaffold an application quickly and run it.
+The Angular CLI lets us scaffold an application quickly and run it. Let's create an Angular application called **ga-ui**.
 
 Type:
 
@@ -45,7 +45,10 @@ Type:
 ng new ga-ui
 ```
 
-Then let's move into the repo:
+What did that do? The Angular CLI has set up a basic Angular application for us! We can just edit it from here. You can always use `ng new ___` to quickly scaffold a new Angular application.
+
+
+Then let's move into the new directory:
 
 ```bash
 cd ga-ui
@@ -56,6 +59,10 @@ We should be able to run our web application immediately!
 ```bash
 ng serve
 ```
+
+Open your browser to `http://localhost:4200/` - there is a basic Angular application created for us!
+
+![](images/angular-start.png)
 
 ## Angular Tools
 
@@ -123,19 +130,24 @@ Our scaffolded application looks like this:
 └── tslint.json
 ```
 
-At the root of our application, we have a README, a folder for our end-to-end tests, the source folder where our code will live, and a series of configuration files. These config files relate to TypeScript and its linting. We won't be touching any files that live here or in the end-to-end folder.
+At the root of our application, we have:
+- A `README`
+- A folder for our end-to-end tests
+- The `src` folder where our code will live
+- A series of configuration files.
+  - These config files relate to TypeScript and its linting.
+  - We won't be touching any files that live here or in the end-to-end folder.
 
-In `src`, we'll find all of the files that are important to us and a few more configuration files we'll be ignoring.
-
-We have our `index.html` that, like with most web frameworks, we'll leave largely untouched.
-
-We have a few more TypeScript and test configuration files that suit us as is.
-
-We have a `polyfill.ts` file, which the Angular CLI mercifully supplies to ensure our code works well on all browsers.
-
-We have `main.ts`, where our app is bootstrapped. This file is very important but works just fine as is.
-
-And we have an `app` folder, which houses our first component. We'll take a deeper dive into this folder in a minute.
+In `src`, we'll find all of the files that are important to us (and a few more configuration files we'll be ignoring):
+- `index.html`
+  - Like with most web frameworks, we'll leave this largely untouched.
+- A few more TypeScript and test configuration files that suit us as is.
+- A `polyfill.ts` file
+  - The Angular CLI mercifully supplies to ensure our code works well on all browsers.
+- `main.ts`
+  - where our app is bootstrapped. This file is very important but works just fine as is.
+- An `app` folder
+  - This houses our first component! We'll take a deeper dive into this folder in a minute.
 
 ## Starting From Our Bootstraps
 
@@ -155,11 +167,14 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
-We have the modularity of Angular 2 on display here. We pluck a few modules from Angular 2 and **the component we generated**, and then bootstrap our module to make it the root of our application. Advanced Angular developers can tweak this bootstrapping process for their projects' specific requirements, but all we care about here is that the last line is where our component becomes an application.
+Look at all of those imports! We have the modularity of Angular 2 on display here.
+- We pluck a few modules from Angular 2 and **the component we generated**, and then bootstrap our module to make it the root of our application.
+
+Advanced Angular developers can tweak this bootstrapping process for their projects' specific requirements, but **all we care about here is that the last line is where our component becomes an application.**
 
 ## Our Root Component
 
-At this point you may be asking yourself "Where does the code that I write live?" For that, we turn to our root component — the app component in the app folder.
+At this point you may be asking yourself, "Where will I write code?" For that, we turn to our root component — the app component in the `app` folder.
 
 With `app.component.html`, we see our first Angular 2 template:
 
@@ -169,9 +184,11 @@ With `app.component.html`, we see our first Angular 2 template:
   </h1>
 ```
 
-Notice that Angular uses a double bracket syntax to bind JavaScript expressions, which is the same as Ember and similar to Handlebars, if you've used either of those before. This will come in handy very soon.
+Angular uses a double-bracket binding syntax for JavaScript, which is pretty common among front-end frameworks and template libraries. We're calling JavaScript in the HTML.
 
-The beating heart of our component exists in `app.component.ts`.
+Looking through the rest of `app.component.html`, you can see that it defines the HTML for the page.
+
+But what about that variable `{{title}}`? The values in brackets will be replaced by values in our next file, `app.component.ts`. At the bottom of this file, we declare the variable `title` and give it the value of `app`.
 
 ```typescript
 @Component({
@@ -184,48 +201,20 @@ export class AppComponent {
 }
 ```
 
-Our component's `selector` is the name of the HTML element we use to summon the component in our templates. If you look at our index, you'll see:
-
-```html
-<app-root></app-root>
-```
-
-Finally, our app component is neatly packaged up to be exported and then bootstrapped in `app.module.ts`.
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
 
 ## Testing It Out
 
-Browse to `http://localhost:4200` in your browser and see your default application.
+Browse to `http://localhost:4200` in your browser and see your default application. At the top, you can see "Welcome to app!"
 
-Go into `app.component.ts` and change the `title` variable value to `My Website`.
+Go into `app.component.ts` and change the `title` variable value to `My Website`:
 
-Go back to your browser and you'll see your new title.
+`title = 'My Website';`
+
+This will change what's passed into `app.component.html`, and therefore change what's displayed on the screen. Go back to your browser, and you'll see your new title.
 
 ## Wrapping Up
 
-By now, you should have a broad, yet shallow, understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular just yet. In the coming lessons, we'll flesh out your understanding so you'll be ready to go out and conquer the world of front-end web development.
+By now, you should have a broad, though shallow, understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular just yet. In the coming lessons, we'll flesh out your understanding so you'll be ready to go out and conquer the world of front-end web development.
 
 ## References
 

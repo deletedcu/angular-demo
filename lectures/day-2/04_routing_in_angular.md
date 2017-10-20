@@ -18,7 +18,7 @@
 
 ## Create a New Angular App
 
-First create a new app using:
+First, go up to a new directory (not inside `ga-ui`). Create a new app called `router` using:
 
 ```
 ng new router
@@ -31,22 +31,26 @@ cd router
 ng serve --open
 ```
 
-You should now see the welcome screen.
+Adding `--open` instructs Angular to, after starting the application ("serving" the application), open a new browser window and display it.
+
+You should now see the welcome screen on `http://localhost:4200/`
 
 
 <!--WDI4 2:09 -->
 
 ## Clean Up the App's HTML
 
-Go into `src/app/app.component.html` and change the HTML to:
+Go into `src/app/app.component.html` and delete all of the HTML. Instead, simply put:
 
 ```html
 <h1>Welcome To My Personal Site</h1>
 ```
 
+Save this and re-check your `http://localhost:4200/`. It should have dynamically updated.
+
 ## Create About, Links, and Resume Components
 
-We'll create components for the different "sections" of the site to which we want to "navigate."
+Now, we'll create components for the different "sections" of the site to which we want to "navigate." In Terminal, quit the running application with `cmd-c`. enter these commands (or use the shorthand, `ng g c __` ):
 
 ```
 ng generate component about
@@ -54,21 +58,24 @@ ng generate component links
 ng generate component resume
 ```
 
+If you look in your `app` folder, you can see that now there are folders for each of these new components.
+
 <!--2:14 WDI4 -->
+
 
 ## Edit the HTML for the About, Links, and Resume Components
 
-Edit `src/app/about/about.component.html`:
+Edit `src/app/about/about.component.html` with anything you want, like...:
 
 ```html
 <h2>This is the About Section of the Site</h2>
 <h3>Early Life</h3>
-<p>Just a kid growing up rough on the streets. Hustlin' code for ca$h.</p>
-<h3>Career</h3>
-<p>Now I'm makin' it raaaiiiiiinnnn!!!</p>
+<p>Just a kid growing up on the streets.</p>
+<h3>Current Life</h3>
+<p>Still loving my life!</p>
 ```
 
-Edit `src/app/links/links.component.html`:
+Edit `src/app/links/links.component.html` with anything you'd like, like...
 
 ```html
 <h2>This is the Links Section of the Site</h2>
@@ -88,7 +95,7 @@ Edit `src/app/links/links.component.html`:
 </ul>
 ```
 
-Edit `src/app/resume/resume.component.html`:
+Edit `src/app/resume/resume.component.html`, with anything you'd like, like...
 
 ```html
 <h2>Resume</h2>
@@ -116,6 +123,8 @@ Edit `src/app/resume/resume.component.html`:
 
 ## Display All Components at Once
 
+Now we have many components, but we still need them to appear to our user.
+
 Edit `src/app/app.component.html`:
 
 ```html
@@ -125,13 +134,17 @@ Edit `src/app/app.component.html`:
 <app-resume></app-resume>
 ```
 
-You should now see all of the components displayed on the page.
+If you run the server (`ng serve`), you should now see all of the components displayed on the page, one after another. Awesome!
+
+Look at the code - think about why this works. For example, where in the `resume` component is `<app-resume></app-resume>` coming from?
 
 <!-- WDI4 2:20-->
 
+Now, let's use Router only display one at a time.
+
 ## Set Up the Router
 
-First import the RouterModule in to `src/app/app.module.ts`:
+First import the `RouterModule` in to `src/app/app.module.ts`:
 
 ```javascript
 import { AppComponent } from './app.component';
@@ -141,7 +154,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { RouterModule } from '@angular/router'; // add import statement here
 ```
 
-Now add the module as an import in `src/app/app.module.ts` and define which modules correspond with which routes:
+Now change the existing `imports: [` section of this file, `src/app/app.module.ts`, and define which modules correspond with which routes:
 
 ```javascript
 imports: [
@@ -163,16 +176,21 @@ imports: [
 ],
 ```
 
+This says:
+- When the user goes to `http://localhost:4200/about`, display the About component.
+- When the user goes to `http://localhost:4200/resume`, display the Resume component.
+- When the user goes to `http://localhost:4200/links`, display the Links component.
+
 ## Tell the Router Where to Display the Components
 
-Now that we've set up the router, we need to tell it where to display the components. Remove the component declarations in `src/app/app.component.html` and replace them with `<router-outlet></router-outlet>`:
+Now that we've set up the router, we need to tell it where to display the components. Go back to  `src/app/app.component.html` and remove the component declarations you just added. Replace them with the line `<router-outlet></router-outlet>`:
 
 ```html
 <h1>Welcome To My Personal Site</h1>
 <router-outlet></router-outlet>
 ```
 
-You can now test the different "pages" by going to:
+There's no navigation bar yet, but it works! You can now test the different "pages" by going to:
 
 - http://localhost:4200/about
 - http://localhost:4200/links
@@ -180,9 +198,9 @@ You can now test the different "pages" by going to:
 
 ## Create Links to the Different "Pages"
 
-When creating links, we no longer use `href`. Instead we use `routerLink`.  
+Let's now make that nav bar. When creating links, we no longer use `href`. Instead we use `routerLink`.  
 
-Edit `src/app/app.component.html`:
+Edit `src/app/app.component.html` to have a nav bar, using `routerLink`:
 
 ```html
 <h1>Welcome To My Personal Site</h1>
@@ -205,9 +223,13 @@ Edit `src/app/app.component.html`:
 <router-outlet></router-outlet>
 ```
 
+Save this and go back to your page. Did it load? Do the links work?
+
 ## Create an External Routing File
 
-As you can imagine, that `RouterModule.forRoot()` can get lengthy. Let's put it in a new file, `src/app/app-routing.module.ts`:
+Go back to `src/app/app.module.ts`. Right now, we only have three components (three pages!), so the `imports` section isn't very long. However, as you can imagine, that `RouterModule.forRoot()` in the `imports` can get lengthy if your website gets large.
+
+To make our life easier in the future, let's put it in a new file. Create `src/app/app-routing.module.ts` and copy this into it:
 
 ```javascript
 import { NgModule } from '@angular/core';
@@ -241,10 +263,23 @@ export class AppRoutingModule {}
 
 ## Use the External AppRoutingModule in `app.module.ts`
 
-Now let's replace our routing with our new AppRoutingModule in `src/app/app.module.ts`:
+Now, going back to `src/app/app.module.ts`, let's replace that lengthy `imports:` line with our routing with our new AppRoutingModule.
+
+Make the `src/app/app.module.ts`:
 
 ```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
+import { LinksComponent } from './links/links.component';
+import { ResumeComponent } from './resume/resume.component';
+import { RouterModule } from '@angular/router';
+
+// Below this is new
 import { AppRoutingModule } from './app-routing.module'; // replace RouterModule with this import statement
+
 
 @NgModule({
     declarations: [
@@ -261,8 +296,9 @@ import { AppRoutingModule } from './app-routing.module'; // replace RouterModule
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 ```
 
-
+Now our code is a little cleaner - when new Routes need to be made, we'll add them in `src/app/app-routing.module.ts`.
 
 <!--WDI4 2:45 -->
