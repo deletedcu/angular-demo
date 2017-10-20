@@ -67,8 +67,7 @@ Before we get into Single Page Applications, let's talk about URL routing.
 URL.
 - If you go to `http://github.com/`, you expect to see GitHub's home page.
 - If you go to `http://github.com/login`, you expect to see a log-in page.
-These are two different pages on the same site, and each of these URLs is a **route**. Each
-of these URLs is a **route**. A route pairs a URL with the content that should
+These are two different pages on the same site, and each of these URLs is a **route**. A route pairs a URL with the content that should
 be displayed for that URL. If you visit a webpage, copy the URL, and send it to a friend, your friend should end up viewing the same page.
 
 Let's look at an example of how content is routed by URLs by looking at the
