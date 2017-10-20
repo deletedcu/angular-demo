@@ -252,7 +252,7 @@ Let's use Gulp to take this `task` off our hands. While we're at it, we can use 
 
 Let's set up our project inside `typeScriptTest` by doing the following:
 
-1) `init`ialize `npm`.
+1) Initialize npm (create a package.json file) using `npm init`.
 2) Install and `--save` the following packages: `gulp`, `gulp-typescript`, and `typescript`.
 3) Create a new directory called `typescript` and use it to store all of your `.ts` files.
 
