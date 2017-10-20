@@ -32,21 +32,17 @@ When using Angular, building components will be your main front-end task.
 
 ### Identifying Components
 
-Take a look at [CraigsList](https://boston.craigslist.org/search/aap) (note: right click to open in a new tab!).
+Take a look at [Wolfram Alpha](https://www.wolframalpha.com/) (note: right click to open in a new tab!).
 
-![Components](images/craigslist.png)
+![Components](images/wolfram.png)
 
-Each listing is a component. How can you identify this?
+Each explore link is a component. How can you identify this?
 - Listings look identical in structure, but have different information populating them
 - Listings are dynamically generated based on the user's search
 
-Now, go to [Amtrak.com](https://www.amtrak.com/home) (note: right click to open in a new tab!). We want to look at the listing page, so put in any "From" (for example, New York - Penn Station), any "To" (for example, Boston - South Station), and pick any date. Hit "Find Trains". Now look at the listing page:
+Now, go to [Pacific Standard](https://psmag.com/) (note: right click to open in a new tab!).
 
-![Amtrak](images/amtrak.png)
-
-Scrolling down it, identify the visual "components" the website is comprised of. We suggest drawing this out on paper! So something like this...
-
-![Component diagram](images/wireframe_deconstructed.png)
+Scrolling down it, identify the visual "components" the website is comprised of. We suggest drawing this out on paper!
 
 As you're drawing this out, think about the following questions...
 * Where do you see "nested components;" that is, where are there components inside another component? Where do you see just one "layer" instead?
@@ -69,13 +65,15 @@ Our `app` component is composed of five files:
 └── app.module.ts
 ```
 
-Besides the module file, which can be unique to the root component, the Angular 2 development team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game.
+This component creates what we see.
 
-We'll put all of the styles that pertain to our component in `app.component.css`. Sick of namespacing your styles to avoid collisions? Angular 2 has you covered — these styles **are scoped exclusively to its component.**
+Besides the module file, which can be unique to the root component, the Angular 2 development team wants **all of our components to be a subset of this structure**.
+
+We'll put all of the styles that pertain to our component in `app.component.css`. Sick of namespacing your styles to avoid collisions? Angular 2 has you covered — these styles **are scoped exclusively to its component.** (Right now, we only have the `App` component - but later, we'll have more!)
 
 All of our unit tests for the component will live in `app.component.spec.ts`. We'll dive into testing a little later, but for now, just know that Angular 2 natively supports the Jasmine testing framework.
 
-With `app.component.html`, we see an Angular template once again:
+With `app.component.html`, we have our Angular template:
 
 ```html
   <h1>
@@ -83,9 +81,7 @@ With `app.component.html`, we see an Angular template once again:
   </h1>
 ```
 
-Angular uses a double-bracket binding syntax, which is pretty common among front-end frameworks and template libraries.
-
-The values in brackets will be replaced by values in our next file, `app.component.ts`.
+As you saw, the values in brackets will be replaced by values in our next file, `app.component.ts`.
 
 ```typescript
 @Component({
@@ -94,27 +90,64 @@ The values in brackets will be replaced by values in our next file, `app.compone
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'My Website';
 }
 ```
 
-Here we see the definition of our component class, as well as our first use of a **decorator**, namely `@Component`. Decorators are a useful tool in TypeScript that allow us to add additional metadata to classes and class properties.
+What else is in this file?
 
-Our component's **selector** is the name of the HTML element we use to summon the component in our templates. If you look at our index, you'll see:
+- Here we see the definition of our component class, as well as our first use of a **decorator**, namely `@Component`.
+  - Decorators are a useful tool in TypeScript that allow us to add additional metadata to classes and class properties.
+- Our component's **selector** is the name of the HTML element we use to summon the component in our templates.
+  - Thus, this component is saying "Find `<app-root>` in the HTML file, and put this there."
+  - If you look at your `index.html` file, you'll see:
 
 ```html
-<app-root></app-root>
+<body>
+  <app-root></app-root>
+</body>
 ```
 
 That's our component!
 
 The next two properties of our component's decorator argument are relative paths to the template and the component's style sheet.
+- `templateUrl: './app.component.html'`
+- `styleUrls: ['./app.component.css']`
 
-These metadata properties are added to our component class at run time. For a full list of metadata properties that our component decorator recognizes, [check out the documentation](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html).
+These metadata properties are added to our component class at run time.
+  - For a full list of metadata properties that our component decorator recognizes, [check out the documentation](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html).
 
-In the class itself, we see one property being set. The scope of an instance of this class will serve as the **view model** for our component. It connects our data **model** and the **view** the user sees. For example, that `title` we saw earlier in the template will be bound to the value of our instance's `title` property.
+In the class itself, we see one property being set. `{ title = 'My Website'; }`
+
+The scope of an instance of this class will serve as the **view model** for our component. It connects our data **model** and the **view** the user sees. For example, that `title` we saw earlier in the template will be bound to the value of our instance's `title` property.
 
 ![Angular 2 Components](https://angular.io/generated/images/guide/architecture/component-databinding.png)
+
+The last file of interest here is `app.module.ts`.
+- Here, our app component is neatly packaged up to be exported and then bootstrapped - it's a long file, but the last two lines are the important ones.
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 That's it! We've reviewed all of the working parts of 95 percent of Angular components. Our first component may be exceedingly simple, but we'll add more spice to our components in the following sections.
 
@@ -122,11 +155,15 @@ That's it! We've reviewed all of the working parts of 95 percent of Angular comp
 
 Let's work together to add a second component, `MasterSword`, to our fledgling app from earlier. The Angular CLI makes this easy.
 
-In your terminal, in the root of this application directory, type:
+`ng generate component ___` says "Create a new component." Then, you add the component name you want. We'll make a component called `master-sword`.
+
+In your terminal, in the root of this application directory (`src/app`), type:
 
 ```bash
-ng g c master-sword
+ng generate component master-sword
 ```
+
+Note: You could also create a component with shorthand: `ng g c ___`.
 
 Your console output should look like this:
 
@@ -215,7 +252,6 @@ Finally, we'll use it in `app.component.html`:
 #### Test It Out
 
 Now run `ng serve` in your `ga-ui` folder, and navigate to `localhost:4200` in your browser. Look at that sword!
-
 
 
 ### Lab: Make Your Own Component

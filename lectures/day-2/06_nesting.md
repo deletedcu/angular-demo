@@ -20,7 +20,7 @@ Sometimes, you'll want to have subsections within a specific route (routes withi
 
 We're going to split `/about` into `/early-life` and `/career`.
 
-Generate the two components:
+Generate the two components (you can also use `ng g c __`):
 
 ```
 ng generate component early-life
@@ -33,14 +33,14 @@ Cut the HTML from `src/app/about/about.component.html` and paste into `src/app/e
 
 ```html
 <h3>Early Life</h3>
-<p>Just a kid growing up rough on the streets. Hustlin' code for ca$h.</p>
+<p>Just a kid growing up on the streets.</p>
 ```
 
 and `src/app/career/career.component.html`:
 
 ```html
-<h3>Career</h3>
-<p>Now I'm makin' it raaaiiiiiinnnn!!!</p>
+<h3>Current Life</h3>
+<p>Still loving my life!</p>
 ```
 
 <!--WDI4 3:40 -->
@@ -83,6 +83,8 @@ const aboutRoutes: Routes = [
 })
 export class AboutRoutingModule { }
 ```
+
+> Stop and check - do you understand everything this does?
 
 ## Replace the Old Main Route With the New Routing Module
 

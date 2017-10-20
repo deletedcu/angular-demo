@@ -67,8 +67,7 @@ Before we get into Single Page Applications, let's talk about URL routing.
 URL.
 - If you go to `http://github.com/`, you expect to see GitHub's home page.
 - If you go to `http://github.com/login`, you expect to see a log-in page.
-These are two different pages on the same site, and each of these URLs is a **route**. Each
-of these URLs is a **route**. A route pairs a URL with the content that should
+These are two different pages on the same site, and each of these URLs is a **route**. A route pairs a URL with the content that should
 be displayed for that URL. If you visit a webpage, copy the URL, and send it to a friend, your friend should end up viewing the same page.
 
 Let's look at an example of how content is routed by URLs by looking at the
@@ -133,7 +132,7 @@ Open your browser and navigate to Gmail (or whichever email site you use):
 * You can start instant messaging a friend in a sidebar.
 * You can start to compose a new email to your manager to request time off.
 * You can search for an email with flight information.
-* You can browse through more emails to make sure you've talked your manager about getting time off and aren't just disappearing for a week.
+* You can browse through more emails to make sure you've talked to your manager about getting time off and aren't just disappearing for a week.
 
 This all happens on one page! The page never refreshes. The chat bar with your friend never disappears as you compose an email and search through your inbox.
 
