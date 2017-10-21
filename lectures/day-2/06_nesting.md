@@ -106,7 +106,7 @@ const routes: Routes = [
 And add the `about-routing.module.ts` module to `src/app/app.module.ts`:
 
 ```javascript
-import { AboutRoutingModule} from './about/about-routing.module' //import the new routing module
+import { AboutRoutingModule} from './about/about-routing.module'; //import the new routing module
 
 @NgModule({
     declarations: [
@@ -146,7 +146,7 @@ You can now test by going to:
 You can now create links to these subsections in `src/app/about/about.component.html`:
 
 ```html
-<h2>About Page</h2>
+<h2>This is the About Section of the Site</h2>
 <nav>
     <ul>
         <li>

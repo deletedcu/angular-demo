@@ -275,10 +275,10 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { LinksComponent } from './links/links.component';
 import { ResumeComponent } from './resume/resume.component';
-import { RouterModule } from '@angular/router';
 
 // Below this is new
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module'; // replace RouterModule with this import statement
+
 
 @NgModule({
     declarations: [
@@ -289,7 +289,7 @@ import { AppRoutingModule } from './app-routing.module'
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule // replace the RouterModule array with this line
     ],
     providers: [],
     bootstrap: [AppComponent]
