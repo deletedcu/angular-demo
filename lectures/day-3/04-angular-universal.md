@@ -9,9 +9,9 @@
 
 ### Why Is This Important?
 
-Angular got its start as an incredibly powerful front-end framework. And, while it continues on that trajectory, it has also evolved beyond it. To prevent front-end bloat and overtaxing the client — especially on mobile devices such as phones and wearables — Angular Universal was created to seamlessly integrate server-side rendering and view caching.
+Angular got its start as an incredibly powerful front-end framework. While it continues on that trajectory, it has also evolved beyond it. To prevent front-end bloat and overtaxing the client — especially on mobile devices such as phones and wearables — Angular Universal was created to seamlessly integrate server-side rendering and view caching.
 
-This gives us the flexibility to lean on the back end when it's the better tool for a job.
+This gives us the flexibility to lean on the back-end when it's the better tool for a job.
 
 ### What Are the Objectives?
 *After this lesson, you will be able to:*
@@ -31,6 +31,8 @@ That's true, except for a couple of cases:
 
 2) Dynamic SPAs are detrimental for search engine optimization (SEO).
 
+> SEO is making sure that your website isn't on the very last page of a search engine like Google! If you have a website about skydiving, you want your website to be on the first page of search results when a user searches for "skydiving".
+
 In this lesson, we will address the second issue.
 
 
@@ -38,7 +40,7 @@ In this lesson, we will address the second issue.
 
 ### Set Up
 
-First, we'll need to create a new project with the Angular CLI called `first-angular-universal`. If you can't remember how to do this, use the earlier lessons for reference.
+First, create a new Angular app called `first-angular-universal`.
 
 Now, let's bring Angular Universal into the picture. In order to do this, we'll need to bring in something we've avoided all this time we were building our Angular front-ends: a Node back-end.
 
@@ -131,7 +133,7 @@ app.listen(PORT, () => {
 
 Look familiar?
 
-Besides the code you're used to from a typical Node `server.js` file, this file also includes the rendering factory and rules for rendering these HTML views and serving them to the front end.
+Besides the code you're used to from a typical Node `server.js` file, this file also includes the rendering factory and rules for rendering these HTML views and serving them to the front-end.
 
 
 <!--WDI4 2:41 turning over to devs -->
@@ -158,7 +160,7 @@ Besides the code you're used to from a typical Node `server.js` file, this file 
 
 8) Make sure you are in the `first-angular-universal` directory and run `npm run start`.
 
-9) Go to `http://localhost:4000`. You should see your app, but this time with a full back end.
+9) Go to `http://localhost:4000`. You should see your app, but this time with a full back-end.
 
 Cool, right? But we haven't changed any functionality yet. Next we'll set our site up for easy searching.
 
@@ -169,7 +171,7 @@ Cool, right? But we haven't changed any functionality yet. Next we'll set our si
 
 ### Search Engine Optimization (SEO)
 
-**Search engine optimization** (SEO) is the practice of increasing the quantity and quality of traffic to your website through organic search engine results.
+**Search engine optimization** (SEO) is the practice of increasing the quantity and quality of traffic to your website through organic search engine results. Get your skydiving page to the top!
 
 #### Why do we care?
 
@@ -201,18 +203,20 @@ import { Meta, Title } from "@angular/platform-browser";
 3) Then, add a title and some meta tags for your app:
 
 ```typescript
-title.setTitle('Our Very Professional Page');
+title.setTitle('Our Skydiving Page');
 
 meta.addTags([
-  { name: 'author',   content: 'YOURNAMEHERE'},
-  { name: 'keywords', content: 'angular seo, angular 4 universal, etc'},
-  { name: 'description', content: 'This is my Angular SEO-based App, enjoy it!' }
+  { name: 'author',   content: 'YOUR_NAME_HERE, master skydiver'},
+  { name: 'keywords', content: 'angular seo, angular 4 universal, skydiving, airplanes, etc'},
+  { name: 'description', content: 'This is my Angular SEO-based App on Skydiving; enjoy it!' }
 ]);
 ```
 
 4) Go back to your browser, refresh the page, and inspect `Element` with `Dev Tools`. You should see your title and meta tags.
 
 ![](resources/componentRendered.jpg)
+
+Now when a search engine indexes your site (when they look at the content to add it to their rankings), they'll see all of these tags.
 
 ### Resources
 

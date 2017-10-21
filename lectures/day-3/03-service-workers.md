@@ -37,7 +37,7 @@ In order to get started, we need to do a little front-end setup:
 
 1) Create a new folder called `first-service-worker`.
 2) Create a new `index.html` file inside this folder.
-3) Fill `index.html` out with the basic HTML boilerplate and a "Hello, World" heading.
+3) Fill `index.html` out with the [basic HTML boilerplate](http://htmlshell.com/) and a "Hello, World" heading.
 4) Create a `service-worker.js` file inside the same folder.
 
 
@@ -52,7 +52,7 @@ Open up Chrome Developer Tools and select the `Application` tab. This is where w
 
 #### Linking to Our HTML
 
-Add a `<script>` tag at the bottom of your `index.html` `<body>`. Put the following code snippet inside the tag.
+Add a `<script>` tag at the bottom of your `index.html` (inside the `<body>`, though!). Put the following code snippet inside the tag.
 
 ```js
 // 1
@@ -73,16 +73,19 @@ if ('serviceWorker' in navigator) {
 
 Let's walk through what's happening here.
 
-1. Not all browsers support Service Workers just yet. We need to make sure we can use them here.
-2. Next we need to tie our Service Worker to the page load.
-3. Now we need to `register` our Service Worker. In other words, we need to tell the browser the location of our Service Worker code.
-4. Save your work and start a web server by running `python -m SimpleHTTPServer` in your folder.
+1. `if ('serviceWorker' in navigator)`:
+  - Not all browsers support Service Workers just yet. We need to make sure we can use them here, so we check if `serviceWorker` is supported.
+2. `window.addEventListener('load', function() {`
+  - Next, we need to tie our Service Worker to the page load.
+3. `navigator.serviceWorker.register('/service-worker.js')`
+  - Now we need to `register` our Service Worker. In other words, we need to tell the browser the location of our Service Worker code.
+4. Save your work and start a web server by running `python -m SimpleHTTPServer` in your folder and navigating to the `localhost`.
 
 >**Note:** It's *very important* that you load your page with a web server rather than opening the HTML file directly.  Service Workers do not work on static files.
 
 ### Actually Doing Work With Our Service Worker
 
-We have a Service Worker!
+We have a Service Worker! ... That does nothing yet, except be called from the browser when `index.html` loads.
 
 Now let's make it do something. Open your `service-worker.js` file and add the following line:
 
@@ -94,7 +97,7 @@ self.addEventListener('install', function(event) {
 
 #### The Service Worker Life Cycle
 
-Installing is the first of two important steps our Service Worker takes before we can take advantage of its caching and fetching power.
+Installing is the first of two important steps our Service Worker must do before we can take advantage of its caching and fetching power.
 
 ![](resources/sw-lifecycle.png)
 
@@ -109,13 +112,13 @@ Some tasks are best left to the **install** step and some to the **activate** st
 
 Remember Xzibit? He had some powerful things to say about software tests.
 
-1) Download the image (or an image of your choice) from the `resources` folder in this repository and place it in your `first-service-worker` folder.
+1) Download the image `xzibit_testing_software.jpg` (or an image of your choice) from the `resources` folder in this repository and place it in your `first-service-worker` folder.
 
-2) Create an `img` HTML element with an `src` pointing to the king of *Pimp My Ride*.
+2) In the `index.html`, create an `img` HTML element with an `src` pointing to your image.
 
-3) Refresh your page. We have a meme!
+3) Refresh your page in the browser. We have a meme!
 
-4) Now navigate into Dev Tools and select `Service Workers` under the `Application` tab.
+4) Now, navigate into the browser's Dev Tools and select `Service Workers` under the `Application` tab.
 
 5) Check the `Offline` box at the top of the developer tools section and refresh the page. Oh no, our beautiful page is gone!
 
@@ -154,7 +157,7 @@ self.addEventListener('install', function(event) {
 <!--12:05 WDI4 turning over to devs -->
 <!--WDI4 coming back 12:12-->
 
-10) Our resources are in the cache. Now we need to reference these any time we're offline. To do that, add the following `fetch` handler to `service-worker.js`. `fetch` is an API that Service Workers use to grab online resources — similar to XML/HTTP requests:
+10) Our resources are in the cache. Now, we need to reference these any time we're offline. To do that, add the following `fetch` handler to `service-worker.js`. `fetch` is an API that Service Workers use to grab online resources — similar to XML/HTTP requests:
 
 ```js
 self.addEventListener('fetch', function(event) {

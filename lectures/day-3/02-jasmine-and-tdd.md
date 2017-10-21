@@ -223,27 +223,28 @@ Run `ng test`. You should see a browser open with the following output:
 
 Let's spec out our `Dog` with some pseudocode. That's right — we're writing our tests first.
 
-All tests in Jasmine are contained within an `it` block. Notice we already have one test written in `dog.component.spec.ts`. We're going to write one just below that:
+All tests in Jasmine are contained within an `it` block. Notice we already have one test written in `src/app/dog/dog.component.spec.ts`. We're going to write one just below that:
 
 `dog.component.spec.ts`
 
 ```typescript
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
+// This is at the bottom of the file already
+it('should be created', () => {
+  expect(component).toBeTruthy();
+});
 
-  //Add this
-  it('should have a name');
+// Add this
+it('should have a name');
 ```
 
-What is the output of `ng test` now? We should get something like `5 specs, 0 failures, 1 pending spec`, saying that our specification is not yet implemented.
+What is the output of `ng test` now? We should get something like `5 specs, 0 failures, 1 pending spec`, saying that our specification is not yet implemented. As well, our new test shows up yellow in the list to emphasize this.
 
 Now add a callback function to our new `it` block.
 
 ```typescript
-  it('should have a name', () => {
+it('should have a name', () => {
 
-  });
+});
 ```
 
 Look at the `ng test` output again. All of our tests are passing. But why? Our dog shouldn't have a name yet.
@@ -253,24 +254,24 @@ Our tests passed because Jasmine will evaluate a test as passing as long as no e
 Let's have our specs actually test something:
 
 ```typescript
-  it('should have a name', () => {
-    expect(component.dogName).toBeTruthy();
-  });
+it('should have a name', () => {
+  expect(component.dogName).toBeTruthy();
+});
 ```
 
 > Expectation: `expect(component.dogName)`
 
 > Matcher: `toBeTruthy()`
 
-We use the pattern `expect(IUT)` to wrap the ***item under test*** so that it supports the `toBeTruthy` method. There are many other methods we can use, such as `toEqual` or `toBeUndefined`.
+We use the pattern `expect(xxx)` to wrap the ***item under test*** so that it supports the `toBeTruthy` method. There are many other methods we can use, such as `toEqual` or `toBeUndefined`.
 
 [Jasmine Cheat Sheet With Assertion Reference](http://ricostacruz.com/cheatsheets/jasmine.html).
 
 If you look in the terminal tab that's running `ng test`, you'll see some red text. This means we're failing, which is a sign that our test is working.
 
-Does the property `dogName` exist? Let's give our component just enough code to satisfy the current minimal specifications.
+Does the property `dogName` exist? Let's actually change some of our application code! We'll give our component just enough code to satisfy the current minimal specifications.
 
-`dog.component.ts`
+In `src/app/dog/dog.component.ts`
 
 ```javascript
 export class DogComponent implements OnInit {
@@ -297,9 +298,12 @@ We did it! Now everything is green again.
 
 <!-- Half-mast -->
 
-Add an expectation to `dog` that "allows the reading of a hunger level." This test should check for a `hungerLevel` property in the component that is equal to `0` by default. When complete, ensure the tests are written correctly by watching them fail in the terminal. Finally implement the code that passes the new expectation.
+Add an expectation (a test) to `dog` that "allows the reading of a hunger level." This test should check for a `component.hungerLevel` property `toEqual` a level `0` by default.
+- When complete, ensure the test is written correctly by watching it fail in the terminal (`Property 'hungerLevel' does not exist on type 'DogComponent'.`).
+- Then, implement the code that passes the new expectation.
 
-Add another expectation to `dog` that "allows the writing of a hunger level" and follow the same pattern as with the earlier expectation. This test should set the `hungerLevel` property in the component to `5` and then check that it's equal to `5` once it is set.  
+Now, add another expectation to `dog` that "allows the writing of a hunger level" and follow the same pattern as with the earlier expectation.
+- This test should set the `hungerLevel` property in the component to `5` and then check that it's equal to `5` once it is set.  
 
 <!--WDI4 10:30 -->
 
@@ -368,7 +372,11 @@ describe("Dog", function() {
 
 Write the code to pass the specifications above.
 
-<!--WDI4 10:47 -->
+
+## Thought Exercises:
+<!-- have a discussion -->
+In your earlier applications, what tests could you implement?
+
 <!-- 5 minutes (70)-->
 
 ### Before Blocks
@@ -387,7 +395,6 @@ In end-to-end (e2e) testing, one process runs the real application and a second 
 
 If you would like to dive deeper into end-to-end tests, check out [this tutorial](https://blog.jscrambler.com/getting-started-with-angular-2-end-to-end-testing/).
 
-<!--WDI4 10:50 -->
 <!--5 minutes (75)-->
 
 ## Closing
@@ -398,9 +405,6 @@ If you would like to dive deeper into end-to-end tests, check out [this tutorial
 - Explain the role Jasmine plays in testing.
 - How can `before()` and `beforeEach()` be helpful?
 - What does Angular use to write end-to-end tests by default?
-
-
-<!--WDI4 10:53 -->
 
 
 ### Additional Resources
