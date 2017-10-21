@@ -407,32 +407,7 @@ There you have it. We've injected our new service and used its logic to enrich o
 
 Use our new service to update the `hylian-shield` component in the same manner we just updated our `master-sword` component.
 
-
-
-### Directives
-
-As you've seen, Angular is dynamic. When Angular renders a webpage, it transforms the DOM according to the instructions given by **directives**. This is a word tossed around in Angular often, so it's good to know what they are!
-
-A directive is, very simply, a class which tells the browser what to display.
-- A component is technically a directive (components are something that's displayed!), but components are so distinctive and central to Angular applications that generally, developers think of directives and components as distinct entities.
-
-All directives have a a @Directive decorator on the class.
-- In fact, a @Component decorator is actually a @Directive decorator extended with template-oriented features.
-
-Two other kinds of directives exist: structural and attribute directives.
-
-Directives tend to be inside an element tag like attributes do, often as the target of an assignment or a binding.
-
-The first type of directive is a structural directive. Structural directives change which elements are in the DOM (adding or removing them).
-- For example, here is a structural directive called `*ngFor`: `<li *ngFor="let hero of heroes"></li>`.
-- In this example, `ngFor` tells Angular to print one `<li>` per `hero` in the `heroes` list (a `for` loop, running through `heroes` with `let... of ...`).
-
-The second kind of directive is a attribute directive. These directives change the appearance or behavior of an existing element.
-- For example, here is an attribute directive called `ngModel`: `<input [(ngModel)]="hero.name">`
-- In this example, `ngModel` changes what's displayed on the `<input>` based on the current `hero.name`. Unlike structural directives, the attribute directive `ngModel` isn't adding or removing the `<input>` - it's simply changing what it looks like.
-
 If you have extra time, play around with the directives listed in the [Angular Cheat Sheet](https://angular.io/guide/cheatsheet).
-
 
 ## Feature Modules: Adding Organization to Unruly Codebases
 
