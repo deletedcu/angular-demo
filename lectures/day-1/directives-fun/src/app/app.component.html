@@ -1,0 +1,12 @@
+<div>
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <interval-dir (everySecond)="everySecond()"></interval-dir>
+  <input [(ngModel)]="trainer.name">
+  <pre *ngIf="trainer.name!=='Jessie'&&trainer.name!=='James'">{{pokemon|json}}</pre>
+  <ul *ngIf="trainer.name!=='Jessie'&&trainer.name!=='James'">
+    <li *ngFor="let poke of pokemon">{{poke.name}} - trained by {{trainer.name}}</li>
+  </ul>
+</div>
+
