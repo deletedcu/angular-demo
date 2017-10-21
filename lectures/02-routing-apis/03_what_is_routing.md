@@ -40,5 +40,3 @@ Demo the site in [/router](/router). Show the following:
     - Paste the link into the URL bar.
     - Hit enter.
     - Note that it takes you directly to the "page" of the URL you copied. -->
-
-    <!-- 2:02 WDI4 -->
