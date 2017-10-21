@@ -65,6 +65,8 @@ npm install typescript -g
 
 What did we just install? This program will read our TypeScript, interpret it, and turn it into JavaScript (ES5). Pretty neat, right? Because our finished product is JavaScript, it can be run in browsers.
 
+**Note:** the `-g` stands for "global", so for example, `npm install typescript --global` would also have worked. Developers like to use shorthand when possible!
+
 > If you use Atom, you'll likely also want to install a package for syntax highlighting of TypeScript, [atom-typescript](https://atom.io/packages/atom-typescript).
 
 ![Transpiling](https://i1.wp.com/www.mithunvp.com/wp-content/uploads/2016/02/transpiling.png)
