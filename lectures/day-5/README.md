@@ -25,7 +25,7 @@ Look again at what you did in [the comments app](comments/). It's all in one com
 1. First, abstract out all the comments logic into a service called `comment-service.ts`. Create a `commment/` directory, and run `ng g service comment`. Look at your `balance.service.ts` from the Vending Machine Lab as reference.
     - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `addComment()`, `deleteComment()`, and `onCommentUpdated()`. The methods `setComments()` and `editComment()` are nice-to-haves, but not necessary.
     - Your comment service should have the following variables: `comments` (array) and `subject` (Observable).
-    - Make sure your code is working as before, but using the Comment Service. 
+    - Make sure your code is working as before, but using the Comment Service.
 
 2. Separate the list of comments and the new comments form into separate components. Use the Comment Service / Observable in the comment service to communicate between the 2 components.
 
@@ -37,16 +37,17 @@ Someone has hacked up the [Tour Of Heroes](https://angular.io/tutorial/toh-pt5) 
 
 ## Choose Your Own Adventure
 
-Choose something to do during this time. Here are some suggestions:
+Choose one of the options below to work on. This is an open-ended exercise; there are no set solutions. Try your best!
 
-- Extend your [comments app](https://github.com/den-materials/angular-comments) even further by creating sign-up/login functionality:
-        - Use routing to display a main page that prompts the user with links to two pages (login/sign up).
-        - On the sign-up page, users can create a profile with a username, full name, password, and email.
-            - The username and email must be unique. No two users can have the same username or email address.
-        - On the login page, users can log in with either their email or username and password. The user must already exist to utilize this page.
-            - Once logged in, the user is taken to the main comments app like they were before.
-            - Alter this app so that, when adding new comments, there is no `author` text input field. Instead, the logged-in user's full name is used.
-- Create a new app using one of [these free APIs that don't require authentication](https://shkspr.mobi/blog/2016/05/easy-apis-without-authentication/). There are more links [here](https://github.com/toddmotto/public-apis), but some require authentication.
-- Deploy your own back-end API and use it in an app.
-- Use the [JSON server](https://github.com/typicode/json-server) as a dummy API.
-- See if you can create a game like Tic-Tac-Toe or Hangman.
+- **Option 1**: Create sign-up/login functionality to go with the comments app you've been working on. Here are suggestions to help you:
+  - Use routing to display a main page that prompts the user with links to two pages (login/sign up).
+  - On the sign-up page, users can create a profile with a username, full name, password, and email.
+    - The username and email must be unique. No two users can have the same username or email address.
+  - On the login page, users can log in with either their email or username and password. The user must already exist to utilize this page.
+    - Once logged in, the user is taken to the main comments app like they were before.
+    - Alter the comments app so that, when adding new comments, there is no `author` text input field where the user can choose an author. Instead, the logged-in user's full name is used.
+- **Option 2**: Create a new app using one of [these free APIs that don't require authentication](https://shkspr.mobi/blog/2016/05/easy-apis-without-authentication/). There are more APIs to choose from [here](https://github.com/toddmotto/public-apis), but some require authentication - make sure you read the documentation!
+  - Try to incorporate routing into your app as well.
+- **Option 3**: Deploy your own back-end API and use it in an app we've previously created or a new one that you create.
+- **Option 4**: Use the [JSON server](https://github.com/typicode/json-server) as a dummy API to create an app around.
+- **Option 5**: See if you can create a game like Tic-Tac-Toe or Hangman.

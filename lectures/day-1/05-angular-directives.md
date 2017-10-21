@@ -8,6 +8,7 @@
 
 By the end of this lesson, you will be able to:
 
+- Use pipes.
 - Describe what a **directive** is.
 - Use directives like `ngFor` and `ngIf`.
 - Use Angular pipes.
@@ -24,9 +25,15 @@ As you've seen, Angular is dynamic. When Angular renders a webpage, it transform
 
 ## Fun with Directives
 
-Create a new Angular app with `ng new` called `directives-fun`.
+Create a new Angular app with `ng new` called `directives-fun`, then start the app.
 
-Now go into `app.component.ts` and add the following code:
+```
+ng new directives-fun
+cd directives-fun
+ng serve --open
+```
+
+Now go into `src/app/app.component.ts` and replace the class definition with the below. This will give us a list of information to pull from and display in our app. It's in a format called JSON, which separates attributes from values with `:` and groups related attributes together with `{}`, much like an array of objects.
 
 ```javascript
 export class AppComponent {
@@ -63,7 +70,7 @@ export class AppComponent {
 
 Now, let's put those pokemon in our app!
 
-Go into `app.component.html` and add the following:
+Go into `app.component.html`. Replace the default information with the following:
 
 ```html
 <div>
@@ -74,11 +81,19 @@ Go into `app.component.html` and add the following:
 </div>
 ```
 
-Sweet! Look at those pokemon!  But what is that `|` thing?
+Go look at your app at `http://localhost:4200/`. Sweet! You're pulling information from `app.component.ts` into `app.component.html` to be displayed. Look at those pokemon!
+
+But if you look, we wrote `{{pokemon|json}}`. What is that `|` thing?
 
 ## Pipes
 
 A **pipe** (`|`) takes in data as input and transforms it to a desired output.
+
+Here, we're saying "take the information in the `app.component.ts` and display it as JSON".
+
+Try taking the `|json` out, so you just have `<pre>{{pokemon}}</pre>`. What does your page look like now?
+
+Now add the pipe back in, so that the file displays properly.
 
 With Angular, we can use a ton of pre-made pipes like the `json` formatter above.  We can even pass in parameters to some of them, or even create our own from scratch!
 
@@ -86,7 +101,9 @@ To learn more, check out [this documentation](https://angular.io/guide/pipes) on
 
 ## Components
 
-In the previous class, we talked about components.  A component is technically a directive, too.  But components are so distinctive and central to Angular applications that generally, developers think of directives and components as distinct entities.
+Now, what about directives? A directive in Angular allows us to dynamically change what's displayed on the screen.
+
+A component, which you've just seen, is technically a directive. Components are absolutely things displayed on the screen, after all. However, components are so distinctive and central to Angular applications that generally, developers think of directives and components as distinct entities.
 
 In addition to components, there are two other kinds of directives: structural and attribute directives.
 
@@ -98,9 +115,9 @@ Structural directives change which elements are in the DOM (adding or removing t
 
 ### Pokemon `ngFor`
 
-So all of those Pokemon are on the screen, but it's not the most user-friendly format.  Let's say we want to print out all of the Pokemon in a bullet list.  First, let's say the singular form of "pokemon" is "poke".  Now let's get `ngFor` in there:
+Currently, all of those Pokemon are on the screen, but it's not the most user-friendly format.  Let's say we want to print out all of the Pokemon in a bulleted list. First, let's say the singular form of "pokemon" is "poke".  
 
-`app.component.html`
+Let's put `ngFor` into our `app.component.html`. Change your file to look like the below.
 
 ```html
 <div>
@@ -114,7 +131,13 @@ So all of those Pokemon are on the screen, but it's not the most user-friendly f
 </div>
 ```
 
-Look at that!  With one line, we printed out all our pokemon names!
+`ngFor` is essentially an Angular `for` loop, so we're saying "for each _item_ in _object_, display _this_".
+
+Here, we have "for each `poke` in the `pokemon` object, display a `<li>` with that pokemon's `name`".
+
+Look at that!  We're still displaying the entire JSON `pokemon` object from our file, so that you have a reference.  Below the JSON, with one line of code, we printed out all our pokemon names.
+
+So to recap, **structural directives** add or remove elements from the DOM. Here, we're adding many `<li>`.
 
 ## Attribute Directives
 
@@ -124,38 +147,40 @@ Attribute directives change the appearance or behavior of an existing element.
 
 ### Pokemon `ngModel`
 
-Go into `app.component.ts` and add the following object at the bottom of the `AppComponent` class.
+Go into `app.component.ts`, where we're storing our information, and add the following JSON object at the bottom of the `AppComponent` class (right above the last `}`).
 
 ```javascript
-  trainer = {
-  	name: "Ash"
-  }
+trainer = {
+  name: "Ash"
+}
 ```
 
-Now add this trainer to our `li` in `app.component.html`:
+Now that we have this in our info file, change the `li` to use it in `app.component.html`:
 
 ```html
 <li *ngFor="let poke of pokemon">{{poke.name}} - trained by {{trainer.name}}</li>
 ```
 
-Cool, we can see our trainer name!  But we already knew we could do this, now we are going to implement "two-way binding" with `ngModel`.
+Check it out in your browser. Cool, we can see our trainer name!  But we already knew we could do this (since `ngFor` is printing that entire `li` for every pokemon). Now, we are going to implement "two-way binding" with `ngModel`.
 
-`app.component.html`
+In your `app.component.html`, add this line right under the `h1`:
 
 ```html
-  <input [(ngModel)]="trainer.name">
+<input [(ngModel)]="trainer.name">
 ```
 
 If we open our browser now we'll see...absolutely nothing?  What's going on here?  If you open up the console in Developer Tools, you will see an error complaining about
 
 `Can't bind to 'ngModel' since it isn't a known property of 'input'.`
 
-What does this error mean?  Well, not everyone needs to use `ngModel`.  With Angular, there are a lot of features available out of the box, but to help with page load times and app simplicity, some are broken out into separate modules we can include if, and only if, we need them. We need the `FormsModule` to enable `ngModel`, and that needs to be added to our `app.module.ts`:
+What does this error mean?  Well, not everyone needs to use `ngModel`.  
+
+With Angular, there are a lot of features available out of the box, but to help with page load times and app simplicity, some Angular features are broken out into separate modules that we can include if, and only if, we need them. We need the `FormsModule` to enable `ngModel`, so that needs to be added to our `app.module.ts`:
 
 ```javascript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // Add this!
 
 import { AppComponent } from './app.component';
 
@@ -165,7 +190,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule // Here too! Don't forget the comma on the line above
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -173,18 +198,24 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-Now let's talk a little more about what "two-way binding" means.  Basically it means that we can update our TypeScript variable `trainer` from the HTML, and we can update `trainer` values in the HTML from TypeScript.  Open your browser again, and replace the value in the `input` box with your name.  Nice, it updates everything immediately!
+If you look at your browser, it loads! We have our pokemon list and an input for the trainer, which is pre-populated with "Ash" since that's in our `app.component.ts`.
+
+Now let's talk a little more about what "two-way binding" means.  With two-way binding, we can update our TypeScript variable `trainer` from the HTML, and we can update `trainer` values in the HTML from TypeScript.  
+
+Open your browser again, and replace the value in the `input` box with your name.  Nice. It updates everything immediately.
 
 ### Pokemon `ngIf`
 
-As we all know, our arch nemesis, Team Rocket is composed of Jessie and James.  If someone from that team is trying to look at our pokemon, we want them to all hide.  How do we do this?  With `ngIf`!  Update our pokemon bullet list and json so they disappear if Jessie or James is typed in as the trainer name.
+Our arch nemesis Team Rocket is composed of Jessie and James.  If someone from that team is trying to look at our pokemon, we want all of our pokemon to all hide.  How do we do this?  With `ngIf`!  
 
-```app.component.html
-<pre *ngIf="trainer.name!=='Jessie'&&trainer.name!=='James'">{{pokemon|json}}</pre>
-<ul *ngIf="trainer.name!=='Jessie'&&trainer.name!=='James'">
-```
+Add these lines to `app.component.html`. Update our pokemon bullet list and JSON so they disappear if "Jessie" or "James" is typed in as the trainer name.
 
-Nice, now our pokemon are safe from those Team Rocket tricksters!
+- Replace `<pre>{{pokemon|json}}</pre>` with `<pre *ngIf="trainer.name!=='Jessie'&&trainer.name!=='James'">{{pokemon|json}}</pre>`.
+- Replace the opening list tag, ` <ul>`, with `<ul *ngIf="trainer.name!=='Jessie'&&trainer.name!=='James'">`.
+
+Try it out by putting "Jessie" or "James" in the trainer input field (note: It's case-sensitive).
+
+`ngIf` is Angular's way of creating an `if` statement.
 
 ## Creating Our Own Directives
 
@@ -193,6 +224,8 @@ If we want to, we can also create our own custom directives.
 All directives have an @Directive decorator on the class.
 
 >**Note:** An @Component decorator is actually an @Directive decorator extended with template-oriented features.
+
+Here, we'll create an Interval directive. We can do anything we want with it! We'll set it to perform an event every second.
 
 Create a new file called `interval.directive.ts` and put it in your `app` folder:
 
@@ -207,14 +240,14 @@ import { EventEmitter } from '@angular/core';
 
 export class IntervalDir {
   everySecond = new EventEmitter();
- 
+
   constructor() {
     setInterval(() => this.everySecond.emit("event"), 1000);
   }
 }
 ```
 
-Then we need to add it to `app.module.ts`:
+Then, we need to add it to `app.module.ts`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -222,12 +255,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { IntervalDir } from './interval.directive';
+import { IntervalDir } from './interval.directive'; // add this!
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntervalDir
+    IntervalDir // And here
   ],
   imports: [
     BrowserModule,
@@ -239,19 +272,21 @@ import { IntervalDir } from './interval.directive';
 export class AppModule { }
 ```
 
-Finally, we need to integrate this into our `app.component`.  Add the following line to the bottom of our `AppComponent` class in `app.component.ts`:
+Finally, we need to integrate this new directive into our `app.component`.  Add the following line to the bottom of our `AppComponent` class in `app.component.ts`:
 
 ```typescript
 everySecond() { console.log('gotta catch em all'); }
 ```
 
-Then add our new directive into `app.component.html`:
+Then, add our new directive into `app.component.html`. Put this right above the `h1`:
 
 ```html
 <interval-dir (everySecond)="everySecond()"></interval-dir>
 ```
 
-Now open the browser and open up the Developer Tools console.  Nice!  Every second we know how many pokemon we are supposed to catch (all of them).
+**Note:** It could go anywhere, but this way it's separated from what's actually displayed.
+
+Let's see if it works. Open the browser, and open up the Developer Tools console.  Nice!  Every second we know how many pokemon we are supposed to catch (all of them).
 
 If you want to know more about custom directives, check out [this tutorial](https://alligator.io/angular/building-custom-directives-angular/).
 
@@ -259,13 +294,15 @@ If you want to know more about custom directives, check out [this tutorial](http
 
 We've seen a lot of Angular punctuation today.  Here is a quick review of what they all mean:
 
-![](punctuation1.png)
+![](images/punctuation1.png)
 
-![](punctuation2.png)
+![](images/punctuation2.png)
 
-But sometimes we will see properties without the `[]`s around them.  What does that mean?  Well, if we have `[]`, we will evaluate the expression in Javascript.  If we don't, we will simply see the property as a string.  For example:
+Sometimes, we will see properties without the `[]`s around them.  What does that mean?  
 
-![](punctuation3.png)
+If we have `[]`, we will evaluate the expression in Javascript.  If we don't, we will simply see the property as a string.  For example:
+
+![](images/punctuation3.png)
 
 ## Additional Resources
 

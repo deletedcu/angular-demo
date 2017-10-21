@@ -9,7 +9,8 @@
 1. [:25] Lesson/Code-along: [Nesting](07_nesting.md)
 1. [:05] Lesson: [Summary](08_routing_summary.md)\*
 1. [:10] Lesson/Demo: [What is an API?](09_what_is_an_api.md)
-1. [:45] Code-along: [Use an API](10_use_an_api.md)\*
+1. [:45] Code-along: [Use an API](10_use_an_api.md)
+1. [:45] Code-along: [Use an API](11_weather_api.md)\*
 
 \*At the end of the routing unit, students will begin work on the [Death Square Routing mini-project](../../projects/project-02-a-routing)
 
