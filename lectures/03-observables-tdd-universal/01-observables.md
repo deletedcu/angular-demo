@@ -2,15 +2,60 @@
 
 ## Lesson Objectives
 
-1. Describe publish/subscribe model and how it relates to Observables
-1. Demonstrate when a normal promise is not optimal
+1. Understand Promises
+1. Understand Observables
 1. Switch from a Promise to an Observable
-1. Make typing into an input field an observable
-1. Have a subscriber act only after a pause in events from an observable
-1. Check for distinct events from an observable
 1. Create a service for an observable
-1. Format the content of the event being published
 1. Pass an observable off to the HTML
+
+## Recap Promises
+
+We've been using, but haven't really gone over, something called a **Promise**. Unlike in other languages, JavaScript statements can execute all at the same time, without waiting on the other to finish first. Promises make sure that if we want one statement to wait for another, it does.
+
+For example, think back to your astronauts API. You were calling the API and displaying the results. We used a promise to make sure that we didn't display the results until **after** the API call was finished. Otherwise, your app might have displayed the results before calling the API - so the user would just see a blank screen (or console log).
+
+```javascript
+findAstronauts(){
+  this.http.get('http://api.open-notify.org/astros.json')
+  .toPromise()
+  .then(response => console.log(response.json()));
+}
+```
+
+Here, we're saying "Do the `get` call, then, when it's finished, log the response to the console."
+
+Promises actually have a few possible outcomes. For examples, promises will say "I'll wait until the API call is finished. If it finishes, I'll log the results to the console, but if it fails, then I'll throw an error." This is rather similar to a try/catch statement.
+
+Promises, in general, look like this:
+
+```js
+var promise = new Promise(function(resolve, reject) {
+  // do a thing, possibly async, (like call an API) then…
+
+  if (/* everything turned out fine */) {
+    resolve("Stuff worked!");
+    // do whatever needs to happen if it works (like logging the results to the console)
+  }
+  else {
+    reject(Error("It broke"));
+    // throw an error if it didn't work (like if the API call was 404ed).
+  }
+});
+```
+
+To be a little more succinct, we can also write that as:
+
+```js
+promise.then(function(result) {
+  console.log(result); // "Stuff worked!"
+}, function(err) {
+  console.log(err); // Error: "It broke"
+});
+```
+
+Promises are a little like event listeners, except, importantly, they only happen once. In our case, the promise listens for the API call to be finished, and when it's finished, the promise logs the results to the console. However, this will never happen again. Once the promise has a resolution, whether it succeeds or fails, the promise stops listening.
+
+This is fine for some cases, but what if you want a constant listener with a statement that can execute multiple times? This is where **observables** come in.
 
 ## Describe publish/subscribe model and how it relates to Observables
 
@@ -201,7 +246,13 @@ export class SearchService {
 }
 ```
 
-Since this is a service, not a component, let's make it `Injectable`:
+Since this is a service, not a component, let's make it `Injectable`. An injectable is another decorator that lets Angular know that what's in this class is designed to be reused in other classes.
+
+Think of this as though you're a movie studio. At the beginning of every movie you make, you want your credits to be displayed. These credits are always going to be exactly the same, so why remake them for each movie? Instead, just make the credits section once in a separate file. Every time you make a movie, copy that file into the beginning of the movie. You've only made the credits section once, but you can use it an infinite number of times because it's a separate file and you're just injecting that file into the beginning of each movie.
+
+What we're going to do is create an injectable with the API call in it. Then, whenever we want to make the API call anywhere in our program, we can load in this injectable.
+
+First, make the basic class with the `@Injectable` decorator:
 
 ```javascript
 import { Injectable } from '@angular/core';

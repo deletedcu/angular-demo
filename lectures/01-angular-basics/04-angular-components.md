@@ -97,7 +97,7 @@ export class AppComponent {
 What else is in this file?
 
 - Here we see the definition of our component class, as well as our first use of a **decorator**, namely `@Component`.
-  - Decorators are a useful tool in TypeScript that allow us to add additional metadata to classes and class properties.
+  - Statements that look like @SomeName are called decorators. Decorators are an extension to JavaScript. Decorators let programmers modify and/or tag methods, classes, properties and parameters. Here, we're tagging these properties as a Component.
 - Our component's **selector** is the name of the HTML element we use to summon the component in our templates.
   - Thus, this component is saying "Find `<app-root>` in the HTML file, and put this there."
   - If you look at your `index.html` file, you'll see:

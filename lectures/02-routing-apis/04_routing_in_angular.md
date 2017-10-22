@@ -5,16 +5,9 @@
 ## Lesson Objectives
 *By the end of this lesson, you will be able to:*
 
-- Create a new Angular app.
-- Clean up the app's HTML.
-- Create About, Links, and Resume components.
-- Edit the HTML for the About, Links, and Resume components.
+- Create multiple components
 - Display all of the components at once.
-- Set up the router.
-- Tell the router where to display the components.
-- Create links to the different "pages."
-- Create an external routing file.
-- Use the external AppRoutingModule in `app.module.ts`.
+- Use Router to create links to the different "pages."
 
 ## Create a New Angular App
 
