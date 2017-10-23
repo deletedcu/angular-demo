@@ -1,0 +1,36 @@
+<h2>Songs</h2>
+
+<a class="btn" routerLink="/songs/new">Add Song</a>
+
+<div class="songs">
+  <div class="row" *ngFor="let song of allSongs">
+    <ul>
+      <li>
+        <h2>
+          <a routerLink="/songs/{{song.id}}">
+            {{song.title}}
+          </a>
+        </h2>
+      </li>
+      <li>
+        <h3>{{song.duration}}</h3>
+      </li>
+      <li>
+        <h3>{{song.date_of_release}}</h3>
+      </li>
+      <li>
+        <h3>{{song.album_title}}</h3>
+      </li>
+      <li>
+        <a routerLink="/songs/edit/{{song.id}}">
+          Edit
+        </a>
+      </li>
+      <li>
+        <form (ngSubmit)="deleteSong(song)">
+          <input type="submit" value="Delete"/>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
