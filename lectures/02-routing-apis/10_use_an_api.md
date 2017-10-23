@@ -192,7 +192,7 @@ It's cool that it's in the console, but we likely want to actually display it to
 ```javascript
 export class SearchComponent implements OnInit {
 
-  people; //add the public property here
+  people: any; //add the public property here
 
   constructor(
       private http: Http
