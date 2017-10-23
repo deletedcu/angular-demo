@@ -29,6 +29,8 @@ That's true, except for a couple of cases:
 
 1) As we mentioned earlier, server-side rendering can improve site performance if used properly.
 
+>  Instead of taking a user's entire phone memory to load (which could take forever on an older phone), you can leverage server-side rendering. With client-side rendering, the phone would have to parse and run all of the JavaScript - while it'd be blazing fast on the newest devices, imagine doing that on an iPhone 5! Instead, we can parse the script on the server side and just return to the client the final results. _([This is a good blog article](http://openmymind.net/2012/5/30/Client-Side-vs-Server-Side-Rendering/) on the general differences between server-side and client-side rendering (not Angular specific), if you'd like to have more of a foundation before applying it to Angular Universal.)_
+
 2) Dynamic SPAs are detrimental for search engine optimization (SEO).
 
 > SEO is making sure that your website isn't on the very last page of a search engine like Google! If you have a website about skydiving, you want your website to be on the first page of search results when a user searches for "skydiving".
@@ -175,11 +177,11 @@ Cool, right? But we haven't changed any functionality yet. Next we'll set our si
 
 #### Why do we care?
 
-It is really easy for an amazing page to drop in search rankings because they don't do some simple steps.  In Angular, if you view the page source in a browser, it will only show what's inside the regular `index.html` -- the infamous `loading..` content.  We're going to work on that.
+It is really easy for an amazing page to drop in search rankings because they don't do some simple steps.  In Angular, if you view the page source in a browser, it will only show what's inside the regular `index.html`. If you go look at your `index.html`, the content is... not great. It's the infamous `loading..` content.  We're going to work on that.
 
 #### What will we do about it?
 
-A cornerstone of on-page SEO factors are unique titles, meta descriptions, and meta keywords.
+A cornerstone of on-page SEO factors are unique titles, meta descriptions, and meta keywords. These are tags you can add to your app that search engines will look for and categorize your app by. The more specific and plentiful the tags, the more the search engine will know what your website is about - so the higher your website will appear in search results.
 
 Let's add support for these to our fledgling app.
 
