@@ -1,0 +1,20 @@
+<h2>New Artist</h2>
+
+<form (ngSubmit)="saveArtist(newArtist)">
+  <label for="name">Name:</label>
+  <input name="name" [(ngModel)]="newArtist.name">
+
+  <label for="photoUrl">Photo URL:</label>
+  <input name="photoUrl" [(ngModel)]="newArtist.photoUrl">
+
+  <label for="nationality">Nationality:</label>
+  <input name="nationality" [(ngModel)]="newArtist.nationality">
+
+  <label for="instrument">Instrument:</label>
+  <input name="instrument" [(ngModel)]="newArtist.instrument">
+
+  <label for="home_address">Home Address:</label>
+  <input name="home_address" [(ngModel)]="newArtist.home_address">
+
+  <input type="submit" value="Create">
+</form>

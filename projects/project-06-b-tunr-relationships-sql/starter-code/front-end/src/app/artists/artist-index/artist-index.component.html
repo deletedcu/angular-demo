@@ -1,0 +1,28 @@
+<h2>Artists</h2>
+
+<a class="btn" routerLink="/artists/new">Add Artist</a>
+
+<div class="artists">
+  <div class="row" *ngFor="let artist of allArtists">
+    <img [src]="artist.photoUrl" [alt]="artist.name">
+    <ul>
+      <li>
+        <h2>
+          <a routerLink="/artists/{{artist.id}}">
+            {{artist.name}}
+          </a>
+        </h2>
+      </li>
+      <li>
+        <a routerLink="/artists/edit/{{artist.id}}">
+          Edit
+        </a>
+      </li>
+      <li>
+        <form (ngSubmit)="deleteArtist(artist)">
+          <input type="submit" value="Delete"/>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
