@@ -38,7 +38,7 @@ To do this in a nutshell, you'll need to:
 3. In your `app.component.html`, add the router outlet:
   - `<router-outlet></router-outlet>`
 
-4. You'll likely also want to a nav bar using Router Link:
+4. You'll likely also want to create a nav bar using Router Link:
   ```html
   <nav>
     <a routerLink="/">Home</a>
