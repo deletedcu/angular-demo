@@ -1,0 +1,36 @@
+<h2>Managers</h2>
+
+<a class="btn" routerLink="/managers/new">Add Manager</a>
+
+<div class="managers">
+  <div class="row" *ngFor="let manager of allManagers">
+    <ul>
+      <li>
+        <h2>
+          <a routerLink="/managers/{{manager._id}}">
+            {{manager.name}}
+          </a>
+        </h2>
+      </li>
+      <li>
+        <h3>{{manager.email}}</h3>
+      </li>
+      <li>
+        <h3>{{manager.office_number}}</h3>
+      </li>
+      <li>
+        <h3>{{manager.cell_phone_number}}</h3>
+      </li>
+      <li>
+        <a routerLink="/managers/edit/{{manager._id}}">
+          Edit
+        </a>
+      </li>
+      <li>
+        <form (ngSubmit)="deleteManager(manager)">
+          <input type="submit" value="Delete"/>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>

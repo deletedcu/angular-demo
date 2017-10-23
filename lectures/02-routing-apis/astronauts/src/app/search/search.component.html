@@ -1,0 +1,12 @@
+<section>
+  <h2>Who's on the ISS right now?</h2>
+  <input (click)="findAstronauts()" type="submit" value="Show List"/>
+</section>
+
+<section *ngIf="people">
+  <ul>
+    <li *ngFor="let astronaut of people">
+        <h3>{{astronaut.name}}</h3>
+    </li>
+</ul>
+</section>
