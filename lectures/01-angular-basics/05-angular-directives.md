@@ -288,24 +288,7 @@ Then, add our new directive into `app.component.html`. Put this right above the 
 
 Let's see if it works. Open the browser, and open up the Developer Tools console.  Nice!  Every second we know how many pokemon we are supposed to catch (all of them).
 
-If you want to know more about custom directives, check out [this tutorial](https://alligator.io/angular/building-custom-directives-angular/).
-
-## Angular Punctuation
- 
- We've seen a lot of Angular punctuation today.  Here is a quick review of what they all mean:
- 
- ![](images/punctuation1.png)
- 
- ![](images/punctuation2.png)
- 
- Sometimes, we will see properties without the `[]`s around them.  What does that mean?  
- 
- If we have `[]`, we will evaluate the expression in Javascript.  If we don't, we will simply see the property as a string.  For example:
- 
- ![](images/punctuation3.png)
-
 ## Additional Resources
 
-- [Angular Cheat Sheet](https://angular.io/guide/cheatsheet).
 - [Pipes Documentation](https://angular.io/guide/pipes)
 - [Custom Directives Tutorial](https://alligator.io/angular/building-custom-directives-angular/)

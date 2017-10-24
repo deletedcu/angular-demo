@@ -8,7 +8,7 @@
 1. Create a service for an observable
 1. Pass an observable off to the HTML
 
-## Recap Promises
+## Promises
 
 We've been using, but haven't really gone over, something called a **Promise**. Unlike in other languages, JavaScript statements can execute all at the same time, without waiting on the other to finish first. Promises make sure that if we want one statement to wait for another, it does.
 
