@@ -125,8 +125,7 @@ The basic files in Angular are:
   export class AppModule { } // This makes your component available for other files to use (like displaying it in `index.html`)
 ```
 
-- **Note** Every new component you make will come with its own `component.html` and `.component.ts` file. You can make more files when you need them, like if you make a service.
-
+**Note** Every new component you make will come with its own `component.html` and `.component.ts` file. You can make more files when you need them, like if you make a service.
 
 
 ## Advice and Words of Encouragement
