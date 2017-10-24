@@ -137,7 +137,7 @@ Now update the class definition:
 ```javascript
 export class ResumeComponent implements OnInit {
 
-    jobIndex: Number; //set up public class member
+    jobIndex: number; //set up public class member
 
     constructor(
         private route: ActivatedRoute //make URL routes available to class
