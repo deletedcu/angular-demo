@@ -181,7 +181,7 @@ Now that we have it in the console and know that it's working, let's display it 
 ```javascript
 export class SearchComponent implements OnInit {
 
-    weather; //add the public property here
+    weather: any; //add the public property here
 
     constructor(
         private http: Http
