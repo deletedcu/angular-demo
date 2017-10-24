@@ -151,7 +151,7 @@ export class ResumeComponent implements OnInit {
 
 - `ngOnInit()` is a function that tells the component what to do when it's first initialized, or called to the screen.
 
-Now, we'll go to the resume component's HTML file and change that do display exactly what job we want. Add `jobIndex` to `src/app/resume/resume.component.html`:
+Now, we'll go to the resume component's HTML file and change that to display exactly what job we want. Add `jobIndex` to `src/app/resume/resume.component.html`:
 
 ```html
 <h2>Resume: {{jobIndex}}</h2>
