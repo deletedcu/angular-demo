@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--WDi5 11:44 -->
+
 # Angular Basics
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
@@ -63,6 +65,8 @@ ng serve
 Open your browser to `http://localhost:4200/` - there is a basic Angular application created for us!
 
 ![](images/angular-start.png)
+
+<!--WDI5 11:58  -->
 
 ## Angular Tools
 
@@ -201,7 +205,6 @@ export class AppComponent {
 }
 ```
 
-
 ## Testing It Out
 
 Browse to `http://localhost:4200` in your browser and see your default application. At the top, you can see "Welcome to app!"
@@ -217,6 +220,8 @@ Isn't that cool?  You don't even need to refresh the browser.  This is called "L
 ## Wrapping Up
 
 By now, you should have a broad, though shallow, understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular just yet. In the coming lessons, we'll flesh out your understanding so you'll be ready to go out and conquer the world of front-end web development.
+
+<!--WDI5 12:16 -->
 
 ## References
 
