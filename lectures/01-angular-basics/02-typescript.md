@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--WDI5 9:37 -->
+
 # Introduction to TypeScript
 
 ![TypeScript Logo](https://cdn-images-1.medium.com/max/622/1*grk7btEn0OJEQRKgG2Qs2A.png)
@@ -69,6 +71,8 @@ What did we just install? This program will read our TypeScript, interpret it, a
 
 > If you use Atom, you'll likely also want to install a package for syntax highlighting of TypeScript, [atom-typescript](https://atom.io/packages/atom-typescript).
 
+<!--WDI5 9:50 -->
+
 ![Transpiling](https://i1.wp.com/www.mithunvp.com/wp-content/uploads/2016/02/transpiling.png)
 
 Let's try it out. Clone [this repo](https://github.com/den-materials/typescript-files) with three `.ts` files inside.  We will go through them one-by-one.
@@ -124,9 +128,13 @@ It's the same, except without the type annotations. You might be thinking, "Why 
 
 BAM. Our compiler yells at us, even though it still produces our JavaScript file. It's saving us from making mistakes. If we remove the type annotation from the argument, compile again, and run the JavaScript script with `node`, we get an awkward return value that wasn't the intended result of the function.
 
+<!--WDI5 9:58  -->
+
  ### Lab: Make It Compile
 
 `battle.ts` is very broken. Using what we've just learned, along with the compiler feedback, fix the file so it compiles cleanly.
+
+<!--WDI5 10:05 -->
 
 ## Additional Resources
 
