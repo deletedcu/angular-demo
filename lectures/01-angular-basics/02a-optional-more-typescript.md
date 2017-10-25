@@ -2,6 +2,8 @@
 
 <!--Hook: Throughout this course, we've taught you the legacy tools currently used in web development while slowly introducing the newer tools that have been developed. TypeScript is one of the most useful new tools for two reasons: It provides functionality that JavaScript developers have been asking for since the late '90s and it was used to create many modern tools, most notably Angular 2+ and Ionic 2+ (an Angular-based framework for building mobile apps). So, as today is all about Angular 2+, we should probably show you the language it's written in. -->
 
+<!--WDI5 10:11 -->
+
 # Intro to TypeScript
 
 ## Objectives
@@ -42,6 +44,10 @@ numero = "fish";
 var namey : string = "Bobz";
 
 var isWinter : boolean = true;
+
+-->
+
+<!--WDI5 10:18 -->
 
 <!--Pause before moving onto more complex types:
 
@@ -108,6 +114,7 @@ printName({name: "Bran", age:22});
 
 ### Classes
 
+<!--WDI5 10:35  -->
 <!--0:25 10 minutes -->
 
 A **class** is a supercharged blueprint for an object.
@@ -151,6 +158,7 @@ ned.hello("Bobert");
 
 -->
 
+<!--WDi5 break at 10:49  coming back at 11:08 after project 3 show  -->
 <!--0:35 10 minutes -->
 
 ### Inheritance
@@ -184,6 +192,8 @@ bran.dance();
 
 -->
 
+<!--WDI5 11:16  -->
+
 <!-- Then extend:
 
 class CoolPerson extends Person {
@@ -206,6 +216,7 @@ robb.dance();
 
 ### Modules
 
+<!--WDI5 11:22  -->
 <!--0:45 10 minutes -->
 
 **Modules** are a powerful way to share code between files. In TypeScript, the functionality is similar to Node, but the syntax is a little different. Let's see how.
@@ -242,6 +253,7 @@ console.log(multiplication.timesTwo(9));
 
 >**Note:** If you have not covered Gulp yet, you may want to skip this part of the lesson.  Don't worry, webpack does all this work for you with Angular and the Angular CLI.  If you have worked with Gulp before, though, this will help clarify what goes on "behind the scenes".  If you're looking for an intro course on gulp, you can find one [here](https://github.com/ga-wdi-lessons/build-tools).
 
+<!--WDI5 11:32   -->
 <!--0:55 10 minutes -->
 
 Wouldn't it be frustrating if the only way to convert TypeScript into JavaScript was by running `tsc` every time we made a change?  It's too bad there aren't any tools that could do this automatically for us...
@@ -286,6 +298,8 @@ Next, run `gulp` in your work folder to transpile your TypeScript into JavaScrip
 Finally, run `node scripts/output.js`. We see all of our files' output. Pretty cool. We only need to include one file in our HTML — but when we're coding, we have several files to keep everything organized in our heads.
 
 >**Note:** What do you think that `noImplicitAny` flag is doing?  How about the `module: 'system'` line?  Try removing them, run gulp, and see how it changes the `output.js` file.  And are there any errors in the terminal?
+
+<!--11:42 WDI5 -->
 
 ## Resources
 
