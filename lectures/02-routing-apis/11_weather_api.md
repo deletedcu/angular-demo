@@ -181,13 +181,13 @@ Now that we have it in the console and know that it's working, let's display it 
 ```javascript
 export class SearchComponent implements OnInit {
 
-    weather; //add the public property here
+    weather: any; //add the public property here
 
     constructor(
         private http: Http
     ) { }
 
-		findWeather(zip){
+    findWeather(zip){
 	    this.http.get('http://api.openweathermap.org/data/2.5/weather?zip=' + zip + ',us&appid=052f26926ae9784c2d677ca7bc5dec98&&units=imperial')
 	    .toPromise()
 	    .then(response => this.weather = response.json()); // use it here

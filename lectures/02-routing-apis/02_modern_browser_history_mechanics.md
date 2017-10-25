@@ -12,7 +12,7 @@ of **back** and **forward** is lost.
 When users press the **back** button in a Single Page Application they go back
 off the one page, completely out of the Single Page Application.
 
-Imagine being on Wikipedia, going to Gmail, going through several views of
+**Imagine** being on Wikipedia, going to Gmail, going through several views of
 different email inboxes and search results, and then pressing the back button. This process would go something like this:
 
 * Go to wikipedia.org
@@ -85,14 +85,7 @@ Here's a summary of what we've learned so far for routing:
             - Personal computers are fast enough now to handle this
 
 ## Demonstrate an SPA
-<!--
 1. Go to [Google Maps](https://www.google.com/maps/)
     1. Pan/zoom around
     1. Observe how the tiles update as you interact
     1. This is one of the first sites that made SPAs popular!
-1. Go to a public [Trello](https://trello.com/)
-    1. Interact with cards/lists
-    1. Note that creating/moving/editing/deleting cards does not cause the page to refresh, even though the data is saved
-    1. Perhaps have a student go to the same board and interact with it.  Note that changes appear for the instructor in real time -->
-
-<!--WDI4 1:49 -->
