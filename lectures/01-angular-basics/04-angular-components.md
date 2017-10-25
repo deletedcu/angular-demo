@@ -2,6 +2,8 @@
 
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--WDI5 12:17 -->
+
 # Angular 2: Components & Modules
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
@@ -39,6 +41,8 @@ Take a look at [Wolfram Alpha](https://www.wolframalpha.com/) (note: right click
 Each explore link is a component. How can you identify this?
 - Listings look identical in structure, but have different information populating them
 - Listings are dynamically generated based on the user's search
+
+<!--WDI5 12:25 -->
 
 Now, go to [Pacific Standard](https://psmag.com/) (note: right click to open in a new tab!).
 
