@@ -6,6 +6,8 @@ Those pesky rebels destroyed yet another one of our death stars! But we'll build
 
 ### Instructions:
 
+>**Note:** You will get some hints on the styling later.  Just try to get everything on the page first.
+
 1) Generate a new `ng` app called `imperial-starfleet`.
 
 2) Create a component called `death-square`. This component should be a square with a gray background. Add one instance of this component to our root component.
@@ -15,6 +17,56 @@ Those pesky rebels destroyed yet another one of our death stars! But we'll build
 >**Note:** All Angular assets are served up from the `src/assets` folder. Point the turret's `src` attribute at this folder (e.g., `/assets/...`).
 
 4) Now that our death square is protected, let's create a component called `laser-cannon`. One instance of this component should also be placed and centered in our `death-square` component. It should be a square with a red background. 
+
+<details>
+	<summary>Still struggling with the CSS? Check out these hints if needed.</summary>
+	
+	`death-square.component.css`
+
+	.container {
+	  background-color: grey;
+	  width: 1100px;
+	  height: 1100px;
+	  position: relative;
+	}
+
+	.laser-cannon {
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  width: 50px;
+	  height: 50px;
+	  margin-left: -25px;
+	  margin-top: -25px;
+	}
+
+	`laser-cannon.component.css`
+
+	.container {
+	  background-color: red;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	`turret.component.css`
+
+	.left {
+	  left: 0px;
+	  top: 50%;
+	}
+
+	.right {
+	  right: 0px;
+	  top: 50%;
+	}
+
+	.turret {
+	  position: relative;
+	}
+
+</details>
+
+>**Note:** If you use the hints above, you will still need to make the corresponding changes to your HTML classes.
 
 5) Our death square is complete, but we would still be vulnerable if the rebel fleet attacked. Let's create a new component called `tie-fighter`. Include [tie-fighter.png](images/tie-fighter.png) in its template, and add as many instances as you think are necessary to protect our death square. Do NOT nest these in the `death-square` component.
 
