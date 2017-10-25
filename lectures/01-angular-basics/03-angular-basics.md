@@ -212,6 +212,8 @@ Go into `app.component.ts` and change the `title` variable value to `My Website`
 
 This will change what's passed into `app.component.html`, and therefore change what's displayed on the screen. Go back to your browser, and you'll see your new title.
 
+Isn't that cool?  You don't even need to refresh the browser.  This is called "Live Reloading", and will save you a lot of development time.
+
 ## Wrapping Up
 
 By now, you should have a broad, though shallow, understanding of how an Angular app is put together. We covered a lot of ground very quickly this lesson, so don't worry if you're not ready to remake Facebook in Angular just yet. In the coming lessons, we'll flesh out your understanding so you'll be ready to go out and conquer the world of front-end web development.
