@@ -123,10 +123,23 @@ The basic files in Angular are:
     bootstrap: [AppComponent] // This ties the whole component together, saying "Here is everything for this component"
   })
   export class AppModule { } // This makes your component available for other files to use (like displaying it in `index.html`)
-```
+  ```
 
-**Note** Every new component you make will come with its own `component.html` and `.component.ts` file. You can make more files when you need them, like if you make a service.
+>**Note:** Every new component you make will come with its own `component.html` and `.component.ts` file. You can make more files when you need them, like if you make a service.
 
+## Angular Punctuation
+
+We've seen a lot of Angular punctuation today.  Here is a quick review of what they all mean:
+
+![](images/punctuation1.png)
+
+![](images/punctuation2.png)
+
+Sometimes, we will see properties without the `[]`s around them.  What does that mean?  
+
+If we have `[]`, we will evaluate the expression in Javascript.  If we don't, we will simply see the property as a string.  For example:
+
+![](images/punctuation3.png)
 
 ## Advice and Words of Encouragement
 
