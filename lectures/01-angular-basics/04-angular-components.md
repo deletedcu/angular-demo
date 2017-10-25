@@ -42,7 +42,8 @@ Each explore link is a component. How can you identify this?
 - Listings look identical in structure, but have different information populating them
 - Listings are dynamically generated based on the user's search
 
-<!--WDI5 12:25 -->
+<!--WDI5 12:25, lunchtime -->
+<!--WDI5 12:31 -->
 
 Now, go to [Pacific Standard](https://psmag.com/) (note: right click to open in a new tab!).
 
@@ -52,6 +53,8 @@ As you're drawing this out, think about the following questions...
 * Where do you see "nested components;" that is, where are there components inside another component? Where do you see just one "layer" instead?
 * Are there any components that share the same structure?
 * For components that share the same structure, what is different about them?
+
+<!--WDI5 1:3  -->
 
 Here's a basic component tree in Angular:
 
@@ -209,6 +212,8 @@ import { MasterSwordComponent } from './masterSword/master-sword.component';
 export class AppModule { }
 ```
 
+<!--WDI5 2:06  -->
+
 Let's give our template some flavor:
 
 ```html
@@ -257,12 +262,14 @@ Finally, we'll use it in `app.component.html`:
 
 Now run `ng serve` in your `ga-ui` folder, and navigate to `localhost:4200` in your browser. Look at that sword!
 
+<!--WDI5 2:12   -->
 
 ### Lab: Make Your Own Component
 
 Use the Angular CLI to generate a `hylian-shield` component. Have the component display a picture of a hylian shield and text that reads "Behold! The Hylian Shield!" with a blue background.
 
 <!-- Reference: WDI4 done with shield @ 9:47 -->
+<!--WDI5 2:1  -->
 
 ## Services: Abstracting and Reusing Business Logic
 
@@ -353,6 +360,7 @@ export class UserService {
 }
 ```
 
+<!--WDI5 2:36 -->
 <!--10:04 WDI4 -->
 
 Our new method approximates an AJAX request (don't worry; we'll get to that in a later lesson) and returns something useful to both of our components.
@@ -407,11 +415,15 @@ export class MasterSwordComponent implements OnInit {
 
 There you have it. We've injected our new service and used its logic to enrich our component.
 
+<!--WDI5 2:45 -->
+
 ## Lab: Our Second Injection
 
 Use our new service to update the `hylian-shield` component in the same manner we just updated our `master-sword` component.
 
 If you have extra time, play around with the directives listed in the [Angular Cheat Sheet](https://angular.io/guide/cheatsheet).
+
+<!--WDI5 2:50 -->
 
 ## Feature Modules: Adding Organization to Unruly Codebases
 
@@ -463,6 +475,8 @@ import { HylianShieldComponent } from './hylian-shield/hylian-shield.component';
 export class EquipmentModule { }
 ```
 
+<!--WDI5 2:59 -->
+
 Now we need to remove references to the individual components from our main import, `app.module`, and replace them by importing our feature module:
 
 ```typescript
@@ -496,6 +510,8 @@ export class AppModule { }
 Finally, because we moved our `master-sword` and `hylian-shield` components, we need to change the directory from which they're importing `user.service.ts`.  What should it be now?
 
 If everything worked correctly, our app will render in exactly the same way — but our app component will look less cluttered.
+
+<!--WDI5 3:07  -->
 
 ## References
 
