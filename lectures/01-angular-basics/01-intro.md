@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--WDI5 9:29 -->
+
 # Introduction to Angular
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
@@ -32,3 +34,5 @@ We are learning Angular.
 For some real world Angular websites, check out [Wolfram Alpha](https://www.wolframalpha.com/), [Pacific Standard](https://psmag.com/), and [Lyft](https://www.lyft.com/).
 
 It's time to get cracking! As eager as you may be to start making amazing Angular applications, though, we first need to learn the basics of TypeScript.
+
+<!--WDI5 9:36 -->
