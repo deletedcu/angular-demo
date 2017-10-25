@@ -1,5 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<!--WDI5 3:20 -->
+
 # Angular 2: Directives
 
 ![Angular Logo](https://angular.io/assets/images/logos/angular/angular.png)
@@ -85,6 +87,8 @@ Go look at your app at `http://localhost:4200/`. Sweet! You're pulling informati
 
 But if you look, we wrote `{{pokemon|json}}`. What is that `|` thing?
 
+<!--WDI5 3:32  -->
+
 ## Pipes
 
 A **pipe** (`|`) takes in data as input and transforms it to a desired output.
@@ -138,6 +142,8 @@ Here, we have "for each `poke` in the `pokemon` object, display a `<li>` with th
 Look at that!  We're still displaying the entire JSON `pokemon` object from our file, so that you have a reference.  Below the JSON, with one line of code, we printed out all our pokemon names.
 
 So to recap, **structural directives** add or remove elements from the DOM. Here, we're adding many `<li>`.
+
+<!--WDI5 3:39  -->
 
 ## Attribute Directives
 
@@ -204,6 +210,8 @@ Now let's talk a little more about what "two-way binding" means.  With two-way b
 
 Open your browser again, and replace the value in the `input` box with your name.  Nice. It updates everything immediately.
 
+<!--WDI5 3:51 -->
+
 ### Pokemon `ngIf`
 
 Our arch nemesis Team Rocket is composed of Jessie and James.  If someone from that team is trying to look at our pokemon, we want all of our pokemon to all hide.  How do we do this?  With `ngIf`!  
@@ -216,6 +224,9 @@ Add these lines to `app.component.html`. Update our pokemon bullet list and JSON
 Try it out by putting "Jessie" or "James" in the trainer input field (note: It's case-sensitive).
 
 `ngIf` is Angular's way of creating an `if` statement.
+
+<!--WDI5 3:59 -->
+<!--WDI5 we skipped this part -->
 
 ## Creating Our Own Directives
 
