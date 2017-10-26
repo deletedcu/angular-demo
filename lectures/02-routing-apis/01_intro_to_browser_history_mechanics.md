@@ -1,5 +1,7 @@
 <!-- Note: Same as in React module -->
 
+<!--9:20 WDI5 -->
+
 # Browser History Mechanics
 
 Browsers have built-in history mechanics.
@@ -24,6 +26,8 @@ However, the rise of recent approaches to websites - like Angular and React - br
 # Browser History Mechanics
 Browsers have built in history mechanics. You can go **back** and **forward**
 between pages you've been been to and you can **reload** the page you're on.
+
+<!--WDI5 9:24 -->
 
 ## Exercise
 Open a new tab in your browser and navigate to the Wikipedia article for
@@ -146,3 +150,5 @@ Consider the benefits of a single page application:
 * It's persistent. You can have a chat window open in one corner and keep
   talking to a friend as the rest of Gmail switches between showing you your
   inbox, an email, or email search results.
+
+<!--WDI5 9:35 -->
