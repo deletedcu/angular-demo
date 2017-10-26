@@ -1,6 +1,7 @@
 # Routing in Angular
 
 <!--2:03 WDI4 -->
+<!--WDI5 10:01 -->
 
 ## Lesson Objectives
 *By the end of this lesson, you will be able to:*
@@ -28,7 +29,7 @@ Adding `--open` instructs Angular to, after starting the application ("serving" 
 
 You should now see the welcome screen on `http://localhost:4200/`
 
-
+<!--WDI5 10:06 -->
 <!--WDI4 2:09 -->
 
 ## Clean Up the App's HTML
@@ -53,6 +54,7 @@ ng generate component resume
 
 If you look in your `app` folder, you can see that now there are folders for each of these new components.
 
+<!--WDI5 10:09  -->
 <!--2:14 WDI4 -->
 
 
@@ -131,6 +133,7 @@ If you run the server (`ng serve`), you should now see all of the components dis
 
 Look at the code - think about why this works. For example, where in the `resume` component is `<app-resume></app-resume>` coming from?
 
+<!--WDI5 10:16 -->
 <!-- WDI4 2:20-->
 
 Now, let's use Router only display one at a time.
@@ -189,6 +192,8 @@ There's no navigation bar yet, but it works! You can now test the different "pag
 - http://localhost:4200/links
 - http://localhost:4200/resume
 
+<!--WDI5 10:25   -->
+
 ## Create Links to the Different "Pages"
 
 Let's now make that nav bar. When creating links, we no longer use `href`. Instead we use `routerLink`.  
@@ -217,6 +222,8 @@ Edit `src/app/app.component.html` to have a nav bar, using `routerLink`:
 ```
 
 Save this and go back to your page. Did it load? Do the links work?
+
+<!--WDI5 10:30  -->
 
 ## Create an External Routing File
 
@@ -293,4 +300,5 @@ export class AppModule { }
 
 Now our code is a little cleaner - when new Routes need to be made, we'll add them in `src/app/app-routing.module.ts`.
 
+<!--WDI5 10:41  -->
 <!--WDI4 2:45 -->
