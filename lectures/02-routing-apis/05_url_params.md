@@ -1,5 +1,6 @@
 # URL Params
 
+<!--WDI5 10:53 -->
 <!--WDI4 2:55 -->
 
 ## Lesson Objectives
@@ -99,6 +100,8 @@ In `src/app/app.component.html`, change the `routerLink` for `/resume` to instea
 - `*ngFor` creates a loop.
 - You can call JavaScript parameters using `{{ paramName }}`
 
+<!--WDI5 11:0  -->
+
 ## Alter the Resume Route to Accept Params
 
 Our resume route in `src/app/app-routing.module.ts` no longer works. Update the `resume` path to accept params:
@@ -159,6 +162,7 @@ Now, we'll go to the resume component's HTML file and change that to display exa
 
 At this point, if you look at your website and click between the job links in the nav bar, the Resume header has a counter of 1, 2, or 3. It's working so far!
 
+<!--WDI5 11:18 -->
 <!--WDI4 3:21 -->
 
 ## Show Specific Job Data Based on the ID Param
@@ -216,3 +220,4 @@ Now, the data from `jobs` is being passed in to `resume.component.html`, so disp
 Go try it out! 
 
 <!--WDI4 3:32 -->
+<!--WDI5 11:27  -->
