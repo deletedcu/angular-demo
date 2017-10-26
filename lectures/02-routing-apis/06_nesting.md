@@ -1,5 +1,6 @@
 # Nesting
 
+<!--WDI5 11:29 -->
 <!--3:33 WDI4 -->
 
 ## Lesson Objectives
@@ -43,6 +44,7 @@ and `src/app/career/career.component.html`:
 <p>Still loving my life!</p>
 ```
 
+<!--WDI5 11:35 -->
 <!--WDI4 3:40 -->
 
 ## Create a Router Just for the Subsections
@@ -141,6 +143,8 @@ You can now test by going to:
 - http://localhost:4200/about/early-life
 - http://localhost:4200/about/career
 
+<!--WDI5 11:49  -->
+
 ## Add Links to the Various Subsections
 
 You can now create links to these subsections in `src/app/about/about.component.html`:
@@ -160,5 +164,5 @@ You can now create links to these subsections in `src/app/about/about.component.
 <router-outlet></router-outlet>
 ```
 
-
+<!--WDi5 11:53  -->
 <!--WDI4 3:59 -->
