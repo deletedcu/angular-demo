@@ -1,3 +1,4 @@
+<!--WDI5 2:02 -->
 # Using an API With AJAX
 
 ## Lesson Objectives
@@ -47,6 +48,8 @@ Edit `src/app/app.component.html`:
 <h1>Star Wars Character Search App</h1>
 <app-search></app-search>
 ```
+
+<!--WDI5 2:10 -->
 
 ## Add Form HTML to the Search Component
 
@@ -103,6 +106,8 @@ In `src/app/search/search.component.html`, add `[(ngModel)]` to the text input:
 
 Test this by changing the text in the input field.
 
+<!--WDI5 2:16  -->
+
 ## Invoke a Function When the User Clicks a Button
 
 In `src/app/search/search.component.ts`, add a `findCharacter` method to SearchComponent:
@@ -124,6 +129,8 @@ Call it in `src/app/search/search.component.html` (also remove the `Search Strin
 ```
 
 Test this by looking in the console.
+
+<!--WDI5 2:22  -->
 
 ## Add the Ability to Make AJAX Requests
 
@@ -162,6 +169,8 @@ constructor(
 ) { }
 ```
 
+<!--WDI5 2:29  -->
+
 ## Make an AJAX Request
 
 In `src/app/search/search.component.ts`, `findCharacter(name)` should make a request to `swapi.io`:
@@ -177,6 +186,8 @@ findCharacter(name){
 The `rxjs/add/operator/toPromise` import that we previously wrote adds the ability to change the `Observable` (more on this in another lecture) into a `Promise`.
 
 You can test this by looking in the console.
+
+<!--WDI5 2:35  -->
 
 ## Display AJAX Results in the App
 
@@ -216,6 +227,8 @@ Now add some HTML to `src/app/search/search.component.html` to display the resul
 
 You can test this in the app.
 
+<!--WDI5 2:42 -->
+
 ## Display More Data in the HTML
 
 Edit `src/app/search/search.component.html`:
@@ -246,3 +259,5 @@ Edit `src/app/search/search.component.html`:
     </ul>
 </section>
 ```
+
+<!--WDI5 2:46 -->
