@@ -1,6 +1,7 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
 <!--WDI4 11:34 -->
+<!--WDI5 3:10 -->
 
 # Service Workers
 
@@ -40,7 +41,7 @@ In order to get started, we need to do a little front-end setup:
 3) Fill `index.html` out with the [basic HTML boilerplate](http://htmlshell.com/) and a "Hello, World" heading.
 4) Create a `service-worker.js` file inside the same folder.
 
-
+<!--WDI5 3:18 -->
 <!--WDI4 11:37 turning over to devs -->
 <!--WDI4 coming back 11:42 -->
 
@@ -83,6 +84,8 @@ Let's walk through what's happening here.
 
 >**Note:** It's *very important* that you load your page with a web server rather than opening the HTML file directly.  Service Workers do not work on static files.
 
+<!--WDI5 3:33  -->
+
 ### Actually Doing Work With Our Service Worker
 
 We have a Service Worker! ... That does nothing yet, except be called from the browser when `index.html` loads.
@@ -122,6 +125,8 @@ Remember Xzibit? He had some powerful things to say about software tests.
 
 5) Check the `Offline` box at the top of the developer tools section and refresh the page. Oh no, our beautiful page is gone!
 
+<!--WDI5 3:44  -->
+
 6) Let's fix this. We need to cache some files in our **install**. Add the following lines to `service-worker.js`:
 
 ```js
@@ -131,6 +136,8 @@ var urlsToCache = [
   'xzibit_testing_software.jpg'
 ];
 ```
+
+<!--WDI5 3:49  -->
 
 7) Now that we have a named cache and files to put inside it, we need to load the cache when we install our Service Worker.  Add the following lines to your `install` listener:
 
@@ -146,6 +153,8 @@ self.addEventListener('install', function(event) {
   );
 });
 ```
+
+<!--WDI5 3:52  -->
 
 8) Save your files, go back to your browser, deselect `Offline`, and refresh the page.
 
@@ -177,6 +186,7 @@ self.addEventListener('fetch', function(event) {
 
 11) Refresh your browser, cross your fingers, select `Offline` again, and refresh your browser one more time. Good job!
 
+<!--WDI5 4:03  -->
 <!--WDI4 12:16 turning over to devs -->
 <!--WDI4 coming back 12:25 -->
 
