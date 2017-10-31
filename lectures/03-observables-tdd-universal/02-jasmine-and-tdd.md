@@ -2,6 +2,8 @@
 
 <!--WDI4 9:39 -->
 
+<!--WDI5 11:43 -->
+
 <!--Hook: Has anyone here tried fixing a car or complicated appliance? After two hours, you get the piece back in place or the wheel on straight. Then what do you do? (Personally, I back up and cross my fingers that it works.) The idea behind test-driven development is to gain a higher confidence that, before we flip the switch, the app we're building does what the customer wants.  
 
 Before you take your software to your users, you'll have to test it. Today, we'll talk about how to do that *with software itself*.  -->
@@ -64,6 +66,7 @@ Test-driven development (TDD) leads to better code. TDD is extremely helpful whe
 
 </details>
 
+<!--WDI5 11:47 -->
 <!-- 10 minutes (20)-->
 
 ## Unit vs. End-to-End Tests
@@ -107,6 +110,8 @@ When we think of testing, we tend to think of it as something you do *after* you
 Jasmine makes it easier to write tests. Essentially, it's a domain-specific language (DSL) for writing live specifications about your code.
 
 > A DSL is created to solve problems in a particular domain and is not intended to be able to solve problems outside of it. Other DSLs include HTML or SQL. This is opposed to domain independent languages such as Java, C++, Ruby, Python, PHP, JavaScript, Clojure, Rust, Scala, Erlang. etc., which can solve any possible computation problem.
+
+<!--WDI5 11:54 -->
 
 ## Jasmine Example
 
@@ -192,6 +197,7 @@ describe('PersonComponent', () => {
 
 <!-- 15 minutes (45)-->
 <!--WDI4 9:55 -->
+<!--WDI5 12:04, coming back 1:33 -->
 
 <!-- Half Mast -->
 
@@ -218,6 +224,7 @@ Run `ng test`. You should see a browser open with the following output:
 
 <!--WDI4 would have been 10:01 but had to resolve student issues...some really confusing ones depending on where ng g c was run, folder names, etc -->
 <!--WDI4 actually 10:07 -->
+<!--WDI5 1:40  -->
 
 ### Writing Our First Specification
 
@@ -263,6 +270,8 @@ it('should have a name', () => {
 
 > Matcher: `toBeTruthy()`
 
+<!--WDI5 1:52  -->
+
 We use the pattern `expect(xxx)` to wrap the ***item under test*** so that it supports the `toBeTruthy` method. There are many other methods we can use, such as `toEqual` or `toBeUndefined`.
 
 [Jasmine Cheat Sheet With Assertion Reference](http://ricostacruz.com/cheatsheets/jasmine.html).
@@ -305,6 +314,7 @@ Add an expectation (a test) to `dog` that "allows the reading of a hunger level.
 Now, add another expectation to `dog` that "allows the writing of a hunger level" and follow the same pattern as with the earlier expectation.
 - This test should set the `hungerLevel` property in the component to `5` and then check that it's equal to `5` once it is set.  
 
+<!--WDI5 2:05  -->
 <!--WDI4 10:30 -->
 
 <!-- End half-mast -->
@@ -372,6 +382,7 @@ describe("Dog", function() {
 
 Write the code to pass the specifications above.
 
+<!--WDI5 2:25  -->
 
 ## Thought Exercises:
 <!-- have a discussion -->
@@ -395,6 +406,7 @@ In end-to-end (e2e) testing, one process runs the real application and a second 
 
 If you would like to dive deeper into end-to-end tests, check out [this tutorial](https://blog.jscrambler.com/getting-started-with-angular-2-end-to-end-testing/).
 
+<!--WDI5 2:39 -->
 <!--5 minutes (75)-->
 
 ## Closing
