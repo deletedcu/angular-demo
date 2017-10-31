@@ -1,5 +1,7 @@
 # Observables
 
+<!--WDI5 9:10   -->
+
 ## Lesson Objectives
 
 1. Understand Promises
@@ -57,6 +59,8 @@ Promises are a little like event listeners, except, importantly, they only happe
 
 This is fine for some cases, but what if you want a constant listener with a statement that can execute multiple times? This is where **observables** come in.
 
+<!-- 9:18 WDI5-->
+
 ## Describe publish/subscribe model and how it relates to Observables
 
 In programming, the "pub/sub (publish/subscribe) model" is a situation in which:
@@ -89,6 +93,8 @@ Firstly, we want it to search as the user types into the input (like how google 
 
 Test it out.  In the network tab of your Chrome Developer Tools, see how a request goes out for every letter or number (most of them fail, as a few characters won't make a valid zip code)?  This is exactly what `(keyup)` does, but it can use up data unnecessarily. With Observables, we can fix this.
 
+<!--WDI5 9:32  but doing starwars-->
+
 ## Switch from a Promise to an Observable
 
 Normally, `this.http.get()` returns an observable.  We are converting it to a traditional promise with `toPromise()`.  Let's remove `toPromise()` and use the default functionality of `this.http.get()`.
@@ -107,6 +113,8 @@ Since we aren't using `toPromise` anymore, we can eliminate the import for it in
 ```javascript
 import 'rxjs/add/operator/toPromise';
 ```
+
+<!--WDI5 9:36  -->
 
 ## Make typing into an input field an observable
 
@@ -158,6 +166,8 @@ ngOnInit() {
     })
 }
 ```
+
+<!--WDI5 9:44, this is a confusing jump, make sure to explain what `next` and `subscribe` are doing, then change this -->
 
 When `SearchComponent` is initialized (`ngOnInit`), it sets up a subscription to the `searchSubject` observable.  When `searchSubject` publishes an event, the code above logs the zip that was written.
 
@@ -211,6 +221,8 @@ ngOnInit() {
 
 Now try typing.  You should see that a request goes out only when you pause your typing.
 
+<!--WDI5 9:52  -->
+
 ## Check for distinct events from an observable
 
 Try selecting the input with your cursor, typing in a value (like 02144), and then hitting tab to make the cursor move away from the input box.  You should see a second request go out to the same location, even though the search value is the same as before.  Let's fix this.
@@ -237,6 +249,8 @@ ngOnInit() {
 
 Now try that out. It should work!
 
+<!--WDI5 9:59, back at 10:11  -->
+
 ## Create a service for an observable
 
 Our code works, but it could be cleaner.  Let's move the HTTP action to a service, so that other components can use it if they want. First, create `src/app/search/search.service.ts`.  Now have it export a class like normal:
@@ -261,6 +275,8 @@ import { Injectable } from '@angular/core';
 export class SearchService {
 }
 ```
+
+<!--10:17 WDI5-->
 
 Now we can inject the service in components.
 
@@ -347,6 +363,7 @@ Now add it as a provider in `src/app/app.module.ts`:
 
 Now, go to your browser and check it out. It should be working as normal! We've abstracted the reusable code into a service. Abstracting code that might be used in multiple places makes for a DRY application - don't repeat yourself.
 
+<!--WDI5 10:35 , wrapping up  10:37, after recap lesson (01.5) 10:01-->
 
 ### Resources
 
