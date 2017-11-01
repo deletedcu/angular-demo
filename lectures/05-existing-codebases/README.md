@@ -4,7 +4,7 @@
 
 ## Adding a Feature
 
-Look around [the comments app](comments/). This is just a basic app that displays a list of comments. You may need to run `npm install` for it to work.
+Look around [the comments app](https://github.com/den-materials/angular-comments). This is just a basic app that displays a list of comments. You may need to run `npm install` for it to work.
 
 - Alter your comments so that each comment has an author (represented by a string).
 - Add a feature that allows you to add more comments.
@@ -20,7 +20,7 @@ Look around [the comments app](comments/). This is just a basic app that display
 
 ## Changing a Feature
 
-Look again at what you did in [the comments app](comments/). It's all in one component, which isn't very modular. Put the list of comments into one component and the new comments form into another component. Use Observables to communicate between the two.
+Look again at what you did in [the comments app](https://github.com/den-materials/angular-comments). It's all in one component, which isn't very modular. Put the list of comments into one component and the new comments form into another component. Use Observables to communicate between the two.
 
 1. First, abstract out all the comments logic into a service called `comment-service.ts`. Create a `commment/` directory, and run `ng g service comment`. Look at your `balance.service.ts` from the Vending Machine Lab as reference.
     - Your comment service should have the following methods: `updateSubject()`, `getComments()`, `addComment()`, `deleteComment()`, and `onCommentUpdated()`. The methods `setComments()` and `editComment()` are nice-to-haves, but not necessary.
