@@ -248,14 +248,16 @@ console.log(multiplication.timesTwo(9));
 -- Now try running `main.js`. What happens?
 
 -->
-
+<!-- 
 ### Compiling with Gulp
-
+-->
+<!--
 >**Note:** If you have not covered Gulp yet, you may want to skip this part of the lesson.  Don't worry, webpack does all this work for you with Angular and the Angular CLI.  If you have worked with Gulp before, though, this will help clarify what goes on "behind the scenes".  If you're looking for an intro course on gulp, you can find one [here](https://github.com/ga-wdi-lessons/build-tools).
+-->
 
 <!--WDI5 11:32   -->
 <!--0:55 10 minutes -->
-
+<!--
 Wouldn't it be frustrating if the only way to convert TypeScript into JavaScript was by running `tsc` every time we made a change?  It's too bad there aren't any tools that could do this automatically for us...
 
 ...
@@ -298,7 +300,7 @@ Next, run `gulp` in your work folder to transpile your TypeScript into JavaScrip
 Finally, run `node scripts/output.js`. We see all of our files' output. Pretty cool. We only need to include one file in our HTML — but when we're coding, we have several files to keep everything organized in our heads.
 
 >**Note:** What do you think that `noImplicitAny` flag is doing?  How about the `module: 'system'` line?  Try removing them, run gulp, and see how it changes the `output.js` file.  And are there any errors in the terminal?
-
+-->
 <!--11:42 WDI5 -->
 
 ## Resources
