@@ -32,8 +32,8 @@ npm install -g @angular/cli
 To verify that Angular install properly, run the command `ng -v`. You should see a response that looks something like this:
 
 ```bash
-@angular/cli: 1.4.9
-node: 8.1.4
+@angular/cli: 1.6.4
+node: 8.9.1
 os: darwin x64
 ```
 
@@ -171,8 +171,8 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
-Look at all of those imports! We have the modularity of Angular 2 on display here.
-- We pluck a few modules from Angular 2 and **the component we generated**, and then bootstrap our module to make it the root of our application.
+Look at all of those imports! We have the modularity of Angular on display here.
+- We pluck a few modules from Angular and **the component we generated**, and then bootstrap our module to make it the root of our application.
 
 Advanced Angular developers can tweak this bootstrapping process for their projects' specific requirements, but **all we care about here is that the last line is where our component becomes an application.**
 
@@ -180,7 +180,7 @@ Advanced Angular developers can tweak this bootstrapping process for their proje
 
 At this point you may be asking yourself, "Where will I write code?" For that, we turn to our root component — the app component in the `app` folder.
 
-With `app.component.html`, we see our first Angular 2 template:
+With `app.component.html`, we see our first Angular template:
 
 ```html
   <h1>
