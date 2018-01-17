@@ -35,7 +35,7 @@ cd directives-fun
 ng serve --open
 ```
 
-Now go into `src/app/app.component.ts` and replace the class definition with the below. This will give us a list of information to pull from and display in our app. It's in a format called JSON, which separates attributes from values with `:` and groups related attributes together with `{}`, much like an array of objects.
+Now go into `src/app/app.component.ts` and replace the class definition with the below. This will give us a list of information to pull from and display in our app. It's in JSON, which separates attributes from values with `:` and groups related attributes together with `{}`, basically an array of objects.
 
 ```javascript
 export class AppComponent {
@@ -113,7 +113,7 @@ In addition to components, there are two other kinds of directives: structural a
 
 ## Structural Directives
 
-Structural directives change which elements are in the DOM (adding or removing them).
+Structural directives change which elements are in the DOM (adding or removing them). They all start with an asterisk (*), just to make them easier to recognize.
 - For example, here is a structural directive called `*ngFor`: `<li *ngFor="let hero of heroes"></li>`.
 - In this example, `ngFor` tells Angular to print one `<li>` per `hero` in the `heroes` list (a `for` loop, running through `heroes` with `let... of ...`).
 
@@ -151,7 +151,7 @@ Attribute directives change the appearance or behavior of an existing element.
 - For example, here is an attribute directive called `ngModel`: `<input [(ngModel)]="hero.name">`
 - In this example, `ngModel` changes what's displayed on the `<input>` based on the current `hero.name`. Unlike structural directives, the attribute directive `ngModel` isn't adding or removing the `<input>` - it's simply changing what it looks like.
 
-### Pokemon `ngModel`
+### Two-way data binding with `ngModel` and Pokemon
 
 Go into `app.component.ts`, where we're storing our information, and add the following JSON object at the bottom of the `AppComponent` class (right above the last `}`).
 
@@ -212,6 +212,37 @@ Open your browser again, and replace the value in the `input` box with your name
 
 <!--WDI5 3:51 -->
 
+### Event listeners with Angular 2
+
+Angular's functionality encompasses DOM manipulation. As such, you should be extremely wary of combingin Angular with jQuery. Let's see an example of a `click` event in Angular 2.
+
+The Template Syntax ( [referenced here](https://github.com/den-materials/angular/blob/master/lectures/01-angular-basics/06-summary.md#angular-punctuation) ) specifies the use of parentheses for one-way bindings from the view back to the data source, e.g. `(click)`. Let's add a simple reset button to our interface, below the text input.
+
+```
+<input [(ngModel)]="trainer.name">
+
+<button (click)="resetTrainer()">Reset Trainer</button> // Add this below the trainer input
+```
+
+Next, we will need to add the functionality for this function. This belongs in the TypeScript for our component:
+
+```
+export class AppComponent {
+  trainer = {
+  	name: "Ash"
+  };
+
+  ...
+  
+  // add event handler in the component class
+  resetTrainer() {
+  	this.trainer.name = "Ash";
+  }
+}
+```
+
+Now go back to the browser and check if your event listener properly updates the data value. Next, let's take a look at another directive, Angular's `ngIf` statement.
+
 ### Pokemon `ngIf`
 
 Our arch nemesis Team Rocket is composed of Jessie and James.  If someone from that team is trying to look at our pokemon, we want all of our pokemon to all hide.  How do we do this?  With `ngIf`!  
@@ -227,7 +258,7 @@ Try it out by putting "Jessie" or "James" in the trainer input field (note: It's
 
 <!--WDI5 3:59 -->
 <!--WDI5 we skipped this part -->
-
+<!-- 
 ## Creating Our Own Directives
 
 If we want to, we can also create our own custom directives.
@@ -298,7 +329,7 @@ Then, add our new directive into `app.component.html`. Put this right above the 
 **Note:** It could go anywhere, but this way it's separated from what's actually displayed.
 
 Let's see if it works. Open the browser, and open up the Developer Tools console.  Nice!  Every second we know how many pokemon we are supposed to catch (all of them).
-
+-->
 ## Additional Resources
 
 - [Pipes Documentation](https://angular.io/guide/pipes)
