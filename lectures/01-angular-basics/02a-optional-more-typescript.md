@@ -18,6 +18,7 @@
 
 ## Basic TypeScript Features
 
+<!--Before you get into this, make sure everyone has a TypeScript package installed in their text editor -->
 <!--0:05 10 minutes -->
 
 ### Types
@@ -28,7 +29,7 @@ TypeScript comes with several built-in **types** that are similar to the ones we
 
 <!--Start with:
 
-var numero : number = 1;
+let numero : number = 1;
 numero = 2;
 
 <!--Then:
@@ -41,9 +42,9 @@ numero = "fish";
 
 <!--Then go through the other major types:
 
-var namey : string = "Bobz";
+let namey : string = "Bobz";
 
-var isWinter : boolean = true;
+let isWinter : boolean = true;
 
 -->
 
@@ -147,6 +148,7 @@ console.log(ned.saying);
 
 class Stark {
 	name: string = "Brandon";
+	saying: string;
 	hello(person:string) {
 		console.log("Hello, " + person);
 	}
@@ -256,6 +258,7 @@ console.log(multiplication.timesTwo(9));
 -->
 
 <!--WDI5 11:32   -->
+<!-- QUICK WARNING -- the most recent gulp-typescript 4.0.0-alpha throws a critical error complaining about file base needing to be a non-empty string, can just install gulp-typescript@3 if needed  -->
 <!--0:55 10 minutes -->
 <!--
 Wouldn't it be frustrating if the only way to convert TypeScript into JavaScript was by running `tsc` every time we made a change?  It's too bad there aren't any tools that could do this automatically for us...
