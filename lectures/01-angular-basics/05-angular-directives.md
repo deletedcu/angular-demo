@@ -214,7 +214,7 @@ Open your browser again, and replace the value in the `input` box with your name
 
 ### Event listeners with Angular 2
 
-Angular's functionality encompasses DOM manipulation. As such, you should be extremely wary of combingin Angular with jQuery. Let's see an example of a `click` event in Angular 2.
+Angular's functionality encompasses DOM manipulation. As such, you should be extremely wary of combining Angular with jQuery. Let's see an example of a `click` event in Angular 2.
 
 The Template Syntax ( [referenced here](https://github.com/den-materials/angular/blob/master/lectures/01-angular-basics/06-summary.md#angular-punctuation) ) specifies the use of parentheses for one-way bindings from the view back to the data source, e.g. `(click)`. Let's add a simple reset button to our interface, below the text input.
 
