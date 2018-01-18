@@ -14,7 +14,7 @@
 - **Implement** a customized interface to prevent bugs.
 - **Implement** a TypeScript class with inheritance to share functionality between object types.
 - **Share** code between files with modules.
-- **Automatically compile** TypeScript into JavaScript with Gulp.
+<!-- - **Automatically compile** TypeScript into JavaScript with Gulp. -->
 
 ## Basic TypeScript Features
 
