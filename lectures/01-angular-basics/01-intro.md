@@ -31,7 +31,7 @@ while the version of the framework that existed previous to 2016 is called Angul
 
 We are learning Angular.
 
-For some real world Angular websites, check out [Wolfram Alpha](https://www.wolframalpha.com/), [Pacific Standard](https://psmag.com/), and [Lyft](https://www.lyft.com/).
+For some real world Angular websites, check out [Wolfram Alpha](https://www.wolframalpha.com/), [Pacific Standard](https://psmag.com/), and probably [Made With Angular](https://www.madewithangular.com/).
 
 It's time to get cracking! As eager as you may be to start making amazing Angular applications, though, we first need to learn the basics of TypeScript.
 
