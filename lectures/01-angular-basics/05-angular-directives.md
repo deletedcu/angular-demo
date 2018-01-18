@@ -11,9 +11,9 @@
 By the end of this lesson, you will be able to:
 
 - Describe what a **directive** is.
-- Use directives like `ngFor` and `ngIf`.
 - Use Angular pipes.
-- Integrate custom directives into Angular apps.
+- Use structural directives like `ngFor` and `ngIf`.
+- Use attribute directives like `ngModel` and `(click)`.
 
 ### Directives
 
