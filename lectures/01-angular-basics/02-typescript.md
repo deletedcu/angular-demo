@@ -17,7 +17,7 @@ By the end of this lesson, you will be able to:
 
 ## What is TypeScript?
 
-TypeScript is an open-sourced programming language developed and maintained by Microsoft. It's a superset of JavaScript, meaning that **any valid JavaScript program is also a valid TypeScript program.** TypeScript transpiles to JavaScript, so **it can be run in a browser and on a server.**
+TypeScript is an open-sourced programming language developed and maintained by Microsoft. It's a superset of JavaScript, meaning that **any valid JavaScript program is also a valid TypeScript program.** TypeScript transpiles to JavaScript, so **it's typically transpiled on the server, like EJS.**
 
 ### "TS as a superset of JS"
 
@@ -29,28 +29,29 @@ So why bother with TypeScript? It turns out that some of those extra bells and w
 
 ```js
 // Basic JavaScript
-function getPassword(clearTextPassword) {
-    if(clearTextPassword) {
-        return 'password';
-    }
-    return '********';
+function isTallerThanThePyramid(height) {
+	if ( height > 455 ) {
+		return true;
+	} else {
+		return false
+	}
 }
-
-let password = getPassword('false'); // "password"
 ```
 
-We could call `let password = getPassword()` with anything other than a boolean, and JS would still run the code (which would then error at runtime!). With TypeScript, we can check to be sure that what's passed in to `getPassword()` is a boolean.
+If we call `let tallness = isTallerThanThePyramid('600')`, this is still valid JS but would break at runtime. With TypeScript, we can check to be sure that what's passed in to `isTallerThanThePyramid` is a number.
 
 ```js
 // Written with TypeScript
-function getPassword(clearTextPassword: boolean) : string {
-    if(clearTextPassword) {
-        return 'password';
-    }
-    return '********';
+
+function isTallerThanThePyramid(height : number ) : boolean{
+	if ( height > 455 ) {
+		return true;
+	} else {
+		return false
+	}
 }
 
-let password = getPassword('false'); // throws: error TS2345: Argument of type "false" is not assignable to parameter of type 'boolean'.
+let tallness = isTallerThanThePyramid('500') // error TS2345: Argument of type '"500"' is not assignable to parameter of type 'number'.
 ```
 
 What's the difference? It still looks like JavaScript, but you can see that it's strictly typed (thus, "TypeScript"). Let's look into this.
@@ -69,7 +70,7 @@ What did we just install? This program will read our TypeScript, interpret it, a
 
 **Note:** the `-g` stands for "global", so for example, `npm install typescript --global` would also have worked. Developers like to use shorthand when possible!
 
-> If you use Atom, you'll likely also want to install a package for syntax highlighting of TypeScript, [atom-typescript](https://atom.io/packages/atom-typescript).
+> You may want to install a package for syntax highlighting of TypeScript in the text editor of your choice.
 
 <!--WDI5 9:50 -->
 
