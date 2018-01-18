@@ -3,6 +3,7 @@
 <!--Hook: Throughout this course, we've taught you the legacy tools currently used in web development while slowly introducing the newer tools that have been developed. TypeScript is one of the most useful new tools for two reasons: It provides functionality that JavaScript developers have been asking for since the late '90s and it was used to create many modern tools, most notably Angular 2+ and Ionic 2+ (an Angular-based framework for building mobile apps). So, as today is all about Angular 2+, we should probably show you the language it's written in. -->
 
 <!--WDI5 10:11 -->
+<!--WDI6 10:50 -->
 
 # Intro to TypeScript
 
@@ -115,6 +116,7 @@ printName({name: "Bran", age:22});
 
 ### Classes
 
+<!--11:12 WDI6-->
 <!--WDI5 10:35  -->
 <!--0:25 10 minutes -->
 
@@ -161,6 +163,7 @@ ned.hello("Bobert");
 -->
 
 <!--WDi5 break at 10:49  coming back at 11:08 after project 3 show  -->
+<!--WDI6 turning over to devs at 11:18, coming back at 11:23-->
 <!--0:35 10 minutes -->
 
 ### Inheritance
@@ -218,6 +221,7 @@ robb.dance();
 
 ### Modules
 
+<!--WDI6 11:32, coming back 11:41  -->
 <!--WDI5 11:22  -->
 <!--0:45 10 minutes -->
 
@@ -248,6 +252,8 @@ let multiplication = new Multiplication();
 console.log(multiplication.timesTwo(9));
 
 -- Now try running `main.js`. What happens?
+
+<!--Turn over to devs 11:50, coming back 11:57  WDI6 -->
 
 -->
 <!-- 
@@ -305,6 +311,7 @@ Finally, run `node scripts/output.js`. We see all of our files' output. Pretty c
 >**Note:** What do you think that `noImplicitAny` flag is doing?  How about the `module: 'system'` line?  Try removing them, run gulp, and see how it changes the `output.js` file.  And are there any errors in the terminal?
 -->
 <!--11:42 WDI5 -->
+<!--12:10 WDI6  -->
 
 ## Resources
 
