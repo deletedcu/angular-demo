@@ -3,6 +3,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 <!--WDI5 12:17 -->
+<!-- WDI6 1:30 -->
 
 # Angular 2: Components & Modules
 
@@ -213,6 +214,7 @@ export class AppModule { }
 ```
 
 <!--WDI5 2:06  -->
+<!-- WDI6 2:01 -->
 
 Let's give our template some flavor:
 
@@ -258,11 +260,14 @@ Finally, we'll use it in `app.component.html`:
 <app-master-sword></app-master-sword>
 ```
 
+<!-- WDI6 2:11 -->
+
 #### Test It Out
 
 Now run `ng serve` in your `ga-ui` folder, and navigate to `localhost:4200` in your browser. Look at that sword!
 
 <!--WDI5 2:12   -->
+<!-- WDI6 2:20 --> 
 
 ### Lab: Make Your Own Component
 
@@ -270,6 +275,7 @@ Use the Angular CLI to generate a `hylian-shield` component. Have the component 
 
 <!-- Reference: WDI4 done with shield @ 9:47 -->
 <!--WDI5 2:1  -->
+<!--WDI6 2:25  -->
 
 ## Services: Abstracting and Reusing Business Logic
 
@@ -426,7 +432,7 @@ If you have extra time, play around with the directives listed in the [Angular C
 <!--WDI5 2:50 -->
 
 ## Feature Modules: Adding Organization to Unruly Codebases
-
+<!-- WDI6 2:50 -->
 Our current app is small, but let's imagine what a mature application running in production would look like. We could have hundreds of components and dozens of services vying for our attention. Now imagine coming into the project for the first time and trying to make sense of the madness. It's not such a fun prospect.
 
 With Angular modules, we get another chance to namespace our code and provide a layer of organization with which developers can make sense of it.
@@ -477,6 +483,7 @@ export class EquipmentModule { }
 
 <!--WDI5 2:59 -->
 
+
 Now we need to remove references to the individual components from our main import, `app.module`, and replace them by importing our feature module:
 
 ```typescript
@@ -512,6 +519,7 @@ Finally, because we moved our `master-sword` and `hylian-shield` components, we 
 If everything worked correctly, our app will render in exactly the same way — but our app component will look less cluttered.
 
 <!--WDI5 3:07  -->
+<!-- WDI6 2:57 -->
 
 ## References
 
