@@ -80,7 +80,11 @@ The other thing our observables do is allow us to deal with streams of events.  
 
 ## Demonstrate when a normal promise is not optimal
 
-We're going to be optimizing our Weather app we've previously made.
+Earlier, we used `http` to make a request to the Star Wars API.
+
+If you fork and clone [this repo](https://github.com/den-materials/angular-weather), `npm install`, and `npm start`, you will see a page that is nearly identical to the Star Wars API, but for the Open Weather Map API.
+
+We're going to be optimizing that app throughout this lesson.
 
 Firstly, we want it to search as the user types into the input (like how google autocompletes).  Edit the first `section` of `src/app/search.component.html` to have a `(keyup)` parameter that calls `findWeather(zip)` and take out the button.
 
@@ -320,7 +324,6 @@ Inject the service into the component in `src/app/search/search.component.ts`:
 
 ```javascript
 constructor(
-    private http: Http,
     private searchService: SearchService
 ) { }
 ```
@@ -337,7 +340,7 @@ this.searchSubject
 })
 ```
 
-You might see an error in your Chrome console.  We still need to specify our new service as a provider, either at the app level or at the component level.  Let's do at the app level, so that other components can use it if they need to later.  Edit `src/app/app.module.ts` to add the import:
+You might see an error in your Chrome console like `No provider for SearchService!`.  We still need to specify our new service as a provider, either at the app level or at the component level.  Let's do at the app level, so that other components can use it if they need to later.  Edit `src/app/app.module.ts` to add the import:
 
 ```javascript
 import { SearchService } from './search/search.service';
@@ -363,7 +366,7 @@ Now add it as a provider in `src/app/app.module.ts`:
 
 Now, go to your browser and check it out. It should be working as normal! We've abstracted the reusable code into a service. Abstracting code that might be used in multiple places makes for a DRY application - don't repeat yourself.
 
-<!--WDI5 10:35 , wrapping up  10:37, after recap lesson (01.5) 10:01-->
+<!--WDI5 10:35 , wrapping up  10:37, after recap lesson (01.5) 11:01-->
 
 ### Resources
 
