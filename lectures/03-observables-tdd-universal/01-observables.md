@@ -1,6 +1,7 @@
 # Observables
 
 <!--WDI5 9:10   -->
+<!--WDI6 9:02 -->
 
 ## Lesson Objectives
 
@@ -86,6 +87,8 @@ If you fork and clone [this repo](https://github.com/den-materials/angular-weath
 
 We're going to be optimizing that app throughout this lesson.
 
+<!--WDI6 9:24 -->
+
 Firstly, we want it to search as the user types into the input (like how google autocompletes).  Edit the first `section` of `src/app/search.component.html` to have a `(keyup)` parameter that calls `findWeather(zip)` and take out the button.
 
 ```html
@@ -118,6 +121,7 @@ Since we aren't using `toPromise` anymore, we can eliminate the import for it in
 import 'rxjs/add/operator/toPromise';
 ```
 
+<!--WDI6 9:34  -->
 <!--WDI5 9:36  -->
 
 ## Make typing into an input field an observable
@@ -190,6 +194,8 @@ ngOnInit() {
 }
 ```
 
+<!--WDI6 9:48 -->
+
 ## Have a subscriber act only after a pause in events from an observable
 
 Try it out again in the browser.
@@ -253,6 +259,7 @@ ngOnInit() {
 
 Now try that out. It should work!
 
+<!--WDI6 9:56, back at 10:02 -->
 <!--WDI5 9:59, back at 10:11  -->
 
 ## Create a service for an observable
@@ -280,6 +287,7 @@ export class SearchService {
 }
 ```
 
+<!--WDI6 10:16 -->
 <!--10:17 WDI5-->
 
 Now we can inject the service in components.
@@ -366,6 +374,7 @@ Now add it as a provider in `src/app/app.module.ts`:
 
 Now, go to your browser and check it out. It should be working as normal! We've abstracted the reusable code into a service. Abstracting code that might be used in multiple places makes for a DRY application - don't repeat yourself.
 
+<!--WDI6 10:31, wrapping up 10:32 -->
 <!--WDI5 10:35 , wrapping up  10:37, after recap lesson (01.5) 11:01-->
 
 ### Resources
