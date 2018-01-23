@@ -30,7 +30,13 @@ With that in mind, we can take advantage of Service Workers to give users what t
 
 **— Google**
 
-### Our First Service Worker
+## Our First Service Worker
+
+### Easy Mode
+
+Follow [this tutorial](https://angular.io/guide/service-worker-getting-started) from Angular.  Ever since Angular 5, this is the preferred way of making your app scalable in an offline or low bandwidth situation.
+
+### Hard Mode
 
 #### Set Up
 
