@@ -9,7 +9,6 @@
 1. Understand Observables
 1. Switch from a Promise to an Observable
 1. Create a service for an observable
-1. Pass an observable off to the HTML
 
 ## Promises
 
