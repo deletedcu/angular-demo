@@ -2,6 +2,7 @@
 
 
 <!--WDI4 3:47 -->
+<!--WDI6 9:17 -->
 
 # Major Angular Packages Breakdown
 
@@ -143,6 +144,7 @@ Make sure you switch drivers halfway through.
 
 
 <!--3:56 WDI4, turning over to devs for the activity above (30-40 minutes) -->
+<!--WDI6 9:30, coming back from package activity at 9:45 -->
 
 ### Resources
 
