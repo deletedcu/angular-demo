@@ -4,9 +4,9 @@ We've almost reached the end of our course. You may not be an Angular expert yet
 
 ## Exercise: Crowd-Sourced Study Guide
 
-One student will volunteer to create a repository with one file named `angular-cheat-sheet.md` and share the link with the rest of the class.
+Check out [this cheatsheet](https://github.com/den-materials/angular-cheat-sheet) from earlier students.  It has a basic rundown of the topics we've covered.
 
-Students will then break out into teams and choose one topic from the following list:
+Per squad, choose one topic from the following list:
 
 - TypeScript
 - Angular CLI
@@ -17,8 +17,11 @@ Students will then break out into teams and choose one topic from the following 
 - Promises & Observables
 - Testing
 - Service Workers
-- Angular Universal
 
-Each team will take 10 minutes to open up a pull request with an explanation of its topic and relative code examples (if necessary) to the document in the shared repository.
+Each team will take 10 minutes to research a topic.  
 
-Once everyone is finished, we will go through the pull requests one by one, review them, and merge them. In the end, you'll have have a crowd-sourced cheat sheet that you can refer to while working on Angular applications in the future. 
+When you have your results in one place, fork and clone [the cheatsheet repo](https://github.com/den-materials/angular-cheat-sheet) and add your changes to the README.
+
+Push your changes up to your GitHub repo, and open up a pull request from your personal repo to the den-materials one with an explanation of its topic and relative code examples (if necessary).
+
+Once everyone is finished, we will go through the pull requests one by one, review them, and merge them. In the end, you'll have a crowd-sourced cheat sheet that you can refer to while working on Angular applications in the future. 
